@@ -1,0 +1,1570 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../presentaci%C3%B3/">
+      
+      
+        <link rel="next" href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Programació didàctica - DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#b-metodologia-especifica-del-modul" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-header__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Programació didàctica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../presentaci%C3%B3/" class="md-tabs__link">
+          
+  
+  Presentació
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-tabs__link">
+          
+  
+  UD0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-tabs__link">
+          
+  
+  UD1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD2_Javascript_DOM/" class="md-tabs__link">
+          
+  
+  UD2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-nav__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Presentació
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Presentació
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentaci%C3%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Programació didàctica
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Programació didàctica
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#b-metodologia-especifica-del-modul" class="md-nav__link">
+    <span class="md-ellipsis">
+      b) Metodología específica del mòdul
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD0 Eines de Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Pr_Git2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD0 Pràctica Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Teoria
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_la_consola/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 La Consola
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_practicaJSbasic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica JS bàsic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_operadors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Operadors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codis extra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Codis extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_codis_extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_formularis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Formularis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Prac_formularis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Formularis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_exemples_extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Codis d'exemple
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#b-metodologia-especifica-del-modul" class="md-nav__link">
+    <span class="md-ellipsis">
+      b) Metodología específica del mòdul
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Programació didàctica</h1>
+
+<p><b><i>ANNEX I.      2<sup>n</sup> DAW – Desenvolupament Web en Entorn Client    IES Jaume II el Just</i></b></p>
+<p><strong>ANNEX I</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>Mòdul</strong></th>
+<th style="text-align: center;"><strong>Desenvolupament Web en Entorn Client (DWEC)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>Professor</strong></td>
+<td style="text-align: center;"><strong>Jesús Ortí Monton</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Cicle</strong></td>
+<td style="text-align: center;"><strong>Desenvolupament d'Aplicacions Web (DAW) semipresencial</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Nivell</strong></td>
+<td style="text-align: center;"><strong>Formació Professional de Grau Superior</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Família</strong></td>
+<td style="text-align: center;"><strong>Informàtica i Comunicacions</strong></td>
+</tr>
+</tbody>
+</table>
+<p><a name="_gjdgxs"></a><strong>5.  UNITATS DIDÀCTIQUES</strong></p>
+<p><strong><em>a) Organització de les unitats didàctiques</em></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>UD0-Eines de programació i depuració.</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CONTINGUTS DOGV</strong></td>
+<td style="text-align: left;"><strong>CONTINGUTS ESPECÍFICS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>- Selecció d'arquitectures i eines de programació:</p><p><code></code>- Models de programació en entorns client / servidor.</p><p><code></code>- Mecanismes d'execució de codi en un navegador web. </p><p><code></code>- Capacitats i limitacions d'execució.</p><p><code></code>- Compatibilitat amb navegadors web.</p><p><code></code>- Característiques dels llenguatges de script.</p><p><code></code>- Llenguatges de programació en entorn client.</p><p><code></code>- Tecnologies i llenguatges associats.</p><p><code></code>- Integració del codi amb les etiquetes en documents HTML.</p><p><code></code>- Eines de programació.</p><p><code></code>- Navegadors. Tipus i característiques.</p><p><code></code>- Especificacions oficials (DOM, CSS, XHTML, EcmaScript, entre altres).</p></td>
+<td style="text-align: left;"><p>- Models de programació en entorns client / servidor.</p><p>- Navegadors web.</p><p>- Mecanismes d'execució de codi en un navegador web.</p><p>- Capacitats i limitacions d'execució. Compatibilitat amb navegadors web.</p><p>- Llenguatges de programació en entorn client.</p><p>- HTML</p><p>- Javascript</p><p>- Ecmsscript 6</p><p>- CSS</p><p>- AJAX</p><p>- Característiques dels llenguatges de script. Avantatges i desavantatges sobre la programació tradicional.</p><p>- Tecnologies i llenguatges associats.</p><p>- Integració del codi amb les etiquetes HTML.</p><p>- Javascript en el document HTML</p><p>- Javascript en elements HTML</p><p>- Javascript al document extern</p><p>- Eines de programació i depuració</p><p>- Firebug</p><p>- Consola Javascript de Google Chrome</p><p>- SublimeText</p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>UD1-Javascript: bases i fonaments</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CONTINGUTS DOGV</strong></td>
+<td style="text-align: left;"><strong>CONTINGUTS ESPECÍFICS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>- Maneig de la sintaxi del llenguatge: </p><p>-Etiquetes i ubicació del codi.</p><p>-Variables. Tipus i àmbit.</p><p>-Tipus de dades.</p><p>-Conversions entre tipus de dades.</p><p>-Literals.</p><p>-Assignacions.</p><p>-Operadors. Precedència dels operadors.</p><p>-Expressions.</p><p>-Comentaris al codi.</p><p>-Ordes.</p><p>-Blocs de codi.</p><p>-Decisions.</p><p>-Bucles.</p><p>-Arquitectura client/servidor.</p><p>-Estructures de control de flux.</p><p>-Convencions de format i codificació.</p><p>-Ferramentes de depuració d’errors.</p><p></p><p>- Programació amb arrays, funcions i objectes definits per l’usuari:</p><p>-Funcions predefinides del llenguatge.</p><p>-Crides a funcions. Definició de funcions.</p><p>-Arrays.</p><p>-Inicialització d’arrays.</p><p>-Recorregut d’arrays.</p><p>-Creació d’objectes.</p><p>-Definició de mètodes i propietats.</p><p></p></td>
+<td style="text-align: left;"><p>- El llenguatge Javascript</p><p>- Característiques i Especificacions</p><p>- Incloure codi Javascript.</p><p>- Etiqueta <noscript></p><p>- Sintaxi bàsica</p><p>- Comentaris</p><p>- El primer script. </p><p>- Tipus de variables (numèriques, strings, arrays, booleans)</p><p>- Operadors</p><p>- Assignació</p><p>- Increment i decrement</p><p>- Lògics</p><p>- NOT</p><p>- AND</p><p>- OR</p><p>- Matemàtics</p><p>- Relacionals</p><p>- Objectes nadius: Math, Date, Number, String</p><p>- Funcions útils: cadenes de text, matrius, números</p><p>- Inserció de codi: innerHTML</p><p>- Estructures de control.</p><p>- Estructura if</p><p>- Estructura if ... else</p><p>- Estructura for</p><p>- Estructura for ... in</p><p>- Estructura while</p><p>- Estructura do ... while</p><p>- Estructura switch</p><p>- Sentències break i continue</p><p>- Operador ternari</p><p>- Declaració de funcions</p><p>- Arguments i valors de retorn</p><p>- Crides a funcions</p><p>- Assignació i execució</p><p>- Àmbit de les variables</p><p>- Funcions anònimes</p><p>- Funcions recursives</p><p>- Funciones de Callback.</p><p>- Implantació</p><p>- Transpiladors (Babel)</p><p>- Variables Let i Const</p><p>- Funcions Arrow</p><p>- Paràmetres per defecte.</p><p>- Importar mòduls</p><p>- Template Literals</p><p>- Classes</p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>UD2- Javascript: interacció amb l’usuari</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CONTINGUTS DOGV</strong></td>
+<td style="text-align: left;"><strong>CONTINGUTS ESPECÍFICS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>- Utilització del model d’objectes del document (DOM):</p><p>- El model d’objectes del document (DOM).</p><p>- Objectes del model. Propietats i mètodes dels objectes.</p><p>- Representació de la pàgina web com una estructura en arbre. </p><p>- Accés al document des de codi.</p><p>- Creació i modificació d’elements.</p><p>- Interacció amb l’usuari: esdeveniments i formularis:</p><p>-Model de gestió d’esdeveniments.</p><p>-Model d’esdeveniments estàndard.</p><p>-Controladors d’esdeveniments.</p><p>-Utilització de formularis des de codi.</p><p></p><p></p><p>- Gestió i creació de macros.</p><p>- Marcs imbricats.</p><p>- Execució de codi entre macros.</p><p>- Aplicacions pràctiques dels marcs.</p><p>- Gestió de l’aparença de la finestra.</p><p>- Creació de finestres noves. Comunicació entre finestres.</p><p></p><p>- Accés als membres del formulari.</p><p>- Modificació d’aparença i comportament.</p><p>- Validació i enviament de formularis.</p><p>- Expressions regulars.</p><p>- Utilització de galetes.</p><p>- Escriptura i lectura de galetes.</p><p>- Ús de frameworks. Desenrotllament ràpid d’aplicacions.</p></td>
+<td style="text-align: left;"><p>- Arbre de nodes</p><p>- Transformació d'HTML a DOM</p><p>- Diferències entre navegadors</p><p>- Tipus de nodes: Document, Element, attr, Text, Comment</p><p>- La interfície Node</p><p>- Accés als nodes: funcions</p><p><code></code>- GetElementsByName ()</p><p><code></code>- GetElementsByTagName ()</p><p><code></code>- GetElementsById ()</p><p>- Creació, manipulació i eliminació de nodes</p><p>- Accés als atributs</p><p>- Propietat innerHTML</p><p>- Model bàsic d'esdeveniments</p><p>- Tipus d'esdeveniments i elements</p><p>- Manejadors d'esdeveniments</p><p>- Com atributs XHTML</p><p>- Per mitjà de la variable this</p><p>- Com a funcions externes</p><p>- Manejadors semàntics</p><p>- Flux d'esdeveniments</p><p>- Event bubbling</p><p>- Event capturing</p><p>- Handlers i listeners</p><p>- L'objecte event</p><p>- Solucions cross-browser</p><p></p><p>- Introducció a BOM</p><p>- Interacció amb el navegador</p><p><code></code>- Objecte Window</p><p><code></code>- Objecte Document</p><p><code></code>- Objecte Location</p><p><code></code>- Objecte Navigation</p><p>- Objecte Screen</p><p></p><p>- Propietats bàsiques dels elements d'un formulari</p><p>- Esdeveniments a maneig de formularis</p><p><code></code>- Obtenció del valor d'un camp</p><p><code></code>- Establiment del focus</p><p><code></code>- Enviament correcte</p><p><code></code>- Restriccions</p><p><code></code>- Validació general</p><p><code></code>- Validació de camps de text</p><p><code></code>- Expressions regulars</p><p><code></code>- Validació de camps numèrics</p><p><code></code>- Validació de dates</p><p><code></code>- Validació de DNI</p><p><code></code>- Validar elements obligatoris, llistes i de selecció</p><p><code></code>- Noves etiquetes de tipus.</p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>UD3- Javascript: utilitats extra</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CONTINGUTS DOGV</strong></td>
+<td style="text-align: left;"><strong>CONTINGUTS ESPECÍFICS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>- Programació amb arrays, funcions i objectes definits per l’usuari:</p><p>-Funcions predefinides del llenguatge.</p><p>-Crides a funcions. Definició de funcions.</p><p>-Arrays.</p><p>-Inicialització d’arrays.</p><p>-Recorregut d’arrays.</p><p>-Creació d’objectes.</p><p>-Definició de mètodes i propietats.</p></td>
+<td style="text-align: left;"><p>- JSON</p><p><code></code>- Sintaxi</p><p><code></code>- Clave-valor</p><p><code></code>- Notació JSON i JSON pròpia de Javascript.</p><p><code></code>- Possibles valors.</p><p><code></code>- Accés a les dades.</p><p><code></code>- Tipus de dades.</p><p><code></code>- Parse()</p><p><code></code>- Convertir a text. Stringify()</p><p><code></code>- Objectes. Looping</p><p>- Arrays</p><p></p><p>- Geolocalització</p><p>- Data Storage</p><p>- Gestors de paquets npm, webpack, etc</p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>UD4- AJAX</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CONTINGUTS DOGV</strong></td>
+<td style="text-align: left;"><strong>CONTINGUTS ESPECÍFICS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>- Utilització de mecanismes de comunicació asíncrona:</p><p>-Mecanismes de comunicació asíncrona.</p><p>-Objectes, propietats i mètodes relacionats.</p><p>-Recuperació remota d’informació.</p><p>-Programació d’aplicacions amb comunicació asíncrona.</p><p>-Modificació dinàmica del document utilitzant comunicació asíncrona.</p><p>-Formats per a l’enviament i la recepció d’informació.</p><p>-Llibreries d’actualització dinàmica.</p><p>-Avantatges i inconvenients de l’ús de la comunicació asíncrona.</p></td>
+<td style="text-align: left;"><p>- Introducció a AJAX</p><p>- Tecnologies</p><p><code></code>- XHTML i CSS</p><p><code></code>- DOM</p><p><code></code>- Javascript</p><p><code></code>- JSON</p><p><code></code>- XML</p><p><code></code>- XMLHttpRequest</p><p>- La primera aplicació</p><p>- Objecte HMLHttpRequest</p><p><code></code>- Propietats</p><p><code></code>- Mètodes</p><p>- Processament de respostes</p><p><code></code>- Respostes tipus text</p><p><code></code>- Respostes HTML</p><p><code></code>- Respostes XML</p><p><code></code>- Respostes JSON</p><p><code></code>- Enviament de paràmetres al servidor</p><p><code></code>- Query string</p><p><code></code>- XML</p><p><code></code>- JSON</p><p>- Restriccions de seguretat</p><p>- El problema del cross-domain</p><p>- AJAX</p><p><code></code>- Amb promeses</p><p><code></code>- Amb fetch()</p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>UD5- VUE3</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CONTINGUTS DOGV</strong></td>
+<td style="text-align: left;"><strong>CONTINGUTS ESPECÍFICS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>- Selecció d'arquitectures i eines de programació:</p><p>- Maneig de la sintaxi del llenguatge:</p><p>- Utilització dels objectes predefinits del llenguatge:</p><p>- Programació amb arrays, funcions i objectes definits per l'usuari:</p><p>- Interacció amb l'usuari: esdeveniments i formularis:</p><p>- Utilització del model d'objectes del document (DOM):</p><p>- Utilització de mecanismes de comunicació asíncrona:</p></td>
+<td style="text-align: left;"><p>- VUE3</p><p>- Característiques i sintaxi</p><p>- Renderitzat.</p><p>- Components.</p><p>- Plantilles.</p><p>- Enrutament.</p><p>- Components en un sol arxiu.</p><p>- Desenvolupament d’aplicacions en VUE3</p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>UD13- Desenvolupament d’aplicacions API REST en VUE3</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CONTINGUTS DOGV</strong></td>
+<td style="text-align: left;"><strong>CONTINGUTS ESPECÍFICS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><p>- Selecció d'arquitectures i eines de programació:</p><p>- Maneig de la sintaxi del llenguatge:</p><p>- Utilització dels objectes predefinits del llenguatge:</p><p>- Programació amb arrays, funcions i objectes definits per l'usuari:</p><p>- Interacció amb l'usuari: esdeveniments i formularis:</p><p>- Utilització del model d'objectes del document (DOM):</p><p>- Utilització de mecanismes de comunicació asíncrona:</p></td>
+<td style="text-align: left;"><p>- Peticions</p><p>- GET</p><p>- POST</p><p>- PUT</p><p>- DELETE</p><p>- Representació de dades</p><p>- Router de VUE</p><p>- Vistes protegides</p><p>- Logins amb JWT</p><p>- Ionic (Aplicacions híbrides)</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>b) Distribució temporal de les unitats didàctiques</em></strong></p>
+<p>La duració d’aquest mòdul és de 140 hores, amb una distribució setmanal de 7 hores.</p>
+<p>La distribució temporal prevista per al desenvolupament d'aquestes unitats didàctiques és la següent:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Unitat Didàctica</strong></th>
+<th style="text-align: center;"><strong>Setmanes</strong></th>
+<th style="text-align: center;"><strong>Avaluació</strong></th>
+<th style="text-align: center;"><strong>Mes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">UD1- Eines de programació</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Sept</td>
+</tr>
+<tr>
+<td style="text-align: left;">UD2- Javascript: bases i fonaments</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Sept/Oct</td>
+</tr>
+<tr>
+<td style="text-align: left;">UD3- Javascript: interacció amb l’usuari</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Oct</td>
+</tr>
+<tr>
+<td style="text-align: left;">UD4- Javascript: utilitats extra</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Nov</td>
+</tr>
+<tr>
+<td style="text-align: left;">UD5- AJAX</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1/2</td>
+<td style="text-align: center;">Nov/Des</td>
+</tr>
+<tr>
+<td style="text-align: left;">UD6- VUE3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Des/Gen</td>
+</tr>
+<tr>
+<td style="text-align: left;">UD7- Aplicació API REST amb VUE3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Gener</td>
+</tr>
+<tr>
+<td style="text-align: left;">Total hores</td>
+<td style="text-align: center;"><strong>140h</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><code></code><strong>6. METODOLOGIA. ORIENTACIONS DIDÀCTIQUES</strong></p>
+<h2 id="b-metodologia-especifica-del-modul"><strong><em>b) Metodología específica del mòdul</em></strong></h2>
+<p>A l’inici del curs escolar, el professor realitzarà un presentació completa als alumnes del mòdul formatiu. Els alumnes han de saber des de l’inici del curs quins continguts van a impartir-se, la seua temporalització, com van a ser avaluats, com van a ser els examens i les proves avaluatives, que han de fer per a superar el mòdul i de quina forma poden recuperar aquelles parts no superades o la totalitat del mòdul si és el cas. També han de coneixer la metologia de treball, com van a ser les sessions a l’aula, normativa de comportament a classe, d’ús dels recursos materials, etc. </p>
+<p>Respectant les particularitats de cada unitat didàctica, a fet de descriure una metodologia general a desenvolupar a cada unitat, seguirem un orde com aquest.</p>
+<ul>
+<li>Explicació dels continguts teòrics, amb el suport d'apunts, presentacions, pissarra o projector. De cada concepte nou es tractarà d'explicar la utilitat i com realitzar-lo, i a més a més, s’intentarà mostrar exemples del seu ús al món real. És necessari que els alumnes troben la utilitat dels continguts nous que van descobrint per a motivar-se en el seu aprenentatge.</li>
+<li>Explicació pràctica dels procediments associats a aconseguir les distintes capacitats que es fixen com a objectiu. És a dir, els alumnes una vegada han aprés el concepte nou, han de saber utilitzar-lo, realitzar-lo, configurar-lo o programar-lo. </li>
+<li>Exercicis senzills que els alumnes hauran de resoldre.</li>
+<li>Explicació teorico-pràctica dels conceptes i tècniques més avançats.</li>
+<li>Exercicis de consolidament per a que resolguen els alumnes.</li>
+<li>Activitat pràctica puntuable, si escau en la unitat.</li>
+<li>Al final de cada trimestre es realitzarà un examen d'avaluació.</li>
+<li>Les tasques puntuables que ha de realitzar l'alumne consten d'activitats pràctiques, exercicis i problemes confeccionats pel professor, i que hauran de resoldre a l'aula, i entregar el resultat a través de la plataforma Aules.</li>
+<li>El material utilitzat en el curs seran apunts, presentacions, etc., que el professor posarà a disposició dels alumnes a través de la plataforma Aules sabor semipresencial. Aquest material està especificat en l'apartat de recursos.</li>
+<li>Els alumnes que tinguen dubtes i necessiten més temps de dedicació per part del professor ho podran fer a les tutories individuals.</li>
+</ul>
+<p><strong>7. AVALUACIÓ</strong></p>
+<p><strong><em>d) Criteris de qualificació</em></strong></p>
+<p>• La qualificació que l'alumne obtindrà en cada avaluació  s’obtindrà a partir del següent barem:</p>
+<ul>
+<li>Examen/s d'Avaluació: 30%</li>
+<li>Pràctiques de les unitats (ponderades) plataforma Aules 30%</li>
+<li>Projectes transversals a diverses unitats: 40%.</li>
+</ul>
+<p>Ací queda explicat amb més detall:</p>
+<p>Per a superar el curs cal tindre una nota global mínima de 5. La nota global es calcularà sumant la nota mitjana de cada avaluació (no la nota del butlletí) i dividint-la entre el número d’avaluacions.</p>
+<p>• Les Avaluacions es consideraran APROVADES si l'alumne obté una nota igual o superior a un 5.</p>
+<p>• A l’examen d’avaluació caldrà obtindre una nota mínima de 4 per a poder superar el mòdul.</p>
+<p>• Mitjana ponderada de les notes de cada una de les pràctiques que apareixen a la plataforma Aules com a tasques. Esta nota tindrà un pes del 30% de la nota. En la ponderació de la mitjana es tindrà en compte el nombre d’hores emprades així com la dificultat tècnica de la pràctica.</p>
+<p>• Hi haurà un projecte transversal per avaluació que suposarà un 40% de la nota. Cal tindre una nota mínima de 4 en aquest apartat per a superar el mòdul.</p>
+<p>• Les Avaluacions es consideraran APROVADES si l'alumne obté una nota igual o superior a un 5.</p>
+<p>• Entre 4 i 4.9, les avaluacions constaran com a Suspeses, però es podrà guardar la nota per a realitzar la mitja del Curs.</p>
+<p>• La nota definitiva del mòdul s'obtindrà a partir de la mitja de la nota de les Avaluacions, cadascuna haurà de ser igual o superiors a 4.</p>
+<p><strong><em>e) Recuperació d’Avaluacions</em></strong></p>
+<ul>
+<li>En cas de suspendre alguna avaluació, el professor proposarà treballs i/o Proves de Recuperació per aquells alumnes que no obtinguin la Nota mínima 5.</li>
+<li>Les Pràctiques entregades fora del termini estipulat tenen una penalització a la nota de manera que puntuaran com a 5 (apte) en cas que es considere que està superada.</li>
+<li>En cas de suspendre una avaluació concreta, l'alumne podrà anar a la convocatòria ordinària de final de curs. A aquesta prova, l'alumne podrà anar d’unitats o trimestres solts d'una UD, o bé a totes, depenent del que li indique el professor (serà funció del nombre de UD no superades). Així mateix per tal de considerar-se Apta l’alumne haurà de lliurar també els treballs i pràctiques pendents que el professor li indique.</li>
+<li>La convocatòria extraordinària constarà de proves que aglutinen totes les Unitats Didàctiques. Per tant, l'alumne ha de preparar-se tots els continguts del curs.</li>
+<li>Es proporcionarà un pla de recuperació per a aquells alumnes que no superen el curs a la convocatòria ordinària i hagen de presentar-se a la extraordinària.</li>
+</ul>
+<p><strong><em>DEPARTAMENT DE LA FAMÍLIA PROFESSIONAL D’INFORMÀTICA I COMUNICACIONS</em>    Pàg. 1 / 9</strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href="../presentaci%C3%B3/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Resum">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Resum
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-footer__link md-footer__link--next" aria-label="Següent: UD0 Eines de Programació">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                UD0 Eines de Programació
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright - Xuso Ortí - Professor Departament d'Informàtica IES Jaume II el Just (Tavernes de la Valldigna)
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.footer"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

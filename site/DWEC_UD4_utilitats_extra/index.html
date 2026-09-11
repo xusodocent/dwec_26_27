@@ -1,0 +1,2270 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>DWEC UD4 utilitats extra - DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#moduls-en-javascript" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-header__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DWEC UD4 utilitats extra
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../presentaci%C3%B3/" class="md-tabs__link">
+          
+  
+  Presentació
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-tabs__link">
+          
+  
+  UD0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-tabs__link">
+          
+  
+  UD1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD2_Javascript_DOM/" class="md-tabs__link">
+          
+  
+  UD2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-nav__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Presentació
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Presentació
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentaci%C3%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DAW2sp_DWEC_%2824-25%29_ANNEX_I/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programació didàctica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD0 Eines de Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Pr_Git2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD0 Pràctica Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Teoria
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_la_consola/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 La Consola
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_practicaJSbasic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica JS bàsic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_operadors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Operadors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codis extra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Codis extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_codis_extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_formularis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Formularis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Prac_formularis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Formularis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_exemples_extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Codis d'exemple
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#moduls-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mòduls en Javascript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mòduls en Javascript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-dun-modul" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'un Mòdul:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importacio-dun-modul" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importació d'un Mòdul:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-del-modul" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús del Mòdul:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cookies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emmagatzemar-una-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emmagatzemar una Cookie:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llegir-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Llegir Cookies:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar Cookies:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar Cookies:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restriccions-de-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restriccions de Cookies:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geolocalitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geolocalització
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geolocalització">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sollicitud-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sol·licitud de permisos:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtencio-de-la-ubicacio-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtenció de la ubicació actual:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualitzacio-de-ubicacio-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualització de ubicació contínua:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestio-derrors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestió d'errors:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requisits-de-seguretat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisits de seguretat:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-de-mapbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      API de Mapbox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API de Mapbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-compte-de-mapbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear un compte de Mapbox:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-el-mapbox-sdk-al-teu-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir el Mapbox SDK al teu projecte:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-contenidor-daplicacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear un contenidor d'aplicació:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicialitzar-el-mapa-amb-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicialitzar el mapa amb JavaScript:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personalitzar-el-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalitzar el mapa:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afegir-interaccio-i-funcionalitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Afegir interacció i funcionalitat:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template literals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicar-canvis-en-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicar canvis en arrays
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drag-and-drop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drag and drop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objectes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herència
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herència">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herencia-amb-prototips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herència amb Prototips:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herencia-amb-classes-es6-i-versions-posteriors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herència amb Classes (ES6 i versions posteriors):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>DWEC UD4 utilitats extra</h1>
+
+<h2 id="moduls-en-javascript">Mòduls en Javascript</h2>
+<div class="admonition info">
+<p class="admonition-title">Mòduls</p>
+<p>Els mòduls en JavaScript són una forma d'organitzar i reutilitzar el codi en diferents arxius. Són especialment útils en aplicacions grans o complexes on vols separar el codi en parts més petites i gestionables. </p>
+</div>
+<p>Per utilitzar mòduls en JavaScript, segueix aquesta guia:</p>
+<h3 id="creacio-dun-modul"><strong>Creació d'un Mòdul</strong>:</h3>
+<ul>
+<li>Defineix el teu mòdul en un fitxer JavaScript separat. Per exemple, pots tenir un fitxer anomenat <code>mimodul.js</code>.</li>
+</ul>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">mimodul.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// mimodul.js</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">export</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">funcioDelModul</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Això és una funció del mòdul.&quot;</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">unaVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">42</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En aquest exemple, hem exportat una funció i una variable del mòdul.</p>
+<h3 id="importacio-dun-modul"><strong>Importació d'un Mòdul</strong>:</h3>
+<ul>
+<li>Ara, pots importar aquest mòdul a un altre fitxer JavaScript on vulguis fer servir les funcions o variables definides al mòdul. Per fer-ho, utilitza la paraula clau <code>import</code>.</li>
+</ul>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">unaltrefitxer.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// unaltrefitxer.js</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">funcioDelModul</span><span class="p">,</span><span class="w"> </span><span class="nx">unaVariable</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./mimodul.js&#39;</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">funcioDelModul</span><span class="p">());</span><span class="w"> </span><span class="c1">// Això és una funció del mòdul.</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">unaVariable</span><span class="p">);</span><span class="w"> </span><span class="c1">// 42</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Assegura't que l'adreça del fitxer del mòdul sigui correcta, i utilitza l'extensió <code>.js</code> si cal. En aquest exemple, hem importat la funció <code>funcioDelModul</code> i la variable <code>unaVariable</code> des del mòdul <code>mimodul.js</code>.</p>
+<h3 id="us-del-modul"><strong>Ús del Mòdul</strong>:</h3>
+<ul>
+<li>Ara pots fer servir les funcions i les variables importades dins del fitxer que has fet la importació, tal com es mostra a l'exemple anterior. Això et permet utilitzar funcions i dades del mòdul en altres parts de la teva aplicació.</li>
+</ul>
+<p>Els mòduls són una característica estàndard a partir d'ECMAScript 6 (ES6) i són compatibles amb molts navegadors moderns i entorns de desenvolupament. Això et permet organitzar i estructurar el teu codi de manera més eficaç i fàcil de mantenir.</p>
+<h2 id="local-storage">Local Storage</h2>
+<p>El Local Storage és una característica de l'emmagatzematge web en JavaScript que permet emmagatzemar dades en el navegador web d'un usuari de manera persistent. Aquesta emmagatzematge és similar a les cookies, però amb algunes diferències claus:</p>
+<ul>
+<li>
+<p><strong>Capacitat</strong>: El Local Storage té una capacitat més gran que les cookies, permetent emmagatzemar més dades (generalment fins a 5-10 MB per domini, encara que això pot variar entre navegadors).</p>
+</li>
+<li>
+<p><strong>Persistència</strong>: Les dades emmagatzemades al Local Storage romanen en el navegador després de tancar-lo i reiniciar-lo. Les cookies poden tenir una data d'expiració.</p>
+</li>
+<li>
+<p><strong>Seguretat</strong>: Les dades del Local Storage no s'envien al servidor en cada sol·licitud HTTP, cosa que succeeix amb les cookies. Això pot ser més segur per a les dades de l'usuari, ja que no es comparteixen constantment amb el servidor.</p>
+</li>
+</ul>
+<p>Per emmagatzemar dades al Local Storage, pots utilitzar les següents funcions en JavaScript:</p>
+<ul>
+<li>
+<p><code>localStorage.setItem(key, value)</code>: Aquesta funció permet emmagatzemar un valor associat a una clau. La clau és una cadena i el valor pot ser qualsevol dada JavaScript vàlida (generalment una cadena).</p>
+</li>
+<li>
+<p><code>localStorage.getItem(key)</code>: Aquesta funció permet recuperar el valor emmagatzemat associat a una clau específica.</p>
+</li>
+<li>
+<p><code>localStorage.removeItem(key)</code>: Aquesta funció elimina una entrada emmagatzemada a partir de la seva clau.</p>
+</li>
+</ul>
+<p>Per exemple:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span>
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Emmagatzemar un valor</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;nom&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">// Recuperar un valor</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">var</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;nom&#39;</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nom</span><span class="p">);</span><span class="w"> </span><span class="c1">// John</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="c1">// Eliminar un valor</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;nom&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<p>El Local Storage és útil per emmagatzemar dades com configuracions de l'usuari, preferències, estadístiques i altres dades que vulguis mantenir localment en el navegador. No obstant això, has de ser conscient que les dades del Local Storage són accessibles des de JavaScript en la mateixa pàgina web, pel que no és el lloc adequat per emmagatzemar dades sensibles o privades.</p>
+<h2 id="cookies">Cookies</h2>
+<div class="admonition note">
+<p class="admonition-title">Les cookies</p>
+<p>Les cookies són petites peces de dades que es poden emmagatzemar en el navegador d'un usuari i que s'envien al servidor amb cada sol·licitud HTTP. Aquestes són àmpliament utilitzades en desenvolupament web per emmagatzemar informació i estat en el costat del client. Les cookies es poden utilitzar en JavaScript mitjançant l'objecte <code>document.cookie</code>. </p>
+</div>
+<p>Aquí tens una descripció bàsica de com funcionen les cookies:</p>
+<h3 id="emmagatzemar-una-cookie"><strong>Emmagatzemar una Cookie</strong>:</h3>
+<p>Per emmagatzemar una cookie des de JavaScript, has d'assignar un valor a <code>document.cookie</code>. El valor ha de ser una cadena en el format "nom=valor". Pots afegir tantes cookies com vulguis, separant-les per punts i coma.</p>
+<p>Exemple:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;usuari=John&quot;</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;preferencia=color=blau&quot;</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="llegir-cookies"><strong>Llegir Cookies</strong>:</h3>
+<p>Per llegir les cookies existents, pots accedir a <code>document.cookie</code> i obtenir la cadena de totes les cookies com una llista separada per punts i coma. Després, pots dividir aquesta cadena per aconseguir els valors individuals.</p>
+<p>Exemple:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">totesLesCookies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">cookiesSeparades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">totesLesCookies</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;; &#39;</span><span class="p">);</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">cookiesSeparades</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cookiesSeparades</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="p">[</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cookie</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">);</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">valor</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="modificar-cookies"><strong>Modificar Cookies</strong>:</h3>
+<p>Per modificar una cookie existent, simplement reassigna el seu valor mitjançant <code>document.cookie</code>. És important tenir en compte que si vols modificar una cookie, has de proporcionar totes les seves propietats (nom, valor, data d'expiració, etc.) de nou, ja que aquesta assignació reemplaçarà completament la cookie existent.</p>
+<p>Exemple:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;usuari=NouValor; expires=Thu, 01 Jan 2099 00:00:00 UTC&quot;</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="eliminar-cookies"><strong>Eliminar Cookies</strong>:</h3>
+<p>Per eliminar una cookie, assigna-li una data d'expiració que sigui anterior a la data i hora actual. Això fa que la cookie sigui invàlida i s'eliminarà.</p>
+<p>Exemple:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;usuari=; expires=Thu, 01 Jan 1970 00:00:00 UTC&quot;</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="restriccions-de-cookies"><strong>Restriccions de Cookies</strong>:</h3>
+<p>Les cookies estan subjectes a diverses restriccions de seguretat i privadesa. Les cookies només poden ser llegides pel mateix domini que les va crear i estan limitades en capacitat. També has de tenir en compte les preferències de privadesa de l'usuari.</p>
+<p>En resum, les cookies són una manera de persistir dades al navegador de l'usuari i enviar-les de tornada al servidor amb cada sol·licitud HTTP. Malgrat ser ampliament utilitzades, és important tenir en compte les restriccions de seguretat i privadesa quan les utilitzis. Moltes vegades, es fan servir altres mètodes més segurs i eficaços per a emmagatzemar dades al costat del client, com el Local Storage o les Web Storage API.</p>
+<h2 id="geolocalitzacio">Geolocalització</h2>
+<p>La API de geolocalització en JavaScript proporciona una forma d'accedir a la ubicació del dispositiu des del navegador. Això permet a les aplicacions web obtenir la ubicació de l'usuari, cosa que és útil per a una varietat de casos d'ús, com serveis de mapes, recomanacions basades en la ubicació i molt més. Aquí et explico com funciona:</p>
+<h3 id="sollicitud-de-permisos"><strong>Sol·licitud de permisos</strong>:</h3>
+<p>Abans d'accedir a la ubicació de l'usuari, has de sol·licitar el seu permís. Els navegadors moderns demanen permís a l'usuari abans de proporcionar la ubicació. Pots fer-ho utilitzant la funció <code>navigator.geolocation.getCurrentPosition</code> o <code>navigator.geolocation.watchPosition</code>.</p>
+<h3 id="obtencio-de-la-ubicacio-actual"><strong>Obtenció de la ubicació actual</strong>:</h3>
+<p>Per obtenir la ubicació actual, pots utilitzar <code>navigator.geolocation.getCurrentPosition</code>. Aquí tens un exemple:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">latitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Latitud: </span><span class="si">${</span><span class="nx">latitud</span><span class="si">}</span><span class="sb">, Longitud: </span><span class="si">${</span><span class="nx">longitud</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">});</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Aquesta funció pren una funció de devolució de trucada que s'executarà un cop s'obtingui la ubicació. Les dades de la ubicació es passen com a arguments a la funció de devolució de trucada.</p>
+<h3 id="actualitzacio-de-ubicacio-continua"><strong>Actualització de ubicació contínua</strong>:</h3>
+<p>Pots utilitzar <code>navigator.geolocation.watchPosition</code> si necessites seguir la ubicació de l'usuari en temps real. Aquesta funció també pren una funció de devolució de trucada i s'executarà cada cop que s'actualitzi la ubicació de l'usuari.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">watchId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">latitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Latitud: </span><span class="si">${</span><span class="nx">latitud</span><span class="si">}</span><span class="sb">, Longitud: </span><span class="si">${</span><span class="nx">longitud</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">});</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Pots aturar el seguiment de la ubicació utilitzant <code>navigator.geolocation.clearWatch(watchId)</code>.</p>
+<h3 id="gestio-derrors"><strong>Gestió d'errors</strong>:</h3>
+<p>Tingues en compte que l'obtenció de la ubicació de l'usuari pot no estar sempre disponible, i és important gestionar els possibles errors. La funció de devolució de trucada també pot rebre un objecte <code>PositionError</code> que descriu qualsevol error que ocorri.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="c1">// Èxit</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">},</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">PERMISSION_DENIED</span><span class="o">:</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;L&#39;usuari ha denegat el permís de ubicació.&quot;</span><span class="p">);</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">POSITION_UNAVAILABLE</span><span class="o">:</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;La ubicació no està disponible.&quot;</span><span class="p">);</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">TIMEOUT</span><span class="o">:</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Temps d&#39;espera exhaurit en intentar obtenir la ubicació.&quot;</span><span class="p">);</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">UNKNOWN_ERROR</span><span class="o">:</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;S&#39;ha produït un error desconegut.&quot;</span><span class="p">);</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="p">});</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="requisits-de-seguretat"><strong>Requisits de seguretat</strong>:</h3>
+<p>És important destacar que, per utilitzar la API de geolocalització, el teu lloc web ha d'oferir-se a través de HTTPS en la majoria dels navegadors moderns. A més, tingues en compte la privadesa de l'usuari i sol·licita permís abans d'accedir a la seva ubicació.</p>
+<p>La API de geolocalització en JavaScript proporciona una forma potent d'accedir a la ubicació de l'usuari, però també requereix responsabilitat i consideració de la privadesa de l'usuari.</p>
+<h2 id="api-de-mapbox">API de Mapbox</h2>
+<p>Mapbox és una plataforma de mapes que ofereix una API rica per a la visualització de mapes personalitzats en aplicacions web i mòbils. Per utilitzar la API de Mapbox, has de seguir aquestes passes bàsiques:</p>
+<h3 id="crear-un-compte-de-mapbox"><strong>Crear un compte de Mapbox</strong>:</h3>
+<p>Abans de començar, hauràs de registrar-te a Mapbox i obtenir un access token, que serà necessari per autenticar-te quan facis sol·licituds a la seva API. Pots obtenir un access token a través del lloc web de Mapbox.</p>
+<h3 id="afegir-el-mapbox-sdk-al-teu-projecte"><strong>Afegir el Mapbox SDK al teu projecte</strong>:</h3>
+<p>Si estàs desenvolupant una aplicació web, hauràs d'afegir el SDK de Mapbox al teu projecte. Mapbox ofereix biblioteques JavaScript per a aquest propòsit. Pots incloure aquestes biblioteques al teu projecte utilitzant un gestor de paquets com npm o afegint una etiqueta de script directament al teu HTML.</p>
+<p>Exemple d'inclusió de la biblioteca JavaScript de Mapbox a través de CDN:</p>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="crear-un-contenidor-daplicacio"><strong>Crear un contenidor d'aplicació</strong>:</h3>
+<p>Mapbox utilitza un contenidor HTML per a la visualització del mapa. Hauràs d'afegir un element HTML, com un div, al teu document HTML que servirà com a contenidor del mapa.</p>
+<p>Exemple d'un div de contenidor:</p>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#39;width: 100%; height: 400px;&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="inicialitzar-el-mapa-amb-javascript"><strong>Inicialitzar el mapa amb JavaScript</strong>:</h3>
+<p>Amb el SDK de Mapbox inclòs al teu projecte, pots inicialitzar i configurar el mapa amb JavaScript. Has d'utilitzar el teu access token per autenticar-te.</p>
+<p>Exemple de com inicialitzar el mapa:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;YOUR_ACCESS_TOKEN&#39;</span><span class="p">;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// ID de l&#39;element HTML que actua com a contenidor</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/streets-v11&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Estil del mapa</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mf">74.5</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">],</span><span class="w"> </span><span class="c1">// Coordenades centrals</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="c1">// Nivell de zoom</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="p">});</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="personalitzar-el-mapa"><strong>Personalitzar el mapa</strong>:</h3>
+<p>Pots personalitzar el mapa de Mapbox afegint capes, punts d'interès, rutes i moltes altres característiques utilitzant les funcions proporcionades pel SDK de Mapbox.</p>
+<h3 id="afegir-interaccio-i-funcionalitat"><strong>Afegir interacció i funcionalitat</strong>:</h3>
+<p>Pots afegir interacció a través d'events, com ara clics, moviments del ratolí i molts altres. També pots afegir funcionalitats com ara geocodificació i direccions mitjançant les API de Mapbox.</p>
+<p>Mapbox ofereix una ampla documentació i recursos en línia per a ajudar-te a aprofundir en la seva API i crear mapes personalitzats per a les teves aplicacions. També ofereix l'ús de Mapbox Studio per a dissenyar estils de mapes personalitzats.</p>
+<h2 id="template-literals">Template literals</h2>
+<p>En JavaScript, els "template literals" (o plantilles literals) són una característica introduïda amb ECMAScript 6 (ES6) que permeten crear cadenes de text de manera més concisa i amb funcionalitats addicionals. Utilitzen la sintaxi de cometes invertides (``) en lloc de les cometes simples o dobles.</p>
+<p>Aquí tens un exemple bàsic d'ús de template literals:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="c1">// Utilització de template literals</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">missatge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Hola, el meu nom és </span><span class="si">${</span><span class="nx">nom</span><span class="si">}</span><span class="sb"> i tinc </span><span class="si">${</span><span class="nx">edat</span><span class="si">}</span><span class="sb"> anys.`</span><span class="p">;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">missatge</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En aquest exemple, la cadena de text està envoltada per cometes invertides, i les variables es poden integrar directament dins la cadena utilitzant <code>${variable}</code>. Això fa que sigui més llegible i convenient que la concatenació tradicional de cadenes o l'ús de l'operador <code>+</code>.</p>
+<p>Les avantatges principals dels template literals inclouen:</p>
+<ol>
+<li>
+<p><strong>Interpolació de variables:</strong> Les variables es poden afegir fàcilment a la cadena sense necessitat d'operadors de concatenació.</p>
+</li>
+<li>
+<p><strong>Suport per expressions:</strong> Pots incrustar expressions dins les plantilles literals, no només variables. Aquestes expressions són avaluades i incrustades a la cadena.</p>
+</li>
+</ol>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`La suma de </span><span class="si">${</span><span class="nx">a</span><span class="si">}</span><span class="sb"> i </span><span class="si">${</span><span class="nx">b</span><span class="si">}</span><span class="sb"> és </span><span class="si">${</span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultat</span><span class="p">);</span><span class="w"> </span><span class="c1">// La suma de 5 i 10 és 15.</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li><strong>Multilínia:</strong> Pots crear cadenes multilínia sense necessitat de concatenar múltiples cadenes o utilitzar caràcters d'escapament.</li>
+</ol>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">multilinea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="sb">Línia 1</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="sb">Línia 2</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="sb">Línia 3</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="sb">`</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En resum, els template literals són una forma més elegant i versàtil de treballar amb cadenes de text a JavaScript, especialment quan es necessita incorporar variables o expressions dins les cadenes.</p>
+<h2 id="aplicar-canvis-en-arrays">Aplicar canvis en <code>arrays</code></h2>
+<div class="admonition note">
+<p class="admonition-title">Funció map()</p>
+<p>La funció <code>map</code> en JavaScript és un mètode que es pot utilitzar en arrays per iterar sobre cada element i aplicar una funció proporcionada a cada element de l'array original, creant així un nou array amb els resultats de les crides a aquesta funció.</p>
+</div>
+<p>La signatura de la funció <code>map</code> és la següent:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">callback</span><span class="p">(</span><span class="nx">currentValue</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">),</span><span class="w"> </span><span class="nx">thisArg</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li><code>callback</code>: Funció que es crida per cada element de l'array, amb tres arguments:</li>
+<li><code>currentValue</code>: Valor de l'element actual de l'array.</li>
+<li><code>index</code>: Índex de l'element actual.</li>
+<li><code>array</code>: L'array que està sent iterat.</li>
+<li><code>thisArg</code> (opcional): Valor per a utilitzar com a "this" al executar la funció de retorn.</li>
+</ul>
+<p>Aquí tens un exemple senzill de com funciona la funció <code>map</code>:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span>
+<span class="normal"><a href="#__codelineno-17-6">6</a></span>
+<span class="normal"><a href="#__codelineno-17-7">7</a></span>
+<span class="normal"><a href="#__codelineno-17-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="c1">// Utilitzant map per duplicar cada element de l&#39;array</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">duplicats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombres</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="p">});</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7"></a>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">duplicats</span><span class="p">);</span><span class="w"> </span><span class="c1">// Resultat: [2, 4, 6, 8, 10]</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En aquest exemple, la funció passada com a argument a <code>map</code> duplica cada element de l'array original. El resultat es guarda en un nou array (<code>duplicats</code>), sense modificar l'array original (<code>nombres</code>).</p>
+<p><code>map</code> és útil quan vols transformar cada element d'un array sense modificar l'array original. També facilita la lectura i el manteniment del codi en comparació amb l'ús de bucles for.</p>
+<h2 id="drag-and-drop">Drag and drop</h2>
+<div class="admonition note">
+<p class="admonition-title">Arrastra i solta</p>
+<p>El "drag and drop" (arrossega i deixa anar) en JavaScript és una funcionalitat que permet als usuaris agafar elements HTML i arrossegar-los a una altra ubicació de la pàgina web o interactuar amb ells de manera dinàmica. </p>
+</div>
+<p>Aquesta característica es pot implementar mitjançant una combinació d'events i mètodes proporcionats pel model d'objectes del document (DOM) de JavaScript.</p>
+<p>Aquí tens un exemple senzill d'arrossega i deixa anar amb JavaScript:</p>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span>
+<span class="normal"><a href="#__codelineno-18-13">13</a></span>
+<span class="normal"><a href="#__codelineno-18-14">14</a></span>
+<span class="normal"><a href="#__codelineno-18-15">15</a></span>
+<span class="normal"><a href="#__codelineno-18-16">16</a></span>
+<span class="normal"><a href="#__codelineno-18-17">17</a></span>
+<span class="normal"><a href="#__codelineno-18-18">18</a></span>
+<span class="normal"><a href="#__codelineno-18-19">19</a></span>
+<span class="normal"><a href="#__codelineno-18-20">20</a></span>
+<span class="normal"><a href="#__codelineno-18-21">21</a></span>
+<span class="normal"><a href="#__codelineno-18-22">22</a></span>
+<span class="normal"><a href="#__codelineno-18-23">23</a></span>
+<span class="normal"><a href="#__codelineno-18-24">24</a></span>
+<span class="normal"><a href="#__codelineno-18-25">25</a></span>
+<span class="normal"><a href="#__codelineno-18-26">26</a></span>
+<span class="normal"><a href="#__codelineno-18-27">27</a></span>
+<span class="normal"><a href="#__codelineno-18-28">28</a></span>
+<span class="normal"><a href="#__codelineno-18-29">29</a></span>
+<span class="normal"><a href="#__codelineno-18-30">30</a></span>
+<span class="normal"><a href="#__codelineno-18-31">31</a></span>
+<span class="normal"><a href="#__codelineno-18-32">32</a></span>
+<span class="normal"><a href="#__codelineno-18-33">33</a></span>
+<span class="normal"><a href="#__codelineno-18-34">34</a></span>
+<span class="normal"><a href="#__codelineno-18-35">35</a></span>
+<span class="normal"><a href="#__codelineno-18-36">36</a></span>
+<span class="normal"><a href="#__codelineno-18-37">37</a></span>
+<span class="normal"><a href="#__codelineno-18-38">38</a></span>
+<span class="normal"><a href="#__codelineno-18-39">39</a></span>
+<span class="normal"><a href="#__codelineno-18-40">40</a></span>
+<span class="normal"><a href="#__codelineno-18-41">41</a></span>
+<span class="normal"><a href="#__codelineno-18-42">42</a></span>
+<span class="normal"><a href="#__codelineno-18-43">43</a></span>
+<span class="normal"><a href="#__codelineno-18-44">44</a></span>
+<span class="normal"><a href="#__codelineno-18-45">45</a></span>
+<span class="normal"><a href="#__codelineno-18-46">46</a></span>
+<span class="normal"><a href="#__codelineno-18-47">47</a></span>
+<span class="normal"><a href="#__codelineno-18-48">48</a></span>
+<span class="normal"><a href="#__codelineno-18-49">49</a></span>
+<span class="normal"><a href="#__codelineno-18-50">50</a></span>
+<span class="normal"><a href="#__codelineno-18-51">51</a></span>
+<span class="normal"><a href="#__codelineno-18-52">52</a></span>
+<span class="normal"><a href="#__codelineno-18-53">53</a></span>
+<span class="normal"><a href="#__codelineno-18-54">54</a></span>
+<span class="normal"><a href="#__codelineno-18-55">55</a></span>
+<span class="normal"><a href="#__codelineno-18-56">56</a></span>
+<span class="normal"><a href="#__codelineno-18-57">57</a></span>
+<span class="normal"><a href="#__codelineno-18-58">58</a></span>
+<span class="normal"><a href="#__codelineno-18-59">59</a></span>
+<span class="normal"><a href="#__codelineno-18-60">60</a></span>
+<span class="normal"><a href="#__codelineno-18-61">61</a></span>
+<span class="normal"><a href="#__codelineno-18-62">62</a></span>
+<span class="normal"><a href="#__codelineno-18-63">63</a></span>
+<span class="normal"><a href="#__codelineno-18-64">64</a></span>
+<span class="normal"><a href="#__codelineno-18-65">65</a></span>
+<span class="normal"><a href="#__codelineno-18-66">66</a></span>
+<span class="normal"><a href="#__codelineno-18-67">67</a></span>
+<span class="normal"><a href="#__codelineno-18-68">68</a></span>
+<span class="normal"><a href="#__codelineno-18-69">69</a></span>
+<span class="normal"><a href="#__codelineno-18-70">70</a></span>
+<span class="normal"><a href="#__codelineno-18-71">71</a></span>
+<span class="normal"><a href="#__codelineno-18-72">72</a></span>
+<span class="normal"><a href="#__codelineno-18-73">73</a></span>
+<span class="normal"><a href="#__codelineno-18-74">74</a></span>
+<span class="normal"><a href="#__codelineno-18-75">75</a></span>
+<span class="normal"><a href="#__codelineno-18-76">76</a></span>
+<span class="normal"><a href="#__codelineno-18-77">77</a></span>
+<span class="normal"><a href="#__codelineno-18-78">78</a></span>
+<span class="normal"><a href="#__codelineno-18-79">79</a></span>
+<span class="normal"><a href="#__codelineno-18-80">80</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Drag and Drop Exemple<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8"></a>    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">        </span><span class="p">.</span><span class="nc">draggable</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#3498db</span><span class="p">;</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="w">            </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15"></a><span class="w">            </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16"></a><span class="w">            </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">move</span><span class="p">;</span>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17"></a>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19"></a>
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20"></a><span class="w">        </span><span class="p">.</span><span class="nc">dropzone</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22"></a><span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23"></a><span class="w">            </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">dashed</span><span class="w"> </span><span class="mh">#2ecc71</span><span class="p">;</span>
+</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24"></a>
+</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-18-26"><a id="__codelineno-18-26" name="__codelineno-18-26"></a>
+</span><span id="__span-18-27"><a id="__codelineno-18-27" name="__codelineno-18-27"></a><span class="w">        </span><span class="p">.</span><span class="nc">contenidor</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-28"><a id="__codelineno-18-28" name="__codelineno-18-28"></a><span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+</span><span id="__span-18-29"><a id="__codelineno-18-29" name="__codelineno-18-29"></a><span class="w">            </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+</span><span id="__span-18-30"><a id="__codelineno-18-30" name="__codelineno-18-30"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-18-31"><a id="__codelineno-18-31" name="__codelineno-18-31"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span><span id="__span-18-32"><a id="__codelineno-18-32" name="__codelineno-18-32"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-18-33"><a id="__codelineno-18-33" name="__codelineno-18-33"></a>
+</span><span id="__span-18-34"><a id="__codelineno-18-34" name="__codelineno-18-34"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-18-35"><a id="__codelineno-18-35" name="__codelineno-18-35"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;contenidor&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-18-36"><a id="__codelineno-18-36" name="__codelineno-18-36"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;draggableElement&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;draggable&quot;</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-18-37"><a id="__codelineno-18-37" name="__codelineno-18-37"></a>            Arrossega&#39;m!
+</span><span id="__span-18-38"><a id="__codelineno-18-38" name="__codelineno-18-38"></a>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-18-39"><a id="__codelineno-18-39" name="__codelineno-18-39"></a>        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span><span id="__span-18-40"><a id="__codelineno-18-40" name="__codelineno-18-40"></a>
+</span><span id="__span-18-41"><a id="__codelineno-18-41" name="__codelineno-18-41"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;dropzone&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;dropzone&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-18-42"><a id="__codelineno-18-42" name="__codelineno-18-42"></a>            Deixa anar aquí
+</span><span id="__span-18-43"><a id="__codelineno-18-43" name="__codelineno-18-43"></a>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-18-44"><a id="__codelineno-18-44" name="__codelineno-18-44"></a>
+</span><span id="__span-18-45"><a id="__codelineno-18-45" name="__codelineno-18-45"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-18-46"><a id="__codelineno-18-46" name="__codelineno-18-46"></a>
+</span><span id="__span-18-47"><a id="__codelineno-18-47" name="__codelineno-18-47"></a>
+</span><span id="__span-18-48"><a id="__codelineno-18-48" name="__codelineno-18-48"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-18-49"><a id="__codelineno-18-49" name="__codelineno-18-49"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">draggableElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;draggableElement&#39;</span><span class="p">);</span>
+</span><span id="__span-18-50"><a id="__codelineno-18-50" name="__codelineno-18-50"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">dropzone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;dropzone&#39;</span><span class="p">);</span>
+</span><span id="__span-18-51"><a id="__codelineno-18-51" name="__codelineno-18-51"></a>
+</span><span id="__span-18-52"><a id="__codelineno-18-52" name="__codelineno-18-52"></a><span class="w">        </span><span class="c1">// Event listener per iniciar l&#39;arrossega</span>
+</span><span id="__span-18-53"><a id="__codelineno-18-53" name="__codelineno-18-53"></a><span class="w">        </span><span class="nx">draggableElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;dragstart&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-54"><a id="__codelineno-18-54" name="__codelineno-18-54"></a><span class="w">            </span><span class="c1">// Guardar l&#39;identificador de l&#39;element arrossegat</span>
+</span><span id="__span-18-55"><a id="__codelineno-18-55" name="__codelineno-18-55"></a><span class="w">            </span><span class="nx">event</span><span class="p">.</span><span class="nx">dataTransfer</span><span class="p">.</span><span class="nx">setData</span><span class="p">(</span><span class="s1">&#39;text/plain&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">draggableElement</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span><span id="__span-18-56"><a id="__codelineno-18-56" name="__codelineno-18-56"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-18-57"><a id="__codelineno-18-57" name="__codelineno-18-57"></a>
+</span><span id="__span-18-58"><a id="__codelineno-18-58" name="__codelineno-18-58"></a><span class="w">        </span><span class="c1">// Event listener per permetre el soltar</span>
+</span><span id="__span-18-59"><a id="__codelineno-18-59" name="__codelineno-18-59"></a><span class="w">        </span><span class="nx">dropzone</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;dragover&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-60"><a id="__codelineno-18-60" name="__codelineno-18-60"></a><span class="w">            </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"> </span><span class="c1">// Prevenir el comportament per defecte que impedeix el soltar</span>
+</span><span id="__span-18-61"><a id="__codelineno-18-61" name="__codelineno-18-61"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-18-62"><a id="__codelineno-18-62" name="__codelineno-18-62"></a>
+</span><span id="__span-18-63"><a id="__codelineno-18-63" name="__codelineno-18-63"></a><span class="w">        </span><span class="c1">// Event listener per gestionar el soltar</span>
+</span><span id="__span-18-64"><a id="__codelineno-18-64" name="__codelineno-18-64"></a><span class="w">        </span><span class="nx">dropzone</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;drop&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-65"><a id="__codelineno-18-65" name="__codelineno-18-65"></a><span class="w">            </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"> </span><span class="c1">// Prevenir el comportament per defecte que impedeix el soltar</span>
+</span><span id="__span-18-66"><a id="__codelineno-18-66" name="__codelineno-18-66"></a>
+</span><span id="__span-18-67"><a id="__codelineno-18-67" name="__codelineno-18-67"></a><span class="w">            </span><span class="c1">// Obtindre l&#39;identificador de l&#39;element arrossegat</span>
+</span><span id="__span-18-68"><a id="__codelineno-18-68" name="__codelineno-18-68"></a><span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">draggedElementId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">dataTransfer</span><span class="p">.</span><span class="nx">getData</span><span class="p">(</span><span class="s1">&#39;text/plain&#39;</span><span class="p">);</span>
+</span><span id="__span-18-69"><a id="__codelineno-18-69" name="__codelineno-18-69"></a>
+</span><span id="__span-18-70"><a id="__codelineno-18-70" name="__codelineno-18-70"></a><span class="w">            </span><span class="c1">// Obtindre l&#39;element arrossegat</span>
+</span><span id="__span-18-71"><a id="__codelineno-18-71" name="__codelineno-18-71"></a><span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">draggedElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">draggedElementId</span><span class="p">);</span>
+</span><span id="__span-18-72"><a id="__codelineno-18-72" name="__codelineno-18-72"></a>
+</span><span id="__span-18-73"><a id="__codelineno-18-73" name="__codelineno-18-73"></a><span class="w">            </span><span class="c1">// Afegir l&#39;element arrossegat a la dropzone</span>
+</span><span id="__span-18-74"><a id="__codelineno-18-74" name="__codelineno-18-74"></a><span class="w">            </span><span class="nx">dropzone</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">draggedElement</span><span class="p">);</span>
+</span><span id="__span-18-75"><a id="__codelineno-18-75" name="__codelineno-18-75"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-18-76"><a id="__codelineno-18-76" name="__codelineno-18-76"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-18-77"><a id="__codelineno-18-77" name="__codelineno-18-77"></a>
+</span><span id="__span-18-78"><a id="__codelineno-18-78" name="__codelineno-18-78"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-18-79"><a id="__codelineno-18-79" name="__codelineno-18-79"></a>
+</span><span id="__span-18-80"><a id="__codelineno-18-80" name="__codelineno-18-80"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En aquest exemple, hi ha dos elements: un element arrossegable (amb l'ID "draggableElement") i una zona de soltar (amb l'ID "dropzone"). Quan l'usuari arrossega l'element, es dispara l'event <code>dragstart</code>, i quan l'usuari deixa anar l'element a la zona de soltar, es dispara l'event <code>drop</code>. L'element arrossegat es mou a la zona de soltar.</p>
+<h2 id="objectes">Objectes</h2>
+<h3 id="creacio">Creació</h3>
+<p>En JavaScript, es poden crear objectes de diverses maneres. Aquí tens algunes de les maneres més comunes de crear objectes:</p>
+<ol>
+<li><strong>Object Literal (Literals d'objecte):</strong>
+   És la forma més simple i comuna de crear un objecte. Utilitza la notació d'objecte literal, que consisteix en col·locar parells de claus i valors entre les claus.</li>
+</ol>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">,</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">  </span><span class="nx">edat</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">  </span><span class="nx">ciutat</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Barcelona&#39;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li><strong>Constructor de l'Objecte:</strong>
+   Pots utilitzar un constructor d'objectes per crear instàncies d'objectes. El constructor és una funció que actua com a plantilla per a la creació d'objectes.</li>
+</ol>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Persona</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">edat</span><span class="p">,</span><span class="w"> </span><span class="nx">ciutat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nom</span><span class="p">;</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edat</span><span class="p">;</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">ciutat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ciutat</span><span class="p">;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="p">}</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">persona1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Persona</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Barcelona&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li><strong>Object.create:</strong>
+   <code>Object.create</code> crea un nou objecte amb el prototip d'un objecte existent.</li>
+</ol>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span>
+<span class="normal"><a href="#__codelineno-21-6">6</a></span>
+<span class="normal"><a href="#__codelineno-21-7">7</a></span>
+<span class="normal"><a href="#__codelineno-21-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">personaPrototip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">  </span><span class="nx">saluda</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, el meu nom és </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">.`</span><span class="p">);</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="p">};</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6"></a>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">persona2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">personaPrototip</span><span class="p">);</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="nx">persona2</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li><strong>Classes (ES6 i versions posteriors):</strong>
+   A partir d'ECMAScript 6, es va introduir la paraula clau <code>class</code> per facilitar la creació de classes i instàncies d'objectes.</li>
+</ol>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span>
+<span class="normal"><a href="#__codelineno-22-11">11</a></span>
+<span class="normal"><a href="#__codelineno-22-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">tipus</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nom</span><span class="p">;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">tipus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tipus</span><span class="p">;</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">  </span><span class="nx">ferSo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Fent un so&#39;</span><span class="p">);</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="p">}</span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11"></a>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="kd">const</span><span class="w"> </span><span class="nx">gos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Animal</span><span class="p">(</span><span class="s1">&#39;Firulais&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gos&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li><strong>Funció Factoria:</strong>
+   Les funcions factoria són funcions que retornen objectes. Són útils per a la creació d'objectes en situacions més complexes o dinàmiques.</li>
+</ol>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">creaPersona</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">edat</span><span class="p">,</span><span class="w"> </span><span class="nx">ciutat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">    </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">nom</span><span class="p">,</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="nx">edat</span><span class="o">:</span><span class="w"> </span><span class="nx">edat</span><span class="p">,</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">    </span><span class="nx">ciutat</span><span class="o">:</span><span class="w"> </span><span class="nx">ciutat</span><span class="p">,</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">    </span><span class="nx">saluda</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, el meu nom és </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">.`</span><span class="p">);</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="p">}</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11"></a>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="kd">const</span><span class="w"> </span><span class="nx">persona3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">creaPersona</span><span class="p">(</span><span class="s1">&#39;Maria&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Madrid&#39;</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Cada mètode té els seus avantatges i ús específic. L'elecció depèn del context i del que es vol aconseguir amb l'objecte.</p>
+<h3 id="herencia">Herència</h3>
+<p>En JavaScript, l'herència es realitza mitjançant els prototips. Cada objecte té un prototip, i els objectes poden heretar propietats i mètodes del seu prototip. A continuació, et mostraré com funciona l'herència en JavaScript utilitzant els prototips i les classes.</p>
+<h4 id="herencia-amb-prototips">Herència amb Prototips:</h4>
+<p>En aquest exemple, crearem una funció constructora <code>Animal</code> com a prototip base i una funció constructora <code>Gos</code> que hereta de <code>Animal</code> mitjançant el seu prototip:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span>
+<span class="normal"><a href="#__codelineno-24-19">19</a></span>
+<span class="normal"><a href="#__codelineno-24-20">20</a></span>
+<span class="normal"><a href="#__codelineno-24-21">21</a></span>
+<span class="normal"><a href="#__codelineno-24-22">22</a></span>
+<span class="normal"><a href="#__codelineno-24-23">23</a></span>
+<span class="normal"><a href="#__codelineno-24-24">24</a></span>
+<span class="normal"><a href="#__codelineno-24-25">25</a></span>
+<span class="normal"><a href="#__codelineno-24-26">26</a></span>
+<span class="normal"><a href="#__codelineno-24-27">27</a></span>
+<span class="normal"><a href="#__codelineno-24-28">28</a></span>
+<span class="normal"><a href="#__codelineno-24-29">29</a></span>
+<span class="normal"><a href="#__codelineno-24-30">30</a></span>
+<span class="normal"><a href="#__codelineno-24-31">31</a></span>
+<span class="normal"><a href="#__codelineno-24-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="c1">// Prototip base</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Animal</span><span class="p">(</span><span class="nx">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nom</span><span class="p">;</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="p">}</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5"></a>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="c1">// Afegim un mètode al prototip d&#39;Animal</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">saluda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, sóc un animal anomenat </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">.`</span><span class="p">);</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="p">};</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10"></a>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="c1">// Funció constructora que hereta de Animal</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="kd">function</span><span class="w"> </span><span class="nx">Gos</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">raça</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="w">  </span><span class="c1">// Cridem al constructor de l&#39;Animal amb la paraula clau &quot;call&quot;</span>
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">  </span><span class="nx">Animal</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="nx">nom</span><span class="p">);</span>
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">raça</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">raça</span><span class="p">;</span>
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="p">}</span>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17"></a>
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="c1">// Establim la relació de prototip entre Gos i Animal</span>
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19"></a><span class="nx">Gos</span><span class="p">.</span><span class="nx">prototype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Animal</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="nx">Gos</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="kr">constructor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Gos</span><span class="p">;</span><span class="w">  </span><span class="c1">// Corregim el constructor ja que s&#39;ha sobrescrit amb Object.create</span>
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21"></a>
+</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22"></a><span class="c1">// Afegim un mètode addicional al prototip de Gos</span>
+</span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23"></a><span class="nx">Gos</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">lladra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Guau, guau!&#39;</span><span class="p">);</span>
+</span><span id="__span-24-25"><a id="__codelineno-24-25" name="__codelineno-24-25"></a><span class="p">};</span>
+</span><span id="__span-24-26"><a id="__codelineno-24-26" name="__codelineno-24-26"></a>
+</span><span id="__span-24-27"><a id="__codelineno-24-27" name="__codelineno-24-27"></a><span class="c1">// Creem una instància de Gos</span>
+</span><span id="__span-24-28"><a id="__codelineno-24-28" name="__codelineno-24-28"></a><span class="kd">const</span><span class="w"> </span><span class="nx">firulais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Gos</span><span class="p">(</span><span class="s1">&#39;Firulais&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Golden Retriever&#39;</span><span class="p">);</span>
+</span><span id="__span-24-29"><a id="__codelineno-24-29" name="__codelineno-24-29"></a>
+</span><span id="__span-24-30"><a id="__codelineno-24-30" name="__codelineno-24-30"></a><span class="c1">// Fem servir els mètodes heretats</span>
+</span><span id="__span-24-31"><a id="__codelineno-24-31" name="__codelineno-24-31"></a><span class="nx">firulais</span><span class="p">.</span><span class="nx">saluda</span><span class="p">();</span><span class="w"> </span><span class="c1">// Hola, sóc un animal anomenat Firulais.</span>
+</span><span id="__span-24-32"><a id="__codelineno-24-32" name="__codelineno-24-32"></a><span class="nx">firulais</span><span class="p">.</span><span class="nx">lladra</span><span class="p">();</span><span class="w">  </span><span class="c1">// Guau, guau!</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En aquest exemple, <code>Gos</code> hereta de <code>Animal</code> mitjançant <code>Object.create(Animal.prototype)</code>. Això significa que els objectes creats amb la funció constructora <code>Gos</code> tindran un prototip que apunta al prototip d'<code>Animal</code>.</p>
+<h4 id="herencia-amb-classes-es6-i-versions-posteriors">Herència amb Classes (ES6 i versions posteriors):</h4>
+<p>A partir d'ECMAScript 6, es va introduir la paraula clau <code>class</code> per facilitar la creació de classes i herència:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span>
+<span class="normal"><a href="#__codelineno-25-14">14</a></span>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span>
+<span class="normal"><a href="#__codelineno-25-16">16</a></span>
+<span class="normal"><a href="#__codelineno-25-17">17</a></span>
+<span class="normal"><a href="#__codelineno-25-18">18</a></span>
+<span class="normal"><a href="#__codelineno-25-19">19</a></span>
+<span class="normal"><a href="#__codelineno-25-20">20</a></span>
+<span class="normal"><a href="#__codelineno-25-21">21</a></span>
+<span class="normal"><a href="#__codelineno-25-22">22</a></span>
+<span class="normal"><a href="#__codelineno-25-23">23</a></span>
+<span class="normal"><a href="#__codelineno-25-24">24</a></span>
+<span class="normal"><a href="#__codelineno-25-25">25</a></span>
+<span class="normal"><a href="#__codelineno-25-26">26</a></span>
+<span class="normal"><a href="#__codelineno-25-27">27</a></span>
+<span class="normal"><a href="#__codelineno-25-28">28</a></span>
+<span class="normal"><a href="#__codelineno-25-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="c1">// Classe base</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nom</span><span class="p">;</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6"></a>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">  </span><span class="nx">saluda</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, sóc un animal anomenat </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="si">}</span><span class="sb">.`</span><span class="p">);</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="p">}</span>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11"></a>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="c1">// Classe que hereta d&#39;Animal</span>
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Gos</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Animal</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">raça</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="w">    </span><span class="k">super</span><span class="p">(</span><span class="nx">nom</span><span class="p">);</span><span class="w"> </span><span class="c1">// Cridem al constructor de l&#39;Animal amb la paraula clau &quot;super&quot;</span>
+</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">raça</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">raça</span><span class="p">;</span>
+</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-25-18"><a id="__codelineno-25-18" name="__codelineno-25-18"></a>
+</span><span id="__span-25-19"><a id="__codelineno-25-19" name="__codelineno-25-19"></a><span class="w">  </span><span class="nx">lladra</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-20"><a id="__codelineno-25-20" name="__codelineno-25-20"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Guau, guau!&#39;</span><span class="p">);</span>
+</span><span id="__span-25-21"><a id="__codelineno-25-21" name="__codelineno-25-21"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-25-22"><a id="__codelineno-25-22" name="__codelineno-25-22"></a><span class="p">}</span>
+</span><span id="__span-25-23"><a id="__codelineno-25-23" name="__codelineno-25-23"></a>
+</span><span id="__span-25-24"><a id="__codelineno-25-24" name="__codelineno-25-24"></a><span class="c1">// Creem una instància de Gos</span>
+</span><span id="__span-25-25"><a id="__codelineno-25-25" name="__codelineno-25-25"></a><span class="kd">const</span><span class="w"> </span><span class="nx">firulais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Gos</span><span class="p">(</span><span class="s1">&#39;Firulais&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Golden Retriever&#39;</span><span class="p">);</span>
+</span><span id="__span-25-26"><a id="__codelineno-25-26" name="__codelineno-25-26"></a>
+</span><span id="__span-25-27"><a id="__codelineno-25-27" name="__codelineno-25-27"></a><span class="c1">// Fem servir els mètodes heretats</span>
+</span><span id="__span-25-28"><a id="__codelineno-25-28" name="__codelineno-25-28"></a><span class="nx">firulais</span><span class="p">.</span><span class="nx">saluda</span><span class="p">();</span><span class="w"> </span><span class="c1">// Hola, sóc un animal anomenat Firulais.</span>
+</span><span id="__span-25-29"><a id="__codelineno-25-29" name="__codelineno-25-29"></a><span class="nx">firulais</span><span class="p">.</span><span class="nx">lladra</span><span class="p">();</span><span class="w">  </span><span class="c1">// Guau, guau!</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En aquest exemple, <code>Gos</code> hereta de <code>Animal</code> amb la paraula clau <code>extends</code>. La paraula clau <code>super</code> s'utilitza per cridar el constructor de la classe pare (<code>Animal</code>) dins del constructor de la classe filla (<code>Gos</code>). Això garanteix que l'herència es gestioni correctament.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright - Xuso Ortí - Professor Departament d'Informàtica IES Jaume II el Just (Tavernes de la Valldigna)
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.footer"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

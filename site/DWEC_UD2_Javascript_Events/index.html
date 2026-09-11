@@ -1,0 +1,2302 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../DWEC_UD2_Javascript_DOM/">
+      
+      
+        <link rel="next" href="../DWEC_UD2_formularis/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Events - DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-que-son-els-events" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-header__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Events
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../presentaci%C3%B3/" class="md-tabs__link">
+          
+  
+  Presentació
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-tabs__link">
+          
+  
+  UD0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-tabs__link">
+          
+  
+  UD1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../DWEC_UD2_Javascript_DOM/" class="md-tabs__link">
+          
+  
+  UD2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-nav__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Presentació
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Presentació
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentaci%C3%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DAW2sp_DWEC_%2824-25%29_ANNEX_I/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programació didàctica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD0 Eines de Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Pr_Git2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD0 Pràctica Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Teoria
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_la_consola/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 La Consola
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_practicaJSbasic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica JS bàsic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_operadors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Operadors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codis extra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Codis extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_codis_extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Events
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Events
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-son-els-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Que són els events?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tipus-devents" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tipus d'events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tipus d'events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-ratoli-mouse-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de ratolí (Mouse Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-teclat-keyboard-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de teclat (Keyboard Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-formulari-form-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de formulari (Form Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-focus-focus-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de focus (Focus Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-carrega-load-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de càrrega (Load Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-desplacament-scroll-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de desplaçament (Scroll Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-seleccio-selection-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de selecció (Selection Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-copiattallatenganxat-clipboard-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de copiat/tallat/enganxat (Clipboard Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-mitjans-media-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de mitjans (Media Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-finestra-window-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de finestra (Window Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-dus-desdeveniments-del-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'ús d'esdeveniments del DOM:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-manejadors-devents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Manejadors d'events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Manejadors d'events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-a-atributs-dintre-del-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com a atributs dintre del HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amb-la-variable-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amb la variable this
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manejadors-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manejadors semàntics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amb-listeners-addeventlistener-i-removeeventlistener" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amb Listeners: addEventListener() i removeEventListener()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gestio-amb-windowonload" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gestió amb window.onload
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Gestió amb window.onload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#per-que-utilitzar-windowonload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per què utilitzar window.onload?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#situacions-on-es-recomanable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situacions on és recomanable:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternativa-domcontentloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativa: DOMContentLoaded
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quan-utilitzar-windowonload-vs-domcontentloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quan utilitzar window.onload vs DOMContentLoaded:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-informacio-de-levent" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Informació de l'event
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-flux-devents" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Flux d'events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Flux d'events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bubbling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bubbling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capturing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_formularis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Formularis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Prac_formularis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Formularis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_exemples_extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Codis d'exemple
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-son-els-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Que són els events?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tipus-devents" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tipus d'events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tipus d'events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-ratoli-mouse-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de ratolí (Mouse Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-teclat-keyboard-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de teclat (Keyboard Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-formulari-form-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de formulari (Form Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-focus-focus-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de focus (Focus Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-carrega-load-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de càrrega (Load Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-desplacament-scroll-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de desplaçament (Scroll Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-seleccio-selection-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de selecció (Selection Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-copiattallatenganxat-clipboard-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de copiat/tallat/enganxat (Clipboard Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-mitjans-media-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de mitjans (Media Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esdeveniments-de-finestra-window-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esdeveniments de finestra (Window Events)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-dus-desdeveniments-del-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'ús d'esdeveniments del DOM:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-manejadors-devents" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Manejadors d'events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Manejadors d'events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-a-atributs-dintre-del-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com a atributs dintre del HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amb-la-variable-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amb la variable this
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manejadors-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manejadors semàntics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amb-listeners-addeventlistener-i-removeeventlistener" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amb Listeners: addEventListener() i removeEventListener()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gestio-amb-windowonload" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gestió amb window.onload
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Gestió amb window.onload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#per-que-utilitzar-windowonload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per què utilitzar window.onload?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#situacions-on-es-recomanable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Situacions on és recomanable:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternativa-domcontentloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativa: DOMContentLoaded
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quan-utilitzar-windowonload-vs-domcontentloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quan utilitzar window.onload vs DOMContentLoaded:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-informacio-de-levent" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Informació de l'event
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-flux-devents" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Flux d'events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Flux d'events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bubbling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bubbling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capturing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>UD2 Javascript Events</h1>
+
+<h2 id="1-que-son-els-events">1. Que són els events?</h2>
+<p>En el model de programació que heu vist fins ara, les instruccions s'executaven una darrere l'altra fins a acabar el programa. Les aplicacions web actuals requerixen interacció amb l'usuari i amb accions que ocorren a la pàgina, com per exemple prèmer una tecla, passar el ratolí sobre una secció o esperar a que es carregue la pàgina per a interactuar amb el <code>DOM</code>. </p>
+<p>Aquestes accions són el que anomenem <code>events</code> i són de gran utilitat per als programadors ja que doten a l'aplicació de interacció amb l'usuari.</p>
+<div class="admonition note">
+<p class="admonition-title">Que són els events?</p>
+<p>Els events són notificacions que envia la pàgina per a notificar que alguna cosa ha ocorregut. Els events estan representats per objectes de la interfaz <code>Event</code>.</p>
+</div>
+<p><img alt="Funcionament dels events" src="../img/funcionament_events.png" />;</p>
+<h2 id="2-tipus-devents">2. Tipus d'events</h2>
+<p>Els events estan nomenats amb el prefixe <code>on</code> de manera que l'event que correspondria a fer click amb el ratolí seria <code>onclick</code>, polsar una tecla <code>onkeypress</code>, seleccionar un element <code>onfocus</code>, etc. <strong>Cada element podrà proporcionar diferents tipus d'events</strong>. Podem consultar una llista més completa d'events a la <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">web de la 3wschool</a>.</p>
+<hr />
+<h3 id="esdeveniments-de-ratoli-mouse-events"><strong>Esdeveniments de ratolí (Mouse Events)</strong></h3>
+<ul>
+<li><strong><code>click</code></strong>: S'activa quan es fa clic en un element (botó esquerre del ratolí).</li>
+<li><strong><code>dblclick</code></strong>: S'activa quan es fa un doble clic sobre un element.</li>
+<li><strong><code>mousedown</code></strong>: S'activa quan es prem qualsevol botó del ratolí.</li>
+<li><strong><code>mouseup</code></strong>: S'activa quan s'allibera el botó del ratolí que s'havia premut.</li>
+<li><strong><code>mousemove</code></strong>: S'activa quan el ratolí es mou dins d'un element.</li>
+<li><strong><code>mouseenter</code></strong>: S'activa quan el ratolí entra en un element (sense desencadenar-se en els elements fills).</li>
+<li><strong><code>mouseleave</code></strong>: S'activa quan el ratolí surt d'un element.</li>
+<li><strong><code>mouseover</code></strong>: S'activa quan el ratolí entra en un element (també es desencadena en elements fills).</li>
+<li><strong><code>mouseout</code></strong>: S'activa quan el ratolí surt d'un element.</li>
+<li><strong><code>contextmenu</code></strong>: S'activa quan es fa clic amb el botó dret del ratolí per obrir el menú contextual.</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-teclat-keyboard-events"><strong>Esdeveniments de teclat (Keyboard Events)</strong></h3>
+<ul>
+<li><strong><code>keydown</code></strong>: S'activa quan es prem una tecla (reacciona tant a les tecles de caràcters com les de control).</li>
+<li><strong><code>keyup</code></strong>: S'activa quan s'allibera una tecla després d'haver-la premut.</li>
+<li><strong><code>keypress</code></strong>: S'activa quan es prem una tecla que produeix caràcters (antigament s'usava per caràcters com lletres o números, però avui en dia es fa servir menys en favor de <code>keydown</code>).</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-formulari-form-events"><strong>Esdeveniments de formulari (Form Events)</strong></h3>
+<ul>
+<li><strong><code>submit</code></strong>: S'activa quan es fa un enviament d'un formulari.</li>
+<li><strong><code>focus</code></strong>: S'activa quan un element, com un camp de formulari, obté el focus (per exemple, quan l'usuari fa clic en un camp de text per escriure).</li>
+<li><strong><code>blur</code></strong>: S'activa quan un element perd el focus.</li>
+<li><strong><code>change</code></strong>: S'activa quan es canvia el valor d'un element, com ara un camp de text o una selecció (es llança quan l'usuari abandona el camp després de fer el canvi).</li>
+<li><strong><code>input</code></strong>: S'activa quan l'usuari modifica el valor d'un camp d'entrada en temps real.</li>
+<li><strong><code>reset</code></strong>: S'activa quan un formulari es reinicia amb el botó de reset.</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-focus-focus-events"><strong>Esdeveniments de focus (Focus Events)</strong></h3>
+<ul>
+<li><strong><code>focusin</code></strong>: S'activa quan un element o algun dels seus descendents obté el focus.</li>
+<li><strong><code>focusout</code></strong>: S'activa quan un element o algun dels seus descendents perd el focus.</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-carrega-load-events"><strong>Esdeveniments de càrrega (Load Events)</strong></h3>
+<ul>
+<li><strong><code>load</code></strong>: S'activa quan tota la pàgina web (incloent-hi tots els seus recursos com imatges, CSS, etc.) s'ha carregat completament.</li>
+<li><strong><code>DOMContentLoaded</code></strong>: S'activa quan l'HTML s'ha carregat i parsejat, sense esperar que tots els recursos externs estiguin carregats.</li>
+<li><strong><code>unload</code></strong>: S'activa quan es tanca o es surt de la pàgina (tot i que el seu ús està desaconsellat per evitar comportaments no desitjats).</li>
+<li><strong><code>beforeunload</code></strong>: S'activa abans que l'usuari abandoni la pàgina, i permet mostrar un missatge de confirmació per assegurar-se que vol sortir.</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-desplacament-scroll-events"><strong>Esdeveniments de desplaçament (Scroll Events)</strong></h3>
+<ul>
+<li><strong><code>scroll</code></strong>: S'activa quan un element o la pàgina web es desplaça verticalment o horitzontalment.</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-seleccio-selection-events"><strong>Esdeveniments de selecció (Selection Events)</strong></h3>
+<ul>
+<li><strong><code>select</code></strong>: S'activa quan l'usuari selecciona text dins d'un <code>input</code> o <code>textarea</code>.</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-copiattallatenganxat-clipboard-events"><strong>Esdeveniments de copiat/tallat/enganxat (Clipboard Events)</strong></h3>
+<ul>
+<li><strong><code>copy</code></strong>: S'activa quan es copia contingut al porta-retalls.</li>
+<li><strong><code>cut</code></strong>: S'activa quan es talla contingut.</li>
+<li><strong><code>paste</code></strong>: S'activa quan es pega contingut des del porta-retalls.</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-mitjans-media-events"><strong>Esdeveniments de mitjans (Media Events)</strong></h3>
+<ul>
+<li><strong><code>play</code></strong>: S'activa quan la reproducció d'un vídeo o àudio comença.</li>
+<li><strong><code>pause</code></strong>: S'activa quan la reproducció d'un vídeo o àudio es posa en pausa.</li>
+<li><strong><code>ended</code></strong>: S'activa quan el vídeo o àudio arriba al final.</li>
+<li><strong><code>volumechange</code></strong>: S'activa quan el volum d'un vídeo o àudio canvia.</li>
+<li><strong><code>timeupdate</code></strong>: S'activa mentre el temps de reproducció es va actualitzant durant la reproducció.</li>
+</ul>
+<hr />
+<h3 id="esdeveniments-de-finestra-window-events"><strong>Esdeveniments de finestra (Window Events)</strong></h3>
+<ul>
+<li><strong><code>resize</code></strong>: S'activa quan la finestra del navegador es redimensiona.</li>
+<li><strong><code>scroll</code></strong>: S'activa quan la pàgina es desplaça.</li>
+</ul>
+<hr />
+<h3 id="exemples-dus-desdeveniments-del-dom"><strong>Exemples d'ús d'esdeveniments del DOM:</strong></h3>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// Exemple d&#39;esdeveniment &#39;click&#39; que mostra un missatge</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Botó clicat!&#39;</span><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">});</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">// Exemple d&#39;esdeveniment &#39;keydown&#39; per detectar quan es prem una tecla</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;keydown&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Tecla premuda: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">key</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">});</span>
+</span></code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="3-manejadors-devents">3. Manejadors d'events</h2>
+<p>Els events són controlats per porcions de codi que s'encarreguen de gestionar que ocorre a la pàgina en cas que l'event es produisca. Aquest control es pot dur a terme de vàries formes.</p>
+<h3 id="com-a-atributs-dintre-del-html">Com a atributs dintre del HTML</h3>
+<p><div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;alert(&#39;Hello!&#39;)&quot;</span><span class="o">&gt;</span><span class="nx">Saludar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+Com es veu es crea un atribut amb el nom de l'event i el codi a executar. <strong>No és recomanable</strong> utilitzar aquest mètode ja que embruta el codi HTML i és tediós gestionar events amb codi de més d'una línia.</p>
+<h3 id="amb-la-variable-this">Amb la variable <code>this</code></h3>
+<p>La variable <code>this</code> permet reduir el codi ja que ens proporciona una referencia a l'element propi. Vegem dos porcions de codi que realitzen el mateix.</p>
+<p>Sense la variable <code>this</code>.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;contenidos&quot;</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="s2">&quot;width:150px; height:60px; border:thin solid silver&quot;</span><span class="w"> </span><span class="nx">onmouseover</span><span class="o">=</span><span class="s2">&quot;document.getElementById(&#39;contenidos&#39;).style.borderColor=&#39;black&#39;;&quot;</span><span class="w"> </span><span class="nx">onmouseout</span><span class="o">=</span><span class="s2">&quot;document.getElementById(&#39;contenidos&#39;).style.borderColor=&#39;silver&#39;;&quot;</span><span class="o">&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nx">Sección</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">contenidos</span><span class="p">...</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Amb la variable <code>this</code>.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;contenidos&quot;</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="s2">&quot;width:150px; height:60px; border:thin solid silver&quot;</span><span class="w"> </span><span class="nx">onmouseover</span><span class="o">=</span><span class="s2">&quot;this.style.borderColor=&#39;black&#39;;&quot;</span><span class="w"> </span><span class="nx">onmouseout</span><span class="o">=</span><span class="s2">&quot;this.style.borderColor=&#39;silver&#39;;&quot;</span><span class="o">&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nx">Sección</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">contenidos</span><span class="p">...</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="manejadors-semantics">Manejadors semàntics</h3>
+<p>Fent ús de funcions aconseguim eliminar qualsevol porció de codi <code>Javascript</code> dintre del codi <code>HTML</code>. És una versió <strong>molt més recomanable</strong> que les estudiades anteriorment. La metodologia és seleccionar un element de la pàgina i assignar-li una funció que s'encarregarà de controlar el funcionament d'un event determinar.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// Función externa</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">muestraMensaje</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Gracias por pinchar&#39;</span><span class="p">);</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">}</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// Asignar la función externa al elemento</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;pinchable&quot;</span><span class="p">).</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">muestraMensaje</span><span class="p">;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="c1">// Elemento XHTML</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;pinchable&quot;</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span><span class="w"> </span><span class="nx">value</span><span class="o">=</span><span class="s2">&quot;Pinchame y verás&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Es pot comprovar la separació dels codis <code>HTML</code> i <code>Javascript</code>.</p>
+<p>També es pot implementar fent ús de funcions anònimes.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">);</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nx">button</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="amb-listeners-addeventlistener-i-removeeventlistener">Amb Listeners: addEventListener() i removeEventListener()</h3>
+<p>És un mètode que permet assignar una funció per a manejar una funció a un event determinat. A diferència de les anteriors, <strong>es pot assignar en temps d'execució de la pàgina</strong>. Imaginem que creem contingut dinàmicament en la nostra web, estil <code>SPA</code>. Volem assignar unes funcions per a controlar uns elements <code>select</code> però aquestos elements no existeixen en carregar-se la pàgina, sinò que els creem dinàmicament degut a alguna acció de l'usuari (exemple típic de dos selects anidats de província i poble). Com que no existeix el select en el moment de crear la pàgina no podem assignar una funció que controle l'event <code>onchange</code> que provoca el select.</p>
+<p>Vegem com es resol amb els <code>Listeners</code>.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">assignarEvents</span><span class="p">(){</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="nx">selects</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">);</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="nx">j</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="nx">j</span><span class="o">&lt;</span><span class="nx">selects</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">j</span><span class="o">++</span><span class="p">){</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="nx">selects</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">revisa_select</span><span class="p">);</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<p>D'aquesta forma hem assignat el control de l'event <code>onchange</code> de tots els <code>select</code> de la pàgina a una funció anomenada <code>revisa_select</code>.</p>
+<p>La sintaxi utilitzada és la següent:</p>
+<p><img alt="Sintaxi Listeners" src="../img/listeners.png" />;</p>
+<p>Es poden assignar vàries funcions manejadores a un event.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">myFunction</span><span class="p">);</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">someOtherFunction</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div></td></tr></table></div>
+<p>Es poden afegir diferents tipus d'events al document.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;mouseover&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">myFunction</span><span class="p">);</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">someOtherFunction</span><span class="p">);</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;mouseout&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">someOtherFunction</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div></td></tr></table></div>
+<p>En cas que necessites passar paràmetres, ho pots fer mitjançant les funcions anònimes.</p>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This example demonstrates how to pass parameter values when using the 
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a>addEventListener() method.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Click anywhere in the document to perform a calculation.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;demo&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11"></a>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="kd">var</span><span class="w"> </span><span class="nx">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="kd">var</span><span class="w"> </span><span class="nx">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7</span><span class="p">;</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15"></a>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">  </span><span class="nx">myFunction</span><span class="p">(</span><span class="nx">p1</span><span class="p">,</span><span class="w"> </span><span class="nx">p2</span><span class="p">);</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="p">});</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19"></a>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="kd">function</span><span class="w"> </span><span class="nx">myFunction</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="p">}</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25"></a>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En cas que vullgues desasignar una funció a un event, pots emprar <code>removeEventListener()</code>.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1">// Attach an event handler to the document</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;mousemove&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">myFunction</span><span class="p">);</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1">// Remove the event handler from the document</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="nb">document</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">&quot;mousemove&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">myFunction</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="4-gestio-amb-windowonload">4. Gestió amb <code>window.onload</code></h2>
+<div class="admonition warning">
+<p class="admonition-title">Esperar que es carregue el DOM</p>
+<p>És <strong>recomanable</strong> assignar esdeveniments dins del <strong><code>window.onload</code></strong> en moltes situacions, especialment quan vols assegurar-te que el contingut de la pàgina web s'ha carregat completament abans de manipular o assignar esdeveniments a elements del DOM.</p>
+</div>
+<h3 id="per-que-utilitzar-windowonload"><strong>Per què utilitzar <code>window.onload</code>?</strong></h3>
+<p>El <strong><code>window.onload</code></strong> és un esdeveniment que es dispara quan tota la pàgina, incloent-hi tots els seus recursos (com imatges, scripts, i fulls d'estil), ha estat completament carregada. A utilitzar-lo, garanteixes que els elements del DOM que vols manipular estan disponibles abans d'assignar esdeveniments o modificar el seu contingut.</p>
+<h3 id="situacions-on-es-recomanable"><strong>Situacions on és recomanable:</strong></h3>
+<ul>
+<li><strong>Elements que depenen de la càrrega completa de la pàgina:</strong></li>
+<li>
+<p>Si la teva pàgina web carrega recursos externs o grans quantitats de dades (com imatges o fitxers CSS), pot ser que vulguis esperar a que tot estigui completament carregat abans de començar a executar esdeveniments o scripts.</p>
+</li>
+<li>
+<p><strong>Seguretat en l'accés als elements del DOM:</strong></p>
+</li>
+<li>Si intentes accedir a un element que encara no ha estat carregat al DOM (perquè la pàgina està carregant), pot donar errors o no trobar aquests elements.</li>
+<li>Utilitzar <code>window.onload</code> garanteix que tots els elements existeixen abans d'afegir els esdeveniments.</li>
+</ul>
+<p><strong>Exemple:</strong></p>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Assignar esdeveniments amb window.onload<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7"></a>    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myButton&quot;</span><span class="p">&gt;</span>Fes clic aquí<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">);</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">          </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Botó clicat després de carregar la pàgina!&#39;</span><span class="p">);</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">      </span><span class="p">};</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En aquest exemple, el botó no rep l'esdeveniment <code>click</code> fins que tota la pàgina ha estat carregada, garantint que l'element existeix.</p>
+<hr />
+<h3 id="alternativa-domcontentloaded"><strong>Alternativa: <code>DOMContentLoaded</code></strong></h3>
+<p>Tot i que <code>window.onload</code> és útil per assegurar-se que la pàgina està completament carregada, hi ha una alternativa més ràpida i eficient en moltes situacions: l'esdeveniment <strong><code>DOMContentLoaded</code></strong>.</p>
+<ul>
+<li><strong><code>DOMContentLoaded</code></strong> es dispara quan el document HTML ha estat carregat i parsejat, però sense esperar que les imatges, fulls d'estil, i altres recursos externs s'hagin completat.</li>
+<li>Això significa que és <strong>més ràpid</strong> que <code>window.onload</code> i, en molts casos, és suficient si només vols accedir a elements del DOM que ja estan presents.</li>
+</ul>
+<p><strong>Exemple amb <code>DOMContentLoaded</code>:</strong></p>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">);</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Botó clicat després de carregar el DOM!&#39;</span><span class="p">);</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="quan-utilitzar-windowonload-vs-domcontentloaded"><strong>Quan utilitzar <code>window.onload</code> vs <code>DOMContentLoaded</code>:</strong></h3>
+<ul>
+<li>
+<p><strong>Utilitza <code>DOMContentLoaded</code></strong> quan només necessites que el DOM estigui disponible i no t'importa esperar que els altres recursos com imatges i fulls d'estil estiguin completament carregats.</p>
+</li>
+<li>
+<p><strong>Utilitza <code>window.onload</code></strong> si necessites que <strong>tot</strong> el contingut de la pàgina, incloent-hi imatges, CSS i altres recursos, estigui totalment carregat abans de manipular el DOM o afegir esdeveniments.</p>
+</li>
+</ul>
+<hr />
+<h2 id="5-informacio-de-levent">5. Informació de l'event</h2>
+<p>Per a obtindre informació de l'event podem fer ús de <strong>l'objecte màgic</strong> <code>Event</code> que es crea automàticament i és passat com a argument a la funció en cada crida a l'event.</p>
+<p>Pdem veure, amb un exemple de <a href="https://uniwebsidad.com/libros/javascript/capitulo-6/obteniendo-informacion-del-evento-objeto-event">Uniwebsidad</a> com no definim cap objecte <code>Event</code> en l'assignació del manejador, però a l'hora de programar la funció tenim accés a dit objecte. </p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">resalta</span><span class="p">(</span><span class="nx">elEvento</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">evento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">elEvento</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="k">switch</span><span class="p">(</span><span class="nx">evento</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;mouseover&#39;</span><span class="o">:</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;black&#39;</span><span class="p">;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">      </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;mouseout&#39;</span><span class="o">:</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;silver&#39;</span><span class="p">;</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">      </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="p">}</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12"></a>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;seccion&quot;</span><span class="p">).</span><span class="nx">onmouseover</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resalta</span><span class="p">;</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;seccion&quot;</span><span class="p">).</span><span class="nx">onmouseout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resalta</span><span class="p">;</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="p">}</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17"></a>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;seccion&quot;</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="s2">&quot;width:150px; height:60px; border:thin solid silver&quot;</span><span class="o">&gt;</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">  </span><span class="nx">Sección</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">contenidos</span><span class="p">...</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>En <a href="https://www.aprenderaprogramar.com/index.php?option=com_content&amp;view=article&amp;id=843:objeto-event-javascript-type-target-currenttarg-timestamp-clientx-pagex-button-preventdefault-cu01160e&amp;catid=78&amp;Itemid=206">Aprendeaprogramar</a> tenim aquesta taula amb les propietats que presenta l'objecte <code>Event</code>.</p>
+<p><img alt="Propietats objecte Event" src="../img/propietatsevent.png" />;</p>
+<blockquote>
+<p><strong>És molt important</strong> per a aprendre a fer ús de les propietats de l'objecte <code>Event</code> que repases en la <a href="https://uniwebsidad.com/libros/javascript/capitulo-6/obteniendo-informacion-del-evento-objeto-event">web de Uniwebsidad</a> com es realitza el tractament dels events de teclat i ratolí, i <strong>faces els exercicis 15 i 16</strong> de dita web.</p>
+</blockquote>
+<h2 id="6-flux-devents">6. Flux d'events</h2>
+<p>Com que en <code>html</code>podem tindre elements dintre d'altres elements, que ocorre si per exemple fem clic amb el ratolí? En quin element es dispara primer l'event? El de dins o el de fora?</p>
+<p><img alt="Flux de l'event" src="../img/flux_events.png" />;</p>
+<h3 id="bubbling">Bubbling</h3>
+<p>El DOM suporta tant <code>Bubling</code> com <code>Capturing</code> però el <code>Capturing</code> és el que s'executa en primer lloc, tot i ser molt menys usat. </p>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="nt">body</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;alert(&#39;form&#39;)&quot;</span><span class="p">&gt;</span>FORM
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;alert(&#39;div&#39;)&quot;</span><span class="p">&gt;</span>DIV
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;alert(&#39;p&#39;)&quot;</span><span class="p">&gt;</span>P<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Vegem com el <code>Bubbling</code> funciona recorrent l'element més específic fins el menys específic.</p>
+<p><img alt="Funcionament Bubling" src="../img/bubling.png" />;</p>
+<h3 id="capturing">Capturing</h3>
+<p>Funciona a la inversa que l'anterior. Anirà recorrent l'element més genèric fins el més específic.</p>
+<p>Podem triar com volem que es comporte el nostra manejador d'events. Si el <code>handler</code> és <code>true</code> es capturarà l'event el el capturing, si és <code>false</code> es capturarà en el <code>bubbling</code>.</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(...,</span><span class="w"> </span><span class="p">{</span><span class="nx">capture</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">})</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="c1">// or, just &quot;true&quot; is an alias to {capture: true}</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(...,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Vegem ara com podem capturar un event en la fase del capturing i en la del bubbling.</p>
+<div class="language-html highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">  </span><span class="nt">body</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7"></a>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>FORM
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>DIV
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>P<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13"></a>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">elem</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">    </span><span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="sb">`Capturing: </span><span class="si">${</span><span class="nx">elem</span><span class="p">.</span><span class="nx">tagName</span><span class="si">}</span><span class="sb">`</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="w">    </span><span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="sb">`Bubbling: </span><span class="si">${</span><span class="nx">elem</span><span class="p">.</span><span class="nx">tagName</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<p><img alt="Captura del bubbling i el capturing" src="../img/bubling%20.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href="../DWEC_UD2_Javascript_DOM/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: UD2 Javascript DOM">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                UD2 Javascript DOM
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../DWEC_UD2_formularis/" class="md-footer__link md-footer__link--next" aria-label="Següent: UD2 Javascript Formularis">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                UD2 Javascript Formularis
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright - Xuso Ortí - Professor Departament d'Informàtica IES Jaume II el Just (Tavernes de la Valldigna)
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.footer"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>

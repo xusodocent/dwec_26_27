@@ -1,0 +1,1604 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>DAW2sp DWEC Programació - DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-header__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DAW2sp DWEC Programació
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../presentaci%C3%B3/" class="md-tabs__link">
+          
+  
+  Presentació
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-tabs__link">
+          
+  
+  UD0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-tabs__link">
+          
+  
+  UD1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD2_Javascript_DOM/" class="md-tabs__link">
+          
+  
+  UD2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-nav__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Presentació
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Presentació
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentaci%C3%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DAW2sp_DWEC_%2824-25%29_ANNEX_I/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programació didàctica
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD0 Eines de Programació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Pr_Git2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD0 Pràctica Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD1 Teoria
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_la_consola/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 La Consola
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_practicaJSbasic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica JS bàsic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_operadors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Operadors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Codis extra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Codis extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_codis_extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UD2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_formularis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Formularis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_DOM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica DOM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Prac_formularis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Formularis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_exemples_extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD2 Codis d'exemple
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-metodologia-general-i-especifica-del-modul" class="md-nav__link">
+    <span class="md-ellipsis">
+      a) Metodologia general i específica del mòdul
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>DAW2sp DWEC Programació</h1>
+
+<p><b><i>2<sup>n</sup> DAWsp – DESENVOLUPAMENT WEB EN ENTORN CLIENT    IES JaumeII el Just</i></b></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>Mòdul</strong></th>
+<th style="text-align: center;"><strong>Desenvolupament Web en Entorn Client (DWEC)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>Durada</strong></td>
+<td style="text-align: center;"><strong>140 h</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Cicle</strong></td>
+<td style="text-align: center;"><strong>Desenvolupament d'Aplicacions Web (DAW)sp</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Nivell</strong></td>
+<td style="text-align: center;"><strong>Formació Professional de Grau Superior</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Família</strong></td>
+<td style="text-align: center;"><strong>Informàtica i Comunicacions</strong></td>
+</tr>
+</tbody>
+</table>
+<p>L'estructura d'aquesta programació concreta els apartats establerts en l’art.3 de l’<em>ORDE 45/2011, de 8 de juny, de la Conselleria d’Educació, per la qual es regula l’estructura de les programacions didàctiques</em>, on s'estableixen els següents apartats:</p>
+<ol>
+<li>INTRODUCCIÓ
+   1) Justificació de la programació
+   1) Contextualització</li>
+<li>OBJECTIUS
+   1) <code></code>Objectius generals de cicle
+   1) Objectius específics de mòdul</li>
+<li>COMPETÈNCIES BÀSIQUES
+   1) Relació entre les competències bàsiques i els objectius de mòdul i els criteris d’avaluació. </li>
+<li>CONTINGUTS. ESTRUCTURA I CLASSIFICACIÓ</li>
+<li>UNITATS DIDÀCTIQUES
+   1) Organització de les unitats didàctiques
+   1) Distribució temporal de les unitats didàctiques</li>
+<li>METODOLOGIA. ORIENTACIONS DIDÀCTIQUES
+   1) Metodologia general i específica del mòdul
+   1) Activitats i estratègies d’ensenyança i aprenentatge</li>
+<li>AVALUACIÓ
+   1) Criteris d’avaluació
+   1) Instruments d’avaluació
+   1) Tipus d’avaluació
+   1) Criteris de qualificació
+   1) Activitats de reforç i ampliació
+   1) Avaluació del procés d’ensenyança i aprenentatge</li>
+<li>MESURES D’ATENCIÓ A L’ALUMNAT AMB NECESSITAT ESPECIFICA DE SUPORT EDUCATIU O AMB NECESSITAT DE COMPENSACIÓ EDUCATIVA</li>
+<li>FOMENT DE LA LECTURA</li>
+<li>UTILITZACIÓ DE LES TECNOLOGIES DE LA INFORMACIÓ I LA COMUNICACIÓ</li>
+<li>RECURSOS DIDÀCTICS I ORGANITZATIUS</li>
+<li><code></code>ACTIVITATS COMPLEMENTÀRIES</li>
+</ol>
+<p><strong>1. INTRODUCCIÓ</strong></p>
+<p><strong><em>a) Justificació de la programació</em></strong></p>
+<p>Aquesta programació defineix el conjunt d'unitats didàctiques ordenades i seqüenciades desenvolupades pels diferents mòduls que integren el cicle formatiu <strong>Desenvolupament d'Aplicacions Web</strong>, en modalitat semipresencial, impartit a l'IES Jaume II el Just de Tavernes de la Valldigna en el present curs escolar. Es tracta per tant d'una planificació didàctica, sobre la realitat escolar del nostre entorn, ajustada als ensenyaments establerts en:</p>
+<ul>
+<li><strong>R.D 686/2010, de 20 de maig, pel qual s'estableix el títol de Tècnic Superior en Desenvolupament d'Aplicacions Web i es fixen els seus ensenyaments mínims.</strong></li>
+<li><strong>ORDE 60/2012, de 25 de setembre 2012, de la Conselleria d'Educació, per la qual s'estableix per a la Comunitat Valenciana el currículum del cicle formatiu de Grau Superior corresponent al títol de Tècnic Superior en Desenvolupament d'Aplicacions Web.</strong></li>
+</ul>
+<p>Aquesta és una programació didàctica es oberta, flexible i adaptable, de manera que es poden afegir, llevar o modificar les unitats didàctiques que la componen adaptant-les al temps, a l’entorn, als recursos disponibles i a les necessitats.</p>
+<p><a name="_gjdgxs"></a><strong><em>b) Contextualització</em></strong></p>
+<p>El ciclo formatiu de Grau <strong>Superior</strong> de <strong>Desenvolupament d'Aplicacions Web</strong> s'organitza en els diversos mòduls professionals, amb unitats coherents de formació, necessàries per obtenir la titulació de <strong>Tècnic Superior en Desenvolupament d'Aplicacions Web</strong>. La impartició dels mòduls professionals d’ aquest cicle formatiu s’organitza en dos cursos acadèmics, dividits en 3 trimestres, amb una càrrega lectiva total de <strong>2000 hores</strong>.</p>
+<p>Els ensenyaments es desenvolupen al centre educatiu IES Jaume II el Just, a excepció del tercer trimestre del segon curs en què els alumnes completen la seua formació en centres de treball de l’entorn de Tavernes de la Valldigna. </p>
+<p>Les característiques d'aquest mòdul són:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Denominació</th>
+<th style="text-align: center;"><strong>Desenvolupament Web en Entorn Client</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Curs</td>
+<td style="text-align: center;"><b>2<sup>n</sup> (trimestres 1 i 2)</b></td>
+</tr>
+<tr>
+<td style="text-align: left;">Hores setmanals</td>
+<td style="text-align: center;"><strong>7 hores</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Càrrega lectiva completa</td>
+<td style="text-align: center;"><strong>140 hores</strong></td>
+</tr>
+</tbody>
+</table>
+<p><a name="_30j0zll"></a><strong>2. OBJECTIUS</strong></p>
+<p><strong><em>a) Objectius generals de cicle</em></strong> </p>
+<p>Els objectius generals de cicle són els que s'estableixen al R.D 686/2010, de 20 de maig, pel qual s'estableix el títol de Tècnic Superior en Desenvolupament d'Aplicacions Web i es fixen els seus ensenyaments mínims.</p>
+<p><a name="_1fob9te"></a><strong><em>b) Objectius específics de mòdul</em></strong></p>
+<p><a name="_3znysh7"></a>Aquest mòdul contribueix a obtenir els objectius generals f), g), i), q) i r):</p>
+<p><a name="_2et92p0"></a>f) Seleccionar llenguatges, objectes i eines, interpretant les especificacions per desenvolupar aplicacions web amb accés a bases de dades.</p>
+<p><a name="_tyjcwt"></a>g) Utilitzar llenguatges, objectes i eines, interpretant les especificacions per desenvolupar aplicacions web amb accés a bases de dades.</p>
+<p><a name="_3dy6vkm"></a>i) Utilitzar llenguatges de marques i estàndars web, assumint el manual d'estil, per desenvolupar interfícies en aplicacions web.</p>
+<p>q) Programar i realitzar activitats per gestionar el manteniment dels recursos informàtics.</p>
+<p><a name="_1t3h5sf"></a>r) Analitzar i utilitzar els recursos i oportunitats d'aprenentatge relacionades amb l'evolució científica, tecnològica i organitzativa del sector i les tecnologíes de la informació i la comunicació, per matenir l'espirit d'actualització i adaptarse a noves situacions laborals i personals.</p>
+<p><a name="_4d34og8"></a><strong>3. COMPETÈNCIES BÀSIQUES</strong></p>
+<p><strong><em>a) Competència general</em></strong> </p>
+<p>La competència general d'aquest títol consisteix a desenvolupar, implantar, i mantenir aplicacions web, amb independència del model emprat i utilitzant tecnologies específiques, garantint l'accés a les dades de forma segura i complint els criteris d'accessibilitat, usabilitat i qualitat exigides en els estàndars establerts.</p>
+<p><a name="_2s8eyo1"></a><strong><em>b) Competències bàsiques del cicle</em></strong> </p>
+<p><a name="_17dp8vu"></a>La formació del mòdul contribueix a assolir les competències <strong>c), d), f), g), h), k), l), m), n), ny) i q)</strong> del títol.</p>
+<p><a name="_3rdcrjn"></a>c) Gestionar servidors d'aplicacions adaptant la seva configuració en cada cas per permetre el desplegament d'aplicacions web.</p>
+<p><a name="_26in1rg"></a>d) Gestionar bases de dades, interpretant el seu disseny lògic i verificant integritat, consistència, seguretat i accessibilitat de les dades.</p>
+<p><a name="_lnxbz9"></a>f) Integrar continguts en la lògica d'una aplicació web, desenvolupant components d'accés a dades adequades a les especificacions.</p>
+<p><a name="_35nkun2"></a>g) Desenvolupar interfícies en aplicacions web d'acord amb un manual d'estil, utilitzant llenguatges de marques i estàndards web.</p>
+<p><a name="_1ksv4uv"></a>h) Desenvolupar components multimèdia per a la seva integració en aplicacions web, utilitzant eines específiques i seguint les especificacions establertes.</p>
+<p>k) Desenvolupar serveis per integrar les seves funcions en altres aplicacions web, assegurant la seva funcionalitat.</p>
+<p>l) Integrar serveis i continguts distribuïts en aplicacions web, assegurant la seva funcionalitat.</p>
+<p><a name="_44sinio"></a>m) Completar plans de proves verificant el funcionament dels components programari desenvolupats, segons les especificacions.</p>
+<p>n) Elaborar i mantenir la documentació dels processos de desenvolupament, utilitzant eines de generació de documentació i control de versions.</p>
+<p>ny) Desplegar i distribuir aplicacions web en diferents àmbits d'implantació, verificant el seu comportament i realitzant modificacions.</p>
+<p><a name="_2jxsxqh"></a>q) Resoldre situacions, problemes o contingències amb iniciativa i autonomia en l'àmbit de la seva competència, amb creativitat, innovació i esperit de millora en el treball personal i en el dels membres de l'equip.</p>
+<p><a name="_z337ya"></a><strong><em>c) Correspondència de les unitats de competència acreditades en el Catàleg Nacional de Qualificacions Professionals associades al mòdul professional</em></strong></p>
+<p>Conforme a l’Annex del RD 686/2010, el mòdul professional de <strong>Desenvolupament Web en Entorn Client</strong> guarda correspondència amb les següents unitats de competència del Catàleg Nacional de Qualificacions Professionals per a la seva acreditació:</p>
+<ul>
+<li><strong>UC0491_3: Desenvolupar elements software a l'entorn client.</strong></li>
+</ul>
+<p><strong><em>d) Relació entre les competències bàsiques i els objectius de Desenvolupament Web en Entorn Client i els criteris d’avaluació</em></strong> </p>
+<table>
+<thead>
+<tr>
+<th>Objectius del mòdul expressats en termes de <strong>Resultats d’aprenentatge i</strong> Criteris d’avaluació**</th>
+<th style="text-align: center;"><strong>Competèn-cies bàsiques</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p><strong>1. Selecciona les arquitectures i tecnologies de programació sobre clients web, identificant i analitzant les capacitats i característiques de cadascuna.</strong></p><p>a) S'han caracteritzat i diferenciat els models d'execució de codi al servidor i en el client web.</p><p>b) S'han identificat les capacitats i mecanismes d'execució de codi dels navegadors web.</p><p>c) S'han identificat i caracteritzat els principals llenguatges relacionats amb la programació de clients web.</p><p>d) S'han reconegut les particularitats de la programació de guions i els seus avantatges i desavantatges sobre la programació tradicional.</p><p>e) S'han verificat els mecanismes d'integració dels llenguatges de marques amb els llenguatges de programació de clients web.</p><p>f) S'han reconegut i avaluat les eines de programació sobre clients web.</p></td>
+<td style="text-align: center;">c, f, l, q</td>
+</tr>
+<tr>
+<td><p><strong>2. Escriu sentències simples, aplicant la sintaxi del llenguatge i verificant la seva execució sobre navegadors web.</strong></p><p><em>a) S'ha seleccionat un llenguatge de programació de clients web en funció de les seves possibilitats.</em></p><p><em>b) S'han utilitzat els diferents tipus de variables i operadors disponibles en el llenguatge.</em></p><p><em>c) S'han identificat els àmbits d'utilització de les variables.</em></p><p><em>d) S'han reconegut i comprovat les peculiaritats del llenguatge que fa a les conversions entre diferents tipus de dades.</em></p><p><em>e) S'han utilitzat mecanismes de decisió en la creació de blocs de sentències.</em></p><p><em>f) S'han utilitzat bucles i s'ha verificat el seu funcionament.</em></p><p><em>g) S'han afegit comentaris al codi.</em></p><p><em>h) S'han utilitzat eines i entorns per facilitar la programació, prova i depuració del codi.</em></p></td>
+<td style="text-align: center;">g, h, k, n, ny, q</td>
+</tr>
+<tr>
+<td><p><strong>3. Escriu codi, identificant i aplicant les funcionalitats aportades pels objectes predefinits del llenguatge.</strong></p><p><em>a) S'han identificat els objectes predefinits del llenguatge.</em></p><p><em>b) S'han analitzat els objectes referents a les finestres del navegador i els documents web que contenen.</em></p><p><em>c) S'han escrit setències que utilitzen els objectes predefinits del llenguatge per a cambiar l'aspected del navegador i el document que conté.</em></p><p><em>d) S'han generat textos i etiquetes com a resultat de l'execució de codi al navegador.</em></p><p><em>e) S'han escrit sentències que utilitzen els objectes predefinits del llenguatge per a interactuar amb l'usuari.</em></p><p><em>f) S'han utilitzat les característiques pròpies del llenguatge en documents compostos per diverses finestres i marcs.</em></p><p><em>g) S'han utilitzat "cookies" per emmagatzemar informació i recuperar la seva contingut.</em></p><p><em>h) S'ha depurat i documentat el codi.</em></p></td>
+<td style="text-align: center;">g, h, k, l, m, n, ny, q</td>
+</tr>
+<tr>
+<td><p><strong>4. Programa codi per a clients web analitzant i utilitzant estructures definides per l'usuari.</strong></p><p><em>a) S'han classificat i utilitzat les funcions predefinides del llenguatge.</em></p><p><em>b) S'han creat i fet ús de funcions definides pel usuari.</em></p><p><em>c) S'han reconegut les característiques del llenguatge relatives a la creació i ús d'arrays.</em></p><p><em>d) S'han creat i s'ha fet ús d'arrays.</em></p><p><em>e) S'han reconegut les característiques d'orientació a objectes del llenguatge.</em></p><p><em>f) S'ha creat codi per a definir l'estructura d'objectes.</em></p><p><em>g) S'han creat mètodes i propietats.</em></p><p><em>h) S'ha creat codi que faça ús d'objectes definits per l'usuari.</em></p><p><em>i) S'ha depurat i documentat el codi.</em></p></td>
+<td style="text-align: center;">g, h, k, l, m, n, ny, q</td>
+</tr>
+<tr>
+<td><p><strong>5. Desenvolupa aplicacions web interactives integrant mecanismes de maneig d'esdeveniments.</strong></p><p><em>a) S'han reconegut les possibilitats del llenguatge de marques relatives a la captura dels esdeveniments produïts.</em></p><p><em>b) S'han identificat les característiques del llenguatge de programació relatives a la gestió dels esdeveniments.</em></p><p><em>c) S'han diferenciat els tipus d'esdeveniments que es poden manejar.</em></p><p><em>d) S'ha creat un codi que capture i utilitze esdeveniments.</em></p><p><em>e) S'han reconegut les capacitats del llenguatge relatives a la gestió de formularis web.</em></p><p><em>f) S'han validat formularis web utilitzant esdeveniments.</em></p><p><em>g) S'han utilitzat expressions regulars per facilitar els procediments de validació.</em></p><p><em>h) S'ha provat i documentat el codi.</em></p></td>
+<td style="text-align: center;">g, h, k, l, m, n, ny, q</td>
+</tr>
+<tr>
+<td><p><strong>6. Desenvolupa aplicacions web analitzant i aplicant les característiques del model d'objectes del document.</strong></p><p><em>a) S'ha reconegut el model d'objectes del document d'una pàgina web.</em></p><p><em>b) S'han identificat els objectes del model, les propietats i mètodes.</em></p><p><em>c) S'ha creat i verificat un codi que accedeixi a l'estructura del document.</em></p><p><em>d) S'han creat nous elements de l'estructura i modificat elements ja existents.</em></p><p><em>e) S'han associat accions als esdeveniments del model.</em></p><p><em>f) S'han identificat les diferències que presenta el model en diferents navegadors.</em></p><p><em>g) S'han programat aplicacions web de manera que funcione en navegadors amb diferents implementacions del model.</em></p><p><em>h) S'han independitzat les tres facetes (contingut, aspecte i comportament), en aplicacions web.</em></p></td>
+<td style="text-align: center;">c, d, f, g, h, k, l, m, n, ny, q</td>
+</tr>
+<tr>
+<td><p><strong>7. Desenvolupa aplicacions web dinàmiques, reconeixent i aplicant mecanismes de comunicació asíncrona entre client i servidor.</strong></p><p><em>a) S'han avaluat els avantatges i inconvenients d'utilitzar mecanismes de comunicació asíncrona entre client i servidor web.</em></p><p><em>b) S'han analitzat els mecanismes disponibles per a l'establiment de la comunicació asíncrona.</em></p><p><em>c) S'han utilitzat els objectes relacionats.</em></p><p><em>d) S'han identificat les seves propietats i els seus mètodes.</em></p><p><em>e) S'ha utilitzat comunicació asíncrona en l'actualització dinàmica del document web.</em></p><p><em>f) S'han utilitzat diferents formats en l'enviament i recepció d'informació.</em></p><p><em>g) S'han programat aplicacions web asíncrones de manera que funcionen en diferents navegadors.</em></p><p><em>h) S'han classificat i analitzat llibreries que faciliten la incorporació de les tecnologies d'actualització dinàmica a la programació de pàgines web.</em></p><p><em>i) S'han creat i depurat programes que utilitzen aquestes llibreries.</em></p></td>
+<td style="text-align: center;">c, d, f, g, h, k, l, m, n, ny, q</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1"></h2>
+<p><a name="_3j2qqm3"></a><strong>4. CONTINGUTS. ESTRUCTURA I CLASSIFICACIÓ</strong></p>
+<p><a name="_1y810tw"></a>D’acord amb l’ORDE 60/2012, de 25 de setembre, de la Conselleria d’Educació, Formació i Ocupació, per la qual s’establix per a la Comunitat Valenciana el currículum del cicle formatiu de grau superior corresponent al títol de Tècnic Superior en Desenrotllament d’Aplicacions Web, els continguts per aquest mòdul són:</p>
+<ul>
+<li>Selecció d'arquitectures i eines de programació:</li>
+<li>Models de programació en entorns client / servidor.</li>
+<li>Mecanismes d'execució de codi en un navegador web. </li>
+<li>Capacitats i limitacions d'execució.</li>
+<li>Compatibilitat amb navegadors web.</li>
+<li>Característiques dels llenguatges de script.</li>
+<li>Llenguatges de programació en entorn client.</li>
+<li>Tecnologies i llenguatges associats.</li>
+<li>Integració del codi amb les etiquetes en documents HTML.</li>
+<li>Eines de programació.</li>
+<li>Navegadors. Tipus i característiques.</li>
+<li>Especificacions oficials (DOM, CSS, XHTML, EcmaScript, entre altres).</li>
+<li>Maneig de la sintaxi del llenguatge: </li>
+<li>Etiquetes i ubicació del codi.</li>
+<li>Variables. Tipus i àmbit.</li>
+<li>Tipus de dades.</li>
+<li>Conversions entre tipus de dades.</li>
+<li>Literals.</li>
+<li>Assignacions.</li>
+<li>Operadors. Precedència dels operadors.</li>
+<li>Expressions.</li>
+<li>Comentaris al codi.</li>
+<li>Ordes.</li>
+<li>Blocs de codi.</li>
+<li>Decisions.</li>
+<li>Bucles.</li>
+<li>Arquitectura client/servidor.</li>
+<li>Estructures de control de flux.</li>
+<li>Convencions de format i codificació.</li>
+<li>Ferramentes de depuració d’errors.</li>
+<li>Utilització dels objectes predefinits del llenguatge:</li>
+<li>Utilització d’objectes. Objectes natius del llenguatge.</li>
+<li>Interacció amb el navegador. Objectes predefinits associats.</li>
+<li>Generació de text i elements HTML des de codi. Manipulació d’elements HTML dinàmicament.</li>
+<li>Gestió i creació de macros.</li>
+<li>Marcs imbricats.</li>
+<li>Execució de codi entre macros.</li>
+<li>Aplicacions pràctiques dels marcs.</li>
+<li>Gestió de l’aparença de la finestra.</li>
+<li>Creació de finestres noves. Comunicació entre finestres.</li>
+<li>Programació amb arrays, funcions i objectes definits per l’usuari:</li>
+<li>Funcions predefinides del llenguatge.</li>
+<li>Crides a funcions. Definició de funcions.</li>
+<li>Arrays.</li>
+<li>Inicialització d’arrays.</li>
+<li>Recorregut d’arrays.</li>
+<li>Creació d’objectes.</li>
+<li>Definició de mètodes i propietats.</li>
+<li>Interacció amb l’usuari: esdeveniments i formularis:</li>
+<li>Model de gestió d’esdeveniments.</li>
+<li>Model d’esdeveniments estàndard.</li>
+<li>Controladors d’esdeveniments.</li>
+<li>Utilització de formularis des de codi.</li>
+<li>Accés als membres del formulari.</li>
+<li>Modificació d’aparença i comportament.</li>
+<li>Validació i enviament de formularis.</li>
+<li>Expressions regulars.</li>
+<li>Utilització de galetes.</li>
+<li>Escriptura i lectura de galetes.</li>
+<li>Ús de frameworks. Desenrotllament ràpid d’aplicacions.</li>
+<li>Utilització del model d’objectes del document (DOM):</li>
+<li>El model d’objectes del document (DOM).</li>
+<li>Objectes del model. Propietats i mètodes dels objectes.</li>
+<li>Representació de la pàgina web com una estructura en arbre. </li>
+<li>Accés al document des de codi.</li>
+<li>Creació i modificació d’elements.</li>
+<li>El model d’esdeveniments.</li>
+<li>Programació d’esdeveniments.</li>
+<li>Diferències en les implementacions del model. </li>
+<li>Desenrotllament d’aplicacions multiclient.</li>
+<li>Utilització de mecanismes de comunicació asíncrona:</li>
+<li>Mecanismes de comunicació asíncrona.</li>
+<li>Objectes, propietats i mètodes relacionats.</li>
+<li>Recuperació remota d’informació.</li>
+<li>Programació d’aplicacions amb comunicació asíncrona.</li>
+<li>Modificació dinàmica del document utilitzant comunicació asíncrona.</li>
+<li>Formats per a l’enviament i la recepció d’informació.</li>
+<li>Llibreries d’actualització dinàmica.</li>
+<li>Avantatges i inconvenients de l’ús de la comunicació asíncrona.</li>
+</ul>
+<p>Aquests continguts s'han estructurat a través de diverses unitats didàctiques.</p>
+<p><strong>5.  UNITATS DIDÀCTIQUES</strong></p>
+<p>L’ <strong>organització i la distribució temporal de les unitats didàctiques</strong> per mòdul, així com els professors que les impartiran es recull en l’ <strong>ANNEX I</strong> d'aquesta programació.</p>
+<p><code></code><strong>6. METODOLOGIA. ORIENTACIONS DIDÀCTIQUES</strong></p>
+<h2 id="a-metodologia-general-i-especifica-del-modul"><strong><em>a) Metodologia general i específica del mòdul</em></strong></h2>
+<p>Segons el R.D 1147/2011, de 29 de juliol, pel qual s'estableix l'ordenació general de la formació professional del sistema educatiu, especifica en el seu Art. 8 que la metodologia didàctica dels ensenyaments de formació professional integrarà els aspectes científics, tecnològics i organitzatius que en cada cas corresponguin, per tal que l'alumnat adquireixi una visió global dels processos productius propis de l'activitat professional corresponent, amb especial atenció a les necessitats d'aquelles persones que presentin una discapacitat. Així mateix, es tindran en compte les possibilitats formatives de l'entorn, especialment en el mòdul professional de formació en centres de treball.</p>
+<p>La metodologia és el sistema d'ensenyament/aprenentatge que és fa servir a l'aula, o la manera concreta en què s'organitzen, regulin i relacionin entre si els Diferents components que intervenen al procés d'aprenentatge: objectius, activitats, recursos i, molt especialment, alumnat, professorat i la resta de la comunitat educativa.</p>
+<p>La metodologia general que es segueix per a la impartició de cicles formatius a l'IES Jaume II el Just és a partir del nivell de desenvolupament de l'alumne, per a:</p>
+<ul>
+<li>Assegurar la construcció d'aprenentatges significatius a través de la mobilització dels seus coneixements previs i de la memorització comprensiva.</li>
+<li>Possibilitar que els alumnes realitzen aprenentatges significatius per sí mateixos (aprendre a aprendre).</li>
+<li>Proporcionar situacions d'aprenentatge que exigisquen una intensa activitat mental per part de l'alumne que el porte a reflexionar i justificar les seues actuacions.</li>
+<li>Promoure la interacció a l'aula com a motor d'aprenentatge.</li>
+<li>Habituar a l'alumne a treballar amb informació i documentació actualitzada.</li>
+<li>Saber ser sistemàtics i ordenats a l'hora de treballar.</li>
+<li>Possibilitar que els alumnes vegen el mòdul, no com a un bloc de coneixements aïllat, sinó com a un mòdul relacionat amb la resta que componen el cicle formatiu.</li>
+</ul>
+<p>La metodologia específica que se seguirà per a impartir el Mòdul en el present curs escolar es recull en l’ <strong>ANNEX I</strong> d'aquesta programació.</p>
+<p><strong><em>b) Activitats i estratègies d’ensenyança i aprenentatge</em></strong></p>
+<p>Les activitats i estratègies d’ensenyament i aprenentatge dutes a terme en aquest mòdul van contribuir al desenvolupament de les competències dels alumnes.</p>
+<p>Inicialment, el docent ha de posar en pràctica estratègies per indagar en els coneixements previs per poder dur a terme un aprenentatge significatiu establint un pont cognitiu entre el que l'alumne ja coneix i el que necessita conèixer per assimilar significativament els nous coneixements. Aquests ponts didàctics constitueixen els organitzadors previs, és a dir, conceptes, idees inicials i material introductori, els quals es presenten com a marc de referència dels nous conceptes i relacions.</p>
+<p>Algunes de les estratègies i activitats que es desenvolupen en aquest mòdul són:</p>
+<ul>
+<li>Estratègies per indagar sobre els coneixements previs (pluja d'idees, preguntes, qüestionaris, entrevistes personals, etc.).</li>
+<li>Estratègies per promoure la comprensió mitjançant l'organització de la informació (quadres sinòptics, quadres comparatius, matrius, tècnica heurística UVE de Gowin, correlacions, analogies, resums, síntesi, etc.)</li>
+<li>Algorismes i diagrames (radials, arbre, causa-efecte, flux, etc.)</li>
+<li>Mapes cognitius (mentals, conceptuals, semàntics, de cicles, etc.)</li>
+<li>Estratègies grupals (debat, simposi, taula rodona, fòrum, seminari, taller, treball cooperatiu, etc.)</li>
+<li>Metodologies actives per contribuir al desenvolupament de competències (projectes, pràctiques del mòdul, webquest, entorns d'aprenentatge i, en general, totes les eines TIC i Web 2.0 rellevants per al desenvolupament dels continguts impartits en el cicle).</li>
+</ul>
+<p><strong>7. AVALUACIÓ</strong></p>
+<p><a name="_4i7ojhp"></a><strong><em>a) Criteris d’avaluació</em></strong></p>
+<p>L'avaluació és un component bàsic en el procés d'ensenyament. A més, ha de ser coherent amb les característiques del Cicle Formatiu, amb els objectius plantejats i amb la metodologia utilitzada. Per tant, l'aprenentatge de l'alumnat serà avaluat de forma individual, contínua, formativa i integradora. Quan el progrés d'un alumne o alumna no sigui l'adequat, s'establiran mesures de reforç educatiu. Aquestes mesures s'adoptaran en qualsevol moment del curs, tan aviat com es detectin les dificultats i estaran dirigides a garantir l'adquisició de les competències imprescindibles per continuar el procés educatiu.</p>
+<p>Els criteris d’avaluació del mòdul són els especificats en el  <strong>RD 686/2010, de 20 de maig</strong>, així com a l'Apartat 3.d) d'aquesta programació.</p>
+<p><strong><em>b) Instruments d’avaluació</em></strong></p>
+<p>Entre d'altres, es faran servir els següents instruments:</p>
+<ul>
+<li>Proves d'avaluació, orals, escrites o pràctiques.</li>
+<li>Exercicis d'autoavaluació, que permeten no tan altres sols saber la qualificació obtinguda, sinó també reconduir Coneixements erronis.</li>
+<li>Produccions dels alumnes i les alumnes: documents, objectes digitals, programes, portfolis, etc.</li>
+<li>Observació i seguiment continu del treball i l'actitud de cada estudiant a l'aula.</li>
+<li>Altres recursos: rúbriques, diana, etc.</li>
+</ul>
+<p><strong><em>c) Tipus d’avaluació</em></strong></p>
+<p>L'avaluació és un element bàsic al procés d'ensenyament, a més a més, cal ser coherent amb les característiques del cicle formatiu, amb els objectius plantejats i amb la metodologia usada. Cal que també siga formativa i servisca per a fomentar la reflexió, orientar i analitzar el procés educatiu. </p>
+<p>Al llarg del curs, l'alumne compta amb tres ocasions per aprovar este mòdul:</p>
+<ul>
+<li><strong>Avaluació contínua</strong>: formada pels resultats obtinguts a través dels diversos instruments d'avaluació. En qualsevol cas, es contempla un mínim d'un examen per trimestre. </li>
+<li><strong>Avaluació ordinària</strong>: aquells alumnes que no hagen seguit el mòdul mitjançant l'avaluació contínua, s'examinaran (amb els mecanismes que s'establisquen) dels continguts de tot el mòdul. Així mateix, els alumnes que hagen suspès alguna part del mòdul, també seran avaluats mitjançant esta convocatòria.</li>
+<li><strong>Avaluació extraordinària</strong>: per ser esta convocatòria de caràcter extraordinari, aquells alumnes que hi accedisquen s'examinaran de tots els continguts del mòdul.</li>
+</ul>
+<p>Les dates de les avaluacions ordinària i extraordinària seran les fixades, en el calendari escolar, pel centre educatiu. A més de la publicitat que l'IES Jaume II el Just faça d'aquestes convocatòries a través del tauler d'anuncis o pàgina web del centre, el docent informarà expressament sobre les dates i característiques d'aquestes convocatòries.</p>
+<ul>
+<li><strong><em>Absentisme i pèrdua de l'avaluació contínua</em></strong></li>
+</ul>
+<p>L'assistència no és obligatòria en la modalitat semi-presencial i per tant no hi ha pèrdua de l’avaluació contínua per absentisme.</p>
+<p><strong><em>d) Criteris de qualificació</em></strong></p>
+<p>Degut al caràcter pràctic de la formació professional, s'establirà una qualificació mixta entre els continguts avaluats a les activitats d'ensenyament/aprenentatge i les proves finals que es puguen dur a terme (almenys una per avaluació). </p>
+<p>El caràcter integrador de l'avaluació no impedeix que el professorat realitzi de manera diferenciada l'avaluació de cada assignatura tenint en compte els criteris d'avaluació i els estàndards d'aprenentatge avaluables de cadascuna d'elles. En aquest sentit, els criteris de qualificació específics del professorat per a impartir el Mòdul en el present curs escolar es recullen en l’<strong>ANNEX I</strong> d’aquesta programació.</p>
+<p>Amb caràcter general, els alumnes que durant el curs escolar no hagen superat l'avaluació dels continguts mínims no aproven el mòdul, independentment de la feina, interès o comportament.</p>
+<p>Tots els exàmens seran custodiats pel professorat i conservats en el departament, ja siga en paper o en format digital. El docent indicarà els resultats obtinguts a cada alumne, informant-lo dels errors comesos i assessorant per a la millora del seu aprenentatge.</p>
+<p>Els alumnes i les alumnes tenen dret a revisió del seu examen en el termini i horari fixat pel professor. Quan els alumnes i les alumnes siguen majors d'edat o, en el cas de menors d'edat, els pares, mares o tutors legals podran sol·licitar, per escrit, una còpia dels exàmens que hagen realitzat els seus fills una vegada que s'haja comunicat a aquests el resultat de l'examen en qüestió.</p>
+<p><a name="_2xcytpi"></a><strong><em>e) Activitats de reforç i ampliació</em></strong></p>
+<p>Es disposa d’activitats de reforç i ampliació per unitat didàctica. Amb este tipus d’activitats pretenem donar resposta als diferents ritmes d’aprenentatge que presenten els alumnes. Les activitats de reforç permetran que alumnes amb un ritme d’aprenentatge menor arriben a aconseguir les capacitats de la unitat, mentres que les activitats d’ampliació permetran que alumnes amb un ritme d’aprenentatge major puguen aprofundir en els continguts de la unitat una vegada aconseguides les capacitats.</p>
+<p><strong><em>f) Avaluació del procés d’ensenyança i aprenentatge</em></strong></p>
+<p>L'avaluació serà un instrument per a la millora tant dels processos d'ensenyament com dels processos d'aprenentatge. La recerca de la qualitat afecta també, òbviament, a l'activitat docent, per la qual cosa es fa necessària l'avaluació no només dels alumnes (per establir la qualificacions que corresponguen i, per això, per a mesurar el grau d'aprofitament i assoliment del perfil professional corresponent) sinó també del professorat i del propi procés de formació, per comprovar l'efectivitat del treball desenvolupat, així com les possibilitats de millorar-lo.</p>
+<p>Aquesta avaluació es realitzarà:</p>
+<ul>
+<li>Mitjançant el diàleg continu amb alumnes, tutor, equip docent de cicle i departament didàctic.</li>
+<li>Mitjançant l'ús d'eines d'avaluació que dispose el centre, com ara avaluacions del procés formatiu, enquestes de satisfacció de l'alumnat o rúbriques en què apareguen reflectits els indicadors d'assoliment.</li>
+<li>Registres d'autoavaluació del professorat duts a terme pel departament d'Informàtica.</li>
+</ul>
+<p>Les conclusions obtingudes en l'anàlisi d'aquests processos serviran perquè cada docent puga avaluar la seua programació didàctica i realitzar les propostes de millora oportunes.</p>
+<p><strong>8. MESURES D’ATENCIÓ A L’ALUMNAT AMB NECESSITAT ESPECIFICA DE SUPORT EDUCATIU O AMB NECESSITAT DE COMPENSACIÓ EDUCATIVA</strong></p>
+<p>El capítol I del títol II de la Llei Orgànica 8/2013, de 9 de desembre, per a la millora de la qualitat educativa, especifica que les administracions educatives asseguraran els recursos necessaris perquè els alumnes i les alumnes que requereixin una atenció educativa diferent a la ordinària, per presentar necessitats educatives especials, per dificultats específiques d'aprenentatge, TDAH, per les seues altes capacitats intel·lectuals, per haver-se incorporat tard al sistema educatiu, o per condicions personals o d'història escolar, puguen assolir el màxim desenvolupament possible de les seues capacitats personals i , en tot cas, els objectius establerts amb caràcter general per a tot l'alumnat.</p>
+<p>L'atenció integral a l'alumnat amb necessitat específica de suport educatiu s'iniciarà en el mòdul formatiu des del mateix moment en què aquesta necessitat siga identificada i es regirà pels principis de normalització i inclusió. La primera acció serà detectar els alumnes que necessiten una atenció major o diferent a la resta mitjançant els següents instruments:</p>
+<ul>
+<li>Informació del departament d'orientació.</li>
+<li>Prova diagnòstica a l'inici del curs per determinar a els coneixements previs dels alumnes.</li>
+<li>Observació directa diària i de manera més intensiva a l'inici per detectar els casos especials que no fan referència al nivell de coneixements.</li>
+</ul>
+<p>Tal com estableix el R.D 1147/2011, de 29 de juliol, que estableix l'ordenació general de la formació professional del sistema educatiu, els centres de formació professional d'aplicar els currículums establerts per l'Administració educativa corresponent, d'acord amb les característiques i expectatives de l'alumnat, amb especial atenció a les necessitats d'aquelles persones que requereixin mesures d'atenció específiques.   </p>
+<p>El professorat del cicle formatiu establirà les mesures i adaptacions del currículum pertinents perquè els alumnes amb necessitats educatives especials puguen aconseguir les finalitats de la formació professional específica. A més a més, en els cicles les adaptacions curriculars no suposaran, en cap cas, l’eliminació d’objectius (capacitats terminals) relacionats amb la competència professional bàsica característica de cada títol. Només podran afectar la metodologia didàctica, les activitats i la priorització i temporalització en la consecució dels objectius, així com els elements materials a utilitzar per l’alumnat.</p>
+<p>Tenint present l'anterior, entre d'altres, es contemplaran les següents mesures:</p>
+<ul>
+<li>Adaptacions curriculars individualitzades, tant per a alumnes amb dificultats d'aprenentatge com per a alumnes d'altes capacitats.</li>
+<li>Agrupaments flexibles.</li>
+<li>Suport en grups ordinaris.</li>
+<li>Tutoria entre iguals i aprenentatge cooperatiu.</li>
+<li>Desdoblaments de grups.</li>
+<li>Mesures d'adaptació per a alumnes amb dificultats visuals, motores, auditives, etc.</li>
+<li>d'adaptació per als alumnes que requereixin us llocs de treball, programari i maquinari quan els alumnes requereixin ergonòmiques per a alumnes que ho requereixin.</li>
+<li>Programes de millora de l'aprenentatge i el rendiment i altres programes de tractament personalitzat per a l'alumnat amb necessitat específica de suport educatiu.</li>
+</ul>
+<p>Les mesures especifiques que s'adoptin, un cop comencin les classes, i requereixin un tractament específic per ser significatives es reflectiran en l'acta de les reunions de departament.</p>
+<p>En finalitzar cada trimestre, s'avaluaran els resultats aconseguits per cada un dels alumnes en funció dels objectius proposats a partir de l'avaluació inicial, amb suport de l'equip d'orientació del centre, de manera que el pla d'actuació amb aquest alumnat siga el més adequat a les seues possibilitats.</p>
+<p><code></code><strong>9.  FOMENT DE LA LECTURA</strong></p>
+<p>El alumnes llegiran articles de revistes especialitzades online i webs de la matèria, articles d'opinió en blogs etc, que els serviran tant per a completar la seua formació com per a adquirir hàbit de lectura. Els canvis continuats en el món de les TIC fa que l'hàbit de cercar informació, llegir-se-la i entendre-la siga una de les competències bàsiques a desenvolupar. </p>
+<p>Per altra banda aquest foment de la lectura s’ampliaria a l’ús i comprensió de la <strong>llengua anglesa</strong>. </p>
+<p><strong>10. UTILITZACIÓ DE LES TECNOLOGIES DE LA INFORMACIÓ I LA COMUNICACIÓ</strong></p>
+<p>En tractar-se d'un mòdul d'informàtica, és evident l'ús de les TIC de manera continuada i totalment ajustada als continguts curriculars. Els alumnes utilitzaran en el seu dia a dia l'ordinador personal assignat, l'accés a Internet de l'Institut per a dur a terme tasques de recerca de les activitats formatives, el hardware i el software escaient per la realització de treballs que hauran de presentar en format digital.</p>
+<p>Donat que la base del cicle formatiu són les tecnologies de la informació i la comunicació, el seu ús resulta evident i no es necessita de cap mesura per tal de propiciar-lo.</p>
+<p><strong>11. RECURSOS DIDÀCTICS I ORGANITZATIUS</strong></p>
+<p>Per tal de desenvolupar tot allò que es demana al currículum d'aquest modul, caldrà una aula equipada com a mínim amb el següent:</p>
+<ul>
+<li>20 ordinadors en xarxa i una distribució GNU/Linux configurats en mode de clients. És recomanable una quantitat de RAM superior a 8 GB para permetre l'execució de dues màquines virtuals per tal de fer proves i proposar casos d'estudi.</li>
+<li>Un ordinador per al professor configurat de manera que opere com a servidor de serveis de xarxa.</li>
+<li>Pissarra blanca, projector i pantalla antireflectant.</li>
+<li>Maquinari i programari especific para abordar el currículum del mòdul. </li>
+</ul>
+<p>Els recursos didàctics seran els llibres, apunts, activitats i altra documentació elaborada o proposta pel professor, documentació tècnica, la plataforma Aules.</p>
+<p><strong>12.  ACTIVITATS COMPLEMENTÀRIES</strong></p>
+<p>El nostre departament col·laborarà participant en activitats que s'organitzen a nivell de centre. Es preveu la possibilitat de realitzar visites als Ajuntaments, exposicions, Universitats, empreses relacionades amb el sector informàtic, fires de tecnologia, centres de processos de dades, superordinadors, etc. També es podran organitzar xerrades o conferències al centre.</p>
+<p><strong><em>DEPARTAMENT DE LA FAMÍLIA PROFESSIONAL D’INFORMÀTICA I COMUNICACIONS</em>    Pàg. 12 / 13</strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright - Xuso Ortí - Professor Departament d'Informàtica IES Jaume II el Just (Tavernes de la Valldigna)
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.footer"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
