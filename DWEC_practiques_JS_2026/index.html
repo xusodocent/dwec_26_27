@@ -1,0 +1,4531 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../DWEC_UD4_codis_extra/">
+      
+      
+        <link rel="next" href="../DWEC_projecte_guiat_2026/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Gestor de despeses - Enunciats - DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practiques-de-javascript-gestor-de-despeses" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-header__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gestor de despeses - Enunciats
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../presentaci%C3%B32/" class="md-tabs__link">
+          
+  
+  
+  Presentació
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-tabs__link">
+          
+  
+  
+  UD0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-tabs__link">
+          
+  
+  
+  UD1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD2_Javascript_DOM/" class="md-tabs__link">
+          
+  
+  
+  UD2
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD4_utilitats_extra/" class="md-tabs__link">
+          
+  
+  
+  UD3
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Pràctiques JavaScript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_projecte_guiat_2026/" class="md-tabs__link">
+          
+  
+  
+  Projecte 1av
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD5_teoria_ajax/" class="md-tabs__link">
+          
+  
+  
+  UD4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD6_VUE_1rs_passos/" class="md-tabs__link">
+          
+  
+  
+  UD5
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD7_vue_router/" class="md-tabs__link">
+          
+  
+  
+  UD6
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_json_serve/" class="md-tabs__link">
+          
+  
+  
+  Fake API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD8_api_rest_vue/" class="md-tabs__link">
+          
+  
+  
+  UD7
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../annexos_vite/" class="md-tabs__link">
+          
+  
+  
+  Annexos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-nav__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Presentació
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentaci%C3%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DAW2sp_DWEC_%2824-25%29_ANNEX_I/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programació didàctica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD0
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD0 Eines de Programació
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Pr_Git2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD0 Pràctica Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD1 Teoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Javascript
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_la_consola/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 La Consola
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_practicaJSbasic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica JS bàsic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_operadors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Operadors
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Arrays
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Codis extra
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Codis extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_codis_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD2 Teoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_DOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Javascript DOM
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_Events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Events
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Formularis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_json_teoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_DOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica DOM
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_Events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Events
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Prac_formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Formularis
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_exemples_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Codis d'exemple
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD3 Teoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD4_utilitats_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 Utilitats extra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD4_utilitats_extra_pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 Pràctica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD4_codis_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 Codis d'exemple
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Gestor de despeses - Enunciats
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestor de despeses - Enunciats
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#organitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organització
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organització">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condicions-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condicions comunes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dades-inicials-i-regles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades inicials i regles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-1-analitza-les-despeses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pràctica 1. Analitza les despeses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 1. Analitza les despeses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-explora-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explora les dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-calcula-un-resum" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Calcula un resum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-busca-filtra-i-ordena" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Busca, filtra i ordena
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-afig-i-elimina-amb-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Afig i elimina amb control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacions-obligatories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovacions obligatòries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-2-construeix-la-interficie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pràctica 2. Construeix la interfície
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 2. Construeix la interfície">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pantalla-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pantalla mínima
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-mostra-la-informacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Mostra la informació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-connecta-els-filtres" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Connecta els filtres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-valida-el-formulari" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Valida el formulari
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gestiona-leliminacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gestiona l'eliminació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacions-obligatories_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovacions obligatòries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-3-conserva-i-organitza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pràctica 3. Conserva i organitza
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 3. Conserva i organitza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-separa-responsabilitats" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Separa responsabilitats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-guarda-despres-dels-canvis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Guarda després dels canvis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-distingeix-els-casos-de-recuperacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Distingeix els casos de recuperació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-afig-dues-accions-explicites" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Afig dues accions explícites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacions-obligatories_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovacions obligatòries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ampliacions-opcionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ampliacions opcionals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ampliacions opcionals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-editar-una-despesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Editar una despesa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-reordenacio-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Reordenació manual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-una-preferencia-amb-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Una preferència amb cookie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-classes-amb-comportament" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Classes amb comportament
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criteris-de-valoracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criteris de valoració
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projecte 1av
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Projecte 1av
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_projecte_guiat_2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projecte guiat 2026 - La Vall en Joc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            UD4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_teoria_ajax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD4 AJAX Teoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_peticions_ajax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD4 AJAX Peticions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_promeses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD4 AJAX en Promeses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_exemple_ajax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD4 AJAX exemple
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_prac_ajax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica AJAX bàsica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD5
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            UD5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_VUE_1rs_passos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Primers passos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_databinding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data binding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_pas_dades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pas de dades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_cicle_vida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cicle de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_renderitzat_directives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Directives de renderitzat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_tutorials_neoguias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques del tema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD6
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            UD6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD7_vue_router/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    El router de Vue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD7_vue_router_avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Router avançat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Codis extra
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Codis extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD7_codis_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctica
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_VUE_router_practica_semiguiada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica semi-guiada
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fake API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Fake API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_json_serve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctica
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_json_serve_pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica semi-guiada
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD7
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            UD7
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD8_api_rest_vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API RESTful
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD8_app_exemple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aplicació d'exemple
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_login_jwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemple login JWT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_projecte_vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enunciat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_3">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD9_estat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestió de l'estat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD9_Vuex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro Vuex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD9_vuex_projecte_guiat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projete guiat amb Vuex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Annexos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Annexos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexos_vite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_serveis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ús de serveis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_codespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Codespaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_BOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BOM (opcional)
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue_build_deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desplegament
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#organitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organització
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organització">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condicions-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condicions comunes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dades-inicials-i-regles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades inicials i regles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-1-analitza-les-despeses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pràctica 1. Analitza les despeses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 1. Analitza les despeses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-explora-les-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Explora les dades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-calcula-un-resum" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Calcula un resum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-busca-filtra-i-ordena" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Busca, filtra i ordena
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-afig-i-elimina-amb-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Afig i elimina amb control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacions-obligatories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovacions obligatòries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-2-construeix-la-interficie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pràctica 2. Construeix la interfície
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 2. Construeix la interfície">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pantalla-minima" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pantalla mínima
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-mostra-la-informacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Mostra la informació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-connecta-els-filtres" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Connecta els filtres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-valida-el-formulari" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Valida el formulari
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gestiona-leliminacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gestiona l'eliminació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacions-obligatories_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovacions obligatòries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-3-conserva-i-organitza" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pràctica 3. Conserva i organitza
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pràctica 3. Conserva i organitza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-separa-responsabilitats" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Separa responsabilitats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-guarda-despres-dels-canvis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Guarda després dels canvis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-distingeix-els-casos-de-recuperacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Distingeix els casos de recuperació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-afig-dues-accions-explicites" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Afig dues accions explícites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprovacions-obligatories_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprovacions obligatòries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ampliacions-opcionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ampliacions opcionals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ampliacions opcionals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-editar-una-despesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Editar una despesa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-reordenacio-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Reordenació manual
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-una-preferencia-amb-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Una preferència amb cookie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-classes-amb-comportament" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Classes amb comportament
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criteris-de-valoracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criteris de valoració
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practiques-de-javascript-gestor-de-despeses">Pràctiques de JavaScript: gestor de despeses</h1>
+<p>Construiràs <strong>Balanç</strong>, una aplicació local per a registrar despeses fictícies, consultar en què es gasten els diners i detectar errors en les dades. Començaràs amb funcions en consola i acabaràs amb una interfície que conserva la informació en recarregar.</p>
+<p>Són <strong>tres pràctiques progressives sobre un mateix programa</strong>, independents de qualsevol projecte del curs. Els enunciats indiquen què ha de fer l'aplicació; tu decideixes la implementació i el disseny.</p>
+<h2 id="organitzacio">Organització</h2>
+<table>
+<thead>
+<tr>
+<th>Pràctica</th>
+<th>Continguts</th>
+<th>Temps orientatiu</th>
+<th>Resultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Analitza les despeses</td>
+<td>Variables, operadors, funcions, arrays i objectes</td>
+<td>2–3 h</td>
+<td>Funcions comprovades en consola</td>
+</tr>
+<tr>
+<td>2. Construeix la interfície</td>
+<td>DOM, esdeveniments i formularis</td>
+<td>4–5 h</td>
+<td>Aplicació interactiva</td>
+</tr>
+<tr>
+<td>3. Conserva i organitza</td>
+<td>JSON, localStorage, errors i mòduls</td>
+<td>2–3 h</td>
+<td>Aplicació amb persistència</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total orientatiu: 8–11 hores</strong>, incloses les comprovacions. Les ampliacions finals queden fora d'aquest temps. Cada pràctica continua sobre l'anterior; no cal començar tres aplicacions.</p>
+<p>Consulta els apunts segons el que necessites: <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/">JavaScript bàsic</a>, <a href="../DWEC_UD2_Javascript_DOM/">DOM</a>, <a href="../DWEC_UD2_Javascript_Events/">esdeveniments</a>, <a href="../DWEC_UD2_formularis/">formularis</a>, <a href="../DWEC_json_teoria/">JSON</a> i <a href="../DWEC_UD4_utilitats_extra/">mòduls i emmagatzematge</a>.</p>
+<h3 id="condicions-comunes">Condicions comunes</h3>
+<ul>
+<li>Usa HTML, CSS i JavaScript, sense frameworks ni servidor de dades.</li>
+<li>Treballa amb dades fictícies. No introduïsques informació bancària ni personal real.</li>
+<li>Executa l'aplicació amb un servidor local, com el que ja utilitzeu a classe.</li>
+<li>Usa <code>const</code> i <code>let</code>, funcions amb noms descriptius i <code>addEventListener()</code>.</li>
+<li>Les dades de l'array són l'estat de l'aplicació. Actualitza-les abans de dibuixar la pantalla.</li>
+<li>Mostra els missatges a la pàgina. La consola serveix per a depurar, no com a interfície final.</li>
+<li>El CSS ha de facilitar la lectura. No s'avalua la quantitat d'efectes ni cal descarregar una plantilla.</li>
+</ul>
+<h2 id="dades-inicials-i-regles">Dades inicials i regles</h2>
+<p>Cada despesa té un identificador únic, un concepte, una categoria i un import. Representa els diners en <strong>cèntims enters</strong>: <code>1250</code> significa <code>12,50 €</code>. Fes els càlculs en cèntims i formata el resultat només en mostrar-lo.</p>
+<p>Copia aquest array com a punt de partida:</p>
+<div class="language-javascript highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">despesesInicials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;d1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">concepte</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Compra setmanal&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">categoria</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;alimentacio&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">centims</span><span class="o">:</span><span class="w"> </span><span class="mf">3250</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;d2&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">concepte</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Autobús&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">categoria</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;transport&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">centims</span><span class="o">:</span><span class="w"> </span><span class="mf">150</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;d3&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">concepte</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Cinema&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">categoria</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;oci&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">centims</span><span class="o">:</span><span class="w"> </span><span class="mf">800</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;d4&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">concepte</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Fruita&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">categoria</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;alimentacio&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">centims</span><span class="o">:</span><span class="w"> </span><span class="mf">675</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;d5&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">concepte</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Tren&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">categoria</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;transport&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">centims</span><span class="o">:</span><span class="w"> </span><span class="mf">460</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;d6&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">concepte</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Llibre&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">categoria</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;oci&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">centims</span><span class="o">:</span><span class="w"> </span><span class="mf">1490</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">];</span>
+</span></code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Dada</th>
+<th>Regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identificador</td>
+<td>Cadena no buida, única i estable; no uses la posició de l'array</td>
+</tr>
+<tr>
+<td>Concepte</td>
+<td>Entre 3 i 60 caràcters després de llevar espais dels extrems</td>
+</tr>
+<tr>
+<td>Categoria</td>
+<td><code>alimentacio</code>, <code>transport</code>, <code>oci</code> o <code>altres</code></td>
+</tr>
+<tr>
+<td>Import</td>
+<td>Enter entre 1 i 100000 cèntims, ambdós inclosos</td>
+</tr>
+<tr>
+<td>Despeses repetides</td>
+<td>Es permeten conceptes iguals; els identificadors han de ser diferents</td>
+</tr>
+</tbody>
+</table>
+<p>La cerca ignora majúscules i espais als extrems, però <strong>no cal eliminar accents</strong>. Quan diversos registres empaten en una ordenació, conserva el seu ordre relatiu.</p>
+<h2 id="practica-1-analitza-les-despeses">Pràctica 1. Analitza les despeses</h2>
+<p><strong>Objectiu:</strong> escriure funcions reutilitzables que treballen sense DOM.</p>
+<h3 id="1-explora-les-dades">1. Explora les dades</h3>
+<p>Mostra l'array amb <code>console.table()</code>. Comprova els tipus de l'identificador i de l'import. Explica en un comentari per què <code>"150" + 50</code> no serveix per a sumar diners.</p>
+<h3 id="2-calcula-un-resum">2. Calcula un resum</h3>
+<p>Implementa <code>resumeix(despeses)</code>, que retorne un objecte amb:</p>
+<ul>
+<li><code>quantitat</code>: nombre de registres.</li>
+<li><code>totalCentims</code>: suma dels imports.</li>
+<li><code>mitjanaCentims</code>: mitjana arrodonida al cèntim més pròxim.</li>
+<li><code>maxima</code>: objecte de la despesa més cara; en cas d'empat, el primer.</li>
+</ul>
+<p>Amb un array buit, retorna quantitat, total i mitjana iguals a <code>0</code>, i <code>maxima: null</code>.</p>
+<p>Calcula primer el total amb un bucle i després amb <code>reduce()</code>. Compara els resultats i conserva una sola versió en el programa final.</p>
+<h3 id="3-busca-filtra-i-ordena">3. Busca, filtra i ordena</h3>
+<p>Implementa aquestes funcions sense modificar l'array original:</p>
+<table>
+<thead>
+<tr>
+<th>Funció</th>
+<th>Comportament</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filtra(despeses, text = "", categoria = "totes")</code></td>
+<td>Cerca parcial pel concepte i filtre exacte per categoria, combinats</td>
+</tr>
+<tr>
+<td><code>ordena(despeses, criteri = "import-asc")</code></td>
+<td>Admet <code>import-asc</code>, <code>import-desc</code> i <code>concepte</code>; aquest últim ordena alfabèticament en català</td>
+</tr>
+<tr>
+<td><code>totalsPerCategoria(despeses)</code></td>
+<td>Retorna un objecte amb les quatre categories i la suma en cèntims de cadascuna, incloent-hi les que sumen zero</td>
+</tr>
+</tbody>
+</table>
+<p>Pots assumir que les funcions reben arrays de despeses vàlides i criteris dels indicats. No cal dissenyar un sistema general per a qualsevol tipus d'entrada.</p>
+<h3 id="4-afig-i-elimina-amb-control">4. Afig i elimina amb control</h3>
+<p>Implementa <code>afigDespesa(despeses, nova)</code>: retorna un array nou si <code>nova</code> compleix les regles de la taula i el seu identificador no existeix. En cas contrari, llança un <code>Error</code> amb un missatge comprensible. Comprova que <code>centims</code> és un nombre enter; no acceptes una cadena numèrica.</p>
+<p>Implementa <code>eliminaDespesa(despeses, id)</code>: retorna un array nou sense el registre indicat. Si no existeix, retorna una còpia amb els mateixos registres.</p>
+<p>En les proves, captura els errors d'alta amb <code>try...catch</code> perquè pugues continuar comprovant la resta de casos.</p>
+<h3 id="comprovacions-obligatories">Comprovacions obligatòries</h3>
+<p>Cada fila es prova sobre les dades inicials, excepte quan s'indique una altra entrada.</p>
+<table>
+<thead>
+<tr>
+<th>Cas</th>
+<th>Resultat esperat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resum inicial</td>
+<td>6 registres; total 6825; mitjana 1138; màxima <code>d1</code></td>
+</tr>
+<tr>
+<td>Resum de <code>[]</code></td>
+<td>0 registres; total i mitjana 0; màxima <code>null</code></td>
+</tr>
+<tr>
+<td>Totals per categoria</td>
+<td>Alimentació 3925; transport 610; oci 2290; altres 0</td>
+</tr>
+<tr>
+<td>Cerca <code>"  TREN "</code></td>
+<td>Només <code>d5</code></td>
+</tr>
+<tr>
+<td>Text buit i categoria <code>oci</code></td>
+<td><code>d3</code> i <code>d6</code></td>
+</tr>
+<tr>
+<td>Cerca <code>"tren"</code> i categoria <code>oci</code></td>
+<td>Array buit</td>
+</tr>
+<tr>
+<td>Ordre per import ascendent</td>
+<td><code>d2</code>, <code>d5</code>, <code>d4</code>, <code>d3</code>, <code>d6</code>, <code>d1</code></td>
+</tr>
+<tr>
+<td>Afegir <code>d7</code>, «Café», <code>altres</code>, 125</td>
+<td>7 registres i total 6950</td>
+</tr>
+<tr>
+<td>Afegir un altre <code>d1</code></td>
+<td>Error d'identificador duplicat</td>
+</tr>
+<tr>
+<td>Afegir 0, -50, 12.5 o <code>"150"</code> com a <code>centims</code></td>
+<td>Error d'import</td>
+</tr>
+<tr>
+<td>Afegir una categoria desconeguda o concepte <code>"  "</code></td>
+<td>Error de validació</td>
+</tr>
+<tr>
+<td>Eliminar <code>d2</code></td>
+<td>5 registres i total 6675</td>
+</tr>
+<tr>
+<td>Eliminar <code>inexistent</code></td>
+<td>Mateixos sis registres</td>
+</tr>
+</tbody>
+</table>
+<p>Comprova també els límits <strong>1 i 100000</strong>, que han de ser acceptats, i <strong>100001</strong>, que s'ha de rebutjar. Després de cada operació, l'array original ha de continuar intacte.</p>
+<p><strong>Entrega:</strong> codi i <code>comprovacions.md</code> amb els resultats obtinguts. <strong>Explicació individual:</strong> mostra una funció i explica les entrades, l'eixida i un cas límit.</p>
+<h2 id="practica-2-construeix-la-interficie">Pràctica 2. Construeix la interfície</h2>
+<p><strong>Objectiu:</strong> reutilitzar les regles de la pràctica 1 en una pàgina usable.</p>
+<h3 id="pantalla-minima">Pantalla mínima</h3>
+<p>La distribució és lliure, però ha de contindre aquestes zones:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>BALANÇ — GESTOR DE DESPESES
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>Nova despesa
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>[Concepte             ] [Categoria v] [Import €    ] [Afegir]
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>Missatges del formulari
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>Consulta
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>[Cerca pel concepte   ] [Categoria v] [Ordenació v]
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>Concepte             Categoria      Import      Accions
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>Compra setmanal      Alimentació    32,50 €      [Eliminar]
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>...
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>Resultats visibles: 6 despeses · 68,25 €
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a>Total de totes les despeses: 68,25 €
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>Resum per categoria
+</span></code></pre></div></td></tr></table></div>
+<h3 id="1-mostra-la-informacio">1. Mostra la informació</h3>
+<p>Genera la llista o taula des de l'array. Mostra noms llegibles de les categories i imports amb dos decimals i símbol d'euro. Inclou un botó «Eliminar» per registre.</p>
+<p>Usa creació de nodes i <code>textContent</code> per als conceptes. La cadena <code>&lt;b&gt;Prova&lt;/b&gt;</code> ha de mostrar-se com a text, sense convertir-se en negreta.</p>
+<h3 id="2-connecta-els-filtres">2. Connecta els filtres</h3>
+<ul>
+<li>Actualitza la cerca mentre s'escriu amb <code>input</code>.</li>
+<li>Actualitza categoria i ordenació amb <code>change</code>.</li>
+<li>Combina els tres controls sense perdre la informació original.</li>
+<li>Mostra quantitat i total dels <strong>resultats visibles</strong>, i el total global en una zona diferent.</li>
+<li>El resum per categoria usa sempre totes les despeses.</li>
+<li>Si no hi ha coincidències, mostra un missatge i un total visible de <code>0,00 €</code>.</li>
+</ul>
+<h3 id="3-valida-el-formulari">3. Valida el formulari</h3>
+<p>Inclou etiquetes associades als camps. El concepte i l'import són obligatoris; la categoria es tria amb un <code>select</code>.</p>
+<p>Per a aquest exercici, l'import és un <strong>camp de text</strong> amb <code>inputmode="decimal"</code>. Accepta coma o punt decimal, amb un màxim de dues xifres decimals. Exemples vàlids: <code>12</code>, <code>12,5</code>, <code>12.50</code>, <code>0,01</code> i <code>1000</code>. Rebutja signes, notació exponencial, separadors de milers, text afegit i més de dos decimals.</p>
+<p>Normalitza els espais dels extrems i transforma l'import a cèntims abans de cridar <code>afigDespesa()</code>. Pots separar la part entera i decimal per a construir l'enter. No acceptes parcialment entrades com <code>12abc</code>.</p>
+<p>Gestiona <code>submit</code> i evita la recàrrega. Si hi ha errors, informa al costat del formulari i porta el focus al primer camp incorrecte. Conserva els valors perquè l'usuari els puga corregir. Si tot és correcte:</p>
+<ol>
+<li>Genera un identificador que no col·lidisca amb els existents.</li>
+<li>Afig la despesa amb la funció de la pràctica 1.</li>
+<li>Neteja els camps i mostra un missatge d'èxit.</li>
+<li>Actualitza la pantalla mantenint els filtres actuals. Si el filtre oculta la nova despesa, indica que s'ha afegit però no coincideix amb la consulta.</li>
+</ol>
+<h3 id="4-gestiona-leliminacio">4. Gestiona l'eliminació</h3>
+<p>Delega els clics en el contenidor de registres. Elimina mitjançant l'identificador, no mitjançant l'índex de la fila visible. Actualitza els totals sense registrar listeners duplicats.</p>
+<p>Els controls han de poder usar-se amb teclat. Després d'eliminar una fila, situa el focus en un control útil, com el botó d'eliminar següent o la cerca si no queden files. Usa una zona amb <code>role="status"</code> per als missatges de resultat.</p>
+<h3 id="comprovacions-obligatories_1">Comprovacions obligatòries</h3>
+<table>
+<thead>
+<tr>
+<th>Acció</th>
+<th>Resultat esperat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Obrir amb les dades inicials</td>
+<td>6 registres; total global 68,25 €</td>
+</tr>
+<tr>
+<td>Filtrar per transport</td>
+<td>2 registres; total visible 6,10 €; global 68,25 €</td>
+</tr>
+<tr>
+<td>Escriure una cerca sense coincidències</td>
+<td>Missatge de llista buida; global sense canvis</td>
+</tr>
+<tr>
+<td>Afegir «Café», altres, <code>1,25</code> sense filtres</td>
+<td>7 registres; global 69,50 €</td>
+</tr>
+<tr>
+<td>Afegir <code>12.345</code>, <code>12abc</code>, <code>1e2</code>, <code>-5</code>, buit o <code>1000,01</code></td>
+<td>Error; cap registre nou</td>
+</tr>
+<tr>
+<td>Afegir <code>0,01</code> i, en una altra prova, <code>1000</code></td>
+<td>Imports acceptats</td>
+</tr>
+<tr>
+<td>Afegir amb concepte <code>&lt;b&gt;Prova&lt;/b&gt;</code></td>
+<td>Text literal, sense interpretar HTML</td>
+</tr>
+<tr>
+<td>Amb filtre transport, eliminar «Tren» de les dades inicials</td>
+<td>Queda «Autobús» visible; global 63,65 €</td>
+</tr>
+<tr>
+<td>Afegir una despesa d'oci amb filtre transport</td>
+<td>Es guarda en l'array i s'informa que el filtre l'oculta</td>
+</tr>
+<tr>
+<td>Enviar amb Enter o activar controls amb teclat</td>
+<td>Mateix comportament que amb ratolí</td>
+</tr>
+<tr>
+<td>Afegir i eliminar repetidament</td>
+<td>Una operació per acció, sense duplicacions</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Entrega:</strong> aplicació i comprovacions actualitzades, amb una captura que mostre un filtre i els dos totals. <strong>Explicació individual:</strong> justifica la diferència entre l'array complet i la llista visible.</p>
+<h2 id="practica-3-conserva-i-organitza">Pràctica 3. Conserva i organitza</h2>
+<p><strong>Objectiu:</strong> recuperar les dades i gestionar errors sense deixar la pàgina inutilitzable.</p>
+<h3 id="1-separa-responsabilitats">1. Separa responsabilitats</h3>
+<p>Organitza el codi amb mòduls. Pots adaptar els noms, però cada fitxer ha de tindre una responsabilitat clara:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>balanc/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>  index.html
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>  estils.css
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>  js/
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    dades.js          dades inicials
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>    regles.js         validacions, càlculs i filtres
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>    vista.js          creació i actualització del DOM
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>    persistencia.js   lectura i escriptura local
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>    main.js           estat i connexió de les interaccions
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>  README.md
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>  comprovacions.md
+</span></code></pre></div></td></tr></table></div>
+<p>Carrega <code>main.js</code> amb <code>type="module"</code> i usa <code>import</code> i <code>export</code>. Les regles han de continuar funcionant sense accedir al DOM ni a localStorage.</p>
+<h3 id="2-guarda-despres-dels-canvis">2. Guarda després dels canvis</h3>
+<p>Usa una única clau, <code>balanc.despeses.v1</code>, amb aquesta estructura serialitzada com a JSON:</p>
+<div class="language-json highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;versio&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;despeses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;concepte&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Compra setmanal&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;categoria&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alimentacio&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;centims&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3250</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Guarda després d'afegir o eliminar. Els filtres no canvien les despeses guardades. Recupera la informació abans del primer renderitzat.</p>
+<h3 id="3-distingeix-els-casos-de-recuperacio">3. Distingeix els casos de recuperació</h3>
+<table>
+<thead>
+<tr>
+<th>Situació</th>
+<th>Comportament requerit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>La clau encara no existeix</td>
+<td>Comença amb les sis despeses d'exemple</td>
+</tr>
+<tr>
+<td>Guardat vàlid amb <code>despeses: []</code></td>
+<td>Mostra la llista buida; no reposa exemples</td>
+</tr>
+<tr>
+<td>Guardat vàlid amb registres</td>
+<td>Recupera els registres</td>
+</tr>
+<tr>
+<td>JSON incorrecte, versió desconeguda o estructura no vàlida</td>
+<td>Mostra un avís i arranca amb llista buida</td>
+</tr>
+<tr>
+<td>Un registre incompleix les regles o hi ha identificadors repetits</td>
+<td>Rebutja tot el conjunt i mostra l'avís</td>
+</tr>
+<tr>
+<td>Error d'accés a localStorage</td>
+<td>Permet treballar amb llista buida i informa que no es pot recuperar</td>
+</tr>
+</tbody>
+</table>
+<p>No és suficient que <code>JSON.parse()</code> funcione: comprova que tens un objecte, la versió correcta, un array i registres vàlids. Reutilitza les regles de validació.</p>
+<p>No sobreescrigues automàticament un guardat incorrecte durant l'arrancada. Una nova alta o una acció explícita de l'usuari podrà substituir-lo.</p>
+<p>Si falla l'escriptura, conserva el canvi en memòria i mostra que podria perdre's en recarregar. El programa no ha de quedar bloquejat.</p>
+<h3 id="4-afig-dues-accions-explicites">4. Afig dues accions explícites</h3>
+<ul>
+<li><strong>Buidar dades:</strong> demana confirmació en una zona de la pàgina amb «Confirmar» i «Cancel·lar»; si es confirma, guarda un conjunt vàlid amb l'array buit.</li>
+<li><strong>Carregar exemples:</strong> substitueix les dades per les sis inicials després de la mateixa confirmació. No les acumula sobre les existents.</li>
+</ul>
+<p>No uses <code>localStorage.clear()</code>: aquesta pràctica només ha de modificar la seua clau.</p>
+<h3 id="comprovacions-obligatories_2">Comprovacions obligatòries</h3>
+<table>
+<thead>
+<tr>
+<th>Acció o dada guardada</th>
+<th>Resultat esperat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Afegir una despesa i recarregar</td>
+<td>La despesa continua i el total coincideix</td>
+</tr>
+<tr>
+<td>Buidar, confirmar i recarregar</td>
+<td>Continua buit</td>
+</tr>
+<tr>
+<td>Cancel·lar el buidatge</td>
+<td>Cap canvi</td>
+</tr>
+<tr>
+<td>Carregar exemples dues vegades, confirmant</td>
+<td>Sempre 6 registres i 68,25 €</td>
+</tr>
+<tr>
+<td>Guardar manualment <code>text incorrecte</code></td>
+<td>Avís i llista buida, sense error no gestionat</td>
+</tr>
+<tr>
+<td>Guardar <code>null</code>, <code>{}</code> o una versió 2</td>
+<td>Avís i llista buida</td>
+</tr>
+<tr>
+<td>Guardar un registre amb <code>centims: "150"</code> o dos identificadors iguals</td>
+<td>Rebuig del conjunt</td>
+</tr>
+<tr>
+<td>Guardar un conjunt vàlid amb array buit</td>
+<td>Llista buida sense avís d'error</td>
+</tr>
+<tr>
+<td>Simular una fallada d'escriptura</td>
+<td>Canvi visible en memòria i avís de guardat</td>
+</tr>
+</tbody>
+</table>
+<p>Manipula la clau des de les eines de desenvolupament del navegador. Per a simular l'últim cas, provoca temporalment un error dins del bloc d'escriptura del mòdul de persistència; retira la simulació abans d'entregar.</p>
+<p><strong>Entrega:</strong> carpeta completa, comprovacions i un <code>README.md</code> breu amb instruccions d'execució i limitacions conegudes. <strong>Explicació individual:</strong> diferencia un primer inici, un guardat buit i un guardat corrupte.</p>
+<h2 id="ampliacions-opcionals">Ampliacions opcionals</h2>
+<p>Tria com a màxim una si has completat les tres pràctiques. No cal fer-les totes i no formen part de l'entrega bàsica.</p>
+<h3 id="a-editar-una-despesa">A. Editar una despesa</h3>
+<p>Afig «Editar» i reutilitza el formulari. Conserva l'identificador, valida amb les mateixes regles i permet cancel·lar. <strong>Comprovació:</strong> canviar «Cinema» de 8 a 9 euros augmenta el total inicial a 69,25 €, sense crear un seté registre.</p>
+<h3 id="b-reordenacio-manual">B. Reordenació manual</h3>
+<p>Afig una vista d'ordre manual amb arrossegament i botons «Pujar» i «Baixar». Desactiva els filtres en aquesta vista per a evitar ambigüitats. Modifica i guarda l'ordre de l'array. <strong>Comprovació:</strong> mou el primer registre al final, recarrega i verifica l'ordre; els totals han de ser els mateixos.</p>
+<h3 id="c-una-preferencia-amb-cookie">C. Una preferència amb cookie</h3>
+<p>Recorda amb una cookie durant set dies si l'usuari prefereix la vista compacta. Permet canviar i eliminar la preferència. <strong>Comprovació:</strong> recarregar conserva la vista; eliminar la cookie recupera la vista normal en tornar a entrar. Les despeses continuen en localStorage.</p>
+<h3 id="d-classes-amb-comportament">D. Classes amb comportament</h3>
+<p>En un fitxer independent, crea <code>Despesa</code> amb un mètode <code>costAnualCentims()</code> que retorne l'import. Crea <code>DespesaMensual</code> amb herència, que retorne dotze vegades l'import. <strong>Comprovació:</strong> una despesa puntual de 500 retorna 500; una mensual de 500 retorna 6000. Explica què passa amb els mètodes en serialitzar una instància a JSON. No cal canviar el model de dades de l'aplicació principal.</p>
+<h2 id="criteris-de-valoracio">Criteris de valoració</h2>
+<p>Aplica aquesta rúbrica a les funcionalitats exigides en cada entrega:</p>
+<table>
+<thead>
+<tr>
+<th>Criteri</th>
+<th>Punts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requisits funcionals i resultats correctes</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Validació i gestió dels casos límit previstos</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Codi llegible, funcions i responsabilitats clares</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Comprovacions documentades i explicació individual</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>En <code>comprovacions.md</code>, anota <strong>entrada o acció, resultat esperat, resultat obtingut i correcció aplicada</strong> si ha fallat. No marques una prova com a superada sense executar-la. Les ampliacions no substitueixen els requisits bàsics.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href="../DWEC_UD4_codis_extra/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: UD3 Codis d&#39;exemple">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                UD3 Codis d'exemple
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../DWEC_projecte_guiat_2026/" class="md-footer__link md-footer__link--next" aria-label="Següent: Projecte guiat 2026 - La Vall en Joc">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                Projecte guiat 2026 - La Vall en Joc
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright - Xuso Ortí - Professor Departament d'Informàtica IES Jaume II el Just (Tavernes de la Valldigna)
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
