@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Vall en Joc</title>
+    <link rel="stylesheet" href="vendor/leaflet.css" />
+    <link rel="stylesheet" href="estils.css" />
+    <script defer src="vendor/leaflet.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="marca">
+        <span class="simbol" aria-hidden="true">V</span>
+        <div>
+          <h1>La Vall en Joc</h1>
+          <p>Jornada de reptes · Edició 2026</p>
+        </div>
+      </div>
+      <nav aria-label="Seccions">
+        <a href="#cataleg">Reptes</a><a href="#ruta">Itinerari</a
+        ><a href="#inscripcio">Inscripció</a><a href="#zona-mapa">Mapa</a>
+      </nav>
+    </header>
+    <noscript>Activa JavaScript per a utilitzar l'aplicació.</noscript>
+    <main>
+      <aside id="benvinguda" class="avis">
+        <div>
+          <strong>Una jornada, el teu itinerari.</strong>
+          <p>Entre 3 i 5 reptes, almenys 2 categories i fins a 180 minuts.</p>
+        </div>
+        <button
+          id="tancar-avis"
+          type="button"
+          aria-label="Tancar avís"
+          title="Tancar avís"
+        >
+          ×
+        </button>
+      </aside>
+      <div class="principal">
+        <section aria-labelledby="titol-cataleg">
+          <div class="cap-seccio">
+            <h2 id="titol-cataleg">Descobreix els reptes</h2>
+            <span id="recompte"></span>
+          </div>
+          <div class="filtres">
+            <label
+              >Cerca<input
+                id="cerca"
+                type="search"
+                placeholder="Nom del repte" /></label
+            ><label
+              >Categoria<select id="categoria">
+                <option value="totes">Totes</option>
+                <option value="logica">Lògica</option>
+                <option value="patrimoni">Patrimoni</option>
+                <option value="fotografia">Fotografia</option>
+                <option value="esport">Esport</option>
+              </select></label
+            ><label
+              >Ordena per<select id="ordre">
+                <option value="nom">Nom</option>
+                <option value="minuts">Duració</option>
+                <option value="punts">Punts</option>
+              </select></label
+            >
+          </div>
+          <div id="cataleg" class="cataleg"></div>
+        </section>
+        <aside id="ruta" aria-labelledby="titol-ruta">
+          <div class="cap-seccio">
+            <h2 id="titol-ruta" tabindex="-1">El meu itinerari</h2>
+            <span id="quantitat"></span>
+          </div>
+          <ol id="itinerari"></ol>
+          <div id="resum" class="resum"></div>
+          <ul id="errors-ruta"></ul>
+          <p id="validesa"></p>
+          <button type="button" id="buidar" class="secundari">
+            Esborrar itinerari
+          </button>
+          <p id="missatge" role="status"></p>
+        </aside>
+      </div>
+      <div class="inferior">
+        <section aria-labelledby="titol-inscripcio">
+          <h2 id="titol-inscripcio">Inscriu el teu equip</h2>
+          <form id="inscripcio" novalidate>
+            <div class="camps">
+              <label
+                >Nom de l'equip<input
+                  name="equip"
+                  aria-describedby="error-equip"
+                  autocomplete="organization" /><small
+                  id="error-equip"
+                ></small></label
+              ><label
+                >Correu<input
+                  name="correu"
+                  type="email"
+                  aria-describedby="error-correu"
+                  autocomplete="email" /><small
+                  id="error-correu"
+                ></small></label
+              ><label
+                >Participants<input
+                  name="participants"
+                  type="number"
+                  min="2"
+                  max="6"
+                  step="1"
+                  value="4"
+                  aria-describedby="error-participants" /><small
+                  id="error-participants"
+                ></small
+              ></label>
+            </div>
+            <fieldset>
+              <legend>Modalitat</legend>
+              <label
+                ><input
+                  type="radio"
+                  name="modalitat"
+                  value="tranquilla"
+                  aria-describedby="error-modalitat"
+                />
+                Tranquil·la</label
+              ><label
+                ><input
+                  type="radio"
+                  name="modalitat"
+                  value="competitiva"
+                  aria-describedby="error-modalitat"
+                />
+                Competitiva</label
+              ><small id="error-modalitat"></small>
+            </fieldset>
+            <fieldset>
+              <legend>Preferències</legend>
+              <label
+                ><input
+                  type="checkbox"
+                  name="preferencies"
+                  value="logica"
+                  aria-describedby="error-preferencies"
+                />
+                Lògica</label
+              ><label
+                ><input
+                  type="checkbox"
+                  name="preferencies"
+                  value="patrimoni"
+                  aria-describedby="error-preferencies"
+                />
+                Patrimoni</label
+              ><label
+                ><input
+                  type="checkbox"
+                  name="preferencies"
+                  value="fotografia"
+                  aria-describedby="error-preferencies"
+                />
+                Fotografia</label
+              ><label
+                ><input
+                  type="checkbox"
+                  name="preferencies"
+                  value="esport"
+                  aria-describedby="error-preferencies"
+                />
+                Esport</label
+              ><small id="error-preferencies"></small>
+            </fieldset>
+            <label
+              >Observacions<textarea
+                name="observacions"
+                rows="2"
+                aria-describedby="error-observacions"
+              ></textarea
+              ><small id="error-observacions"></small
+            ></label>
+            <label class="accepta"
+              ><input
+                type="checkbox"
+                name="accepta"
+                aria-describedby="error-accepta"
+              />
+              Accepte les condicions d'aquesta simulació local.</label
+            ><small id="error-accepta"></small>
+            <p id="punts-equip"></p>
+            <p id="errors-itinerari"></p>
+            <button id="confirmar" type="submit" disabled>
+              Confirmar inscripció
+            </button>
+          </form>
+          <div id="justificant" role="status"></div>
+        </section>
+        <section id="zona-mapa" aria-labelledby="titol-mapa">
+          <div class="cap-seccio">
+            <h2 id="titol-mapa">Mapa dels reptes</h2>
+            <button id="ubicar" type="button" class="secundari">
+              La meua ubicació
+            </button>
+          </div>
+          <div id="mapa" aria-label="Mapa de les proves"></div>
+          <p id="estat-mapa" role="status">
+            Ubicacions fictícies per a la pràctica.
+          </p>
+          <ul id="llista-ubicacions"></ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <span>Projecte DWEC · Simulació local. No s'envien inscripcions.</span
+      ><button id="restablir-avis" type="button" class="secundari">
+        Mostrar benvinguda
+      </button>
+    </footer>
+    <dialog id="detall" aria-labelledby="detall-titol">
+      <button
+        id="tancar-detall"
+        type="button"
+        aria-label="Tancar detall"
+        title="Tancar detall"
+      >
+        ×</button
+      ><img id="detall-imatge" alt="" />
+      <h2 id="detall-titol"></h2>
+      <p id="detall-text"></p>
+      <p id="detall-dades"></p>
+      <button id="detall-afegir" type="button">Afegir a l'itinerari</button>
+    </dialog>
+  </body>
+</html>

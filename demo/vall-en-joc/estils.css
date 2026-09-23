@@ -1,0 +1,456 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #24332d;
+  background: #fafbf9;
+  line-height: 1.5;
+  --verd: #216b50;
+  --corall: #ba4a39;
+  --vora: #d9e1db;
+}
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+body {
+  margin: 0;
+}
+header,
+main,
+footer {
+  max-width: 1440px;
+  margin: auto;
+  padding: 24px 32px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid var(--vora);
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.simbol {
+  display: grid;
+  place-items: center;
+  background: var(--verd);
+  color: white;
+  width: 48px;
+  height: 48px;
+  font-size: 28px;
+  border-radius: 8px;
+}
+h1 {
+  font-size: 28px;
+  margin: 0;
+}
+h2 {
+  font-size: 21px;
+  margin: 0 0 16px;
+}
+h3 {
+  font-size: 17px;
+  margin: 0;
+}
+p {
+  margin: 8px 0;
+}
+header p {
+  font-size: 13px;
+  color: #617168;
+  margin: 0;
+}
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+a {
+  color: var(--verd);
+}
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+.avis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eaf1e5;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  border-left: 4px solid var(--verd);
+}
+.avis p {
+  margin: 3px 0 0;
+  font-size: 14px;
+}
+[hidden] {
+  display: none !important;
+}
+.principal {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr);
+  gap: 32px;
+}
+.cap-seccio {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.cap-seccio span {
+  color: #617168;
+  font-size: 13px;
+}
+.filtres {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 550;
+}
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #aebdb2;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font: inherit;
+  color: inherit;
+  background: white;
+  margin-top: 5px;
+}
+button {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 9px 14px;
+  background: var(--verd);
+  color: white;
+  min-height: 40px;
+}
+button:hover:not(:disabled) {
+  filter: brightness(0.92);
+}
+button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+.secundari,
+.icona,
+#tancar-avis,
+#tancar-detall {
+  background: white;
+  border-color: var(--vora);
+  color: var(--verd);
+}
+.icona {
+  padding: 6px;
+  width: 36px;
+  min-height: 36px;
+  flex-shrink: 0;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #e19d23;
+  outline-offset: 3px;
+}
+.cataleg {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.fitxa {
+  border: 1px solid var(--vora);
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+}
+.fitxa img {
+  width: 100%;
+  aspect-ratio: 1.8;
+  object-fit: cover;
+  display: block;
+}
+.fitxa .cos {
+  padding: 14px;
+}
+.categoria {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--corall);
+  display: block;
+  margin-bottom: 5px;
+}
+.fitxa p {
+  color: #617168;
+  font-size: 13px;
+}
+.accions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.accions button {
+  flex: 1;
+}
+.seleccionada {
+  border-color: var(--verd);
+}
+#ruta {
+  border-left: 1px solid var(--vora);
+  padding-left: 28px;
+}
+#itinerari {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-height: 80px;
+}
+#itinerari li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--vora);
+}
+#itinerari .nom {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+}
+#itinerari small {
+  display: block;
+  color: #617168;
+}
+.numero {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  background: #f8e4dc;
+  color: var(--corall);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.resum {
+  display: flex;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--vora);
+}
+.resum strong {
+  font-size: 24px;
+  display: block;
+}
+.resum span {
+  font-size: 12px;
+  color: #617168;
+}
+#errors-ruta {
+  font-size: 13px;
+  color: var(--corall);
+  padding-left: 18px;
+}
+#validesa {
+  color: var(--verd);
+  font-weight: 650;
+}
+#missatge {
+  font-size: 13px;
+  min-height: 44px;
+}
+.inferior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  border-top: 1px solid var(--vora);
+  margin-top: 36px;
+  padding-top: 32px;
+}
+.camps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 18px 0;
+}
+legend {
+  font-size: 14px;
+  font-weight: 650;
+  margin-bottom: 8px;
+}
+fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 12px 6px 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--verd);
+  width: 17px;
+  height: 17px;
+}
+.accepta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+small[id^="error"] {
+  color: #a72e29;
+  font-size: 12px;
+  display: block;
+  font-weight: 400;
+}
+#errors-itinerari {
+  color: #a72e29;
+  font-size: 13px;
+}
+#punts-equip {
+  font-weight: 650;
+}
+#justificant:not(:empty) {
+  border-left: 4px solid var(--verd);
+  background: #eaf1e5;
+  padding: 16px;
+  margin-top: 20px;
+  overflow-wrap: anywhere;
+}
+#mapa {
+  height: 360px;
+  width: 100%;
+  background: #e9eeeb;
+  border: 1px solid var(--vora);
+  z-index: 0;
+}
+#estat-mapa,
+#llista-ubicacions {
+  font-size: 12px;
+  color: #617168;
+}
+#llista-ubicacions {
+  columns: 2;
+  padding-left: 16px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--vora);
+  font-size: 12px;
+  color: #617168;
+}
+dialog {
+  border: 1px solid var(--vora);
+  border-radius: 8px;
+  max-width: 540px;
+  width: calc(100% - 32px);
+  padding: 24px;
+}
+dialog::backdrop {
+  background: #15271e99;
+}
+dialog img {
+  width: 100%;
+  aspect-ratio: 1.8;
+  object-fit: cover;
+  margin: 12px 0;
+}
+#tancar-detall {
+  float: right;
+}
+#detall-text {
+  white-space: pre-line;
+}
+.destacada {
+  box-shadow: inset 0 0 0 2px var(--verd);
+}
+@media (max-width: 950px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .principal {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 20px;
+  }
+  .cataleg {
+    grid-template-columns: 1fr;
+  }
+  .inferior {
+    grid-template-columns: 1fr;
+  }
+  #ruta {
+    padding-left: 18px;
+  }
+}
+@media (max-width: 620px) {
+  header,
+  main,
+  footer {
+    padding: 18px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  nav {
+    gap: 18px;
+  }
+  .principal {
+    grid-template-columns: 1fr;
+  }
+  #ruta {
+    border-left: 0;
+    border-top: 1px solid var(--vora);
+    padding: 24px 0 0;
+  }
+  .filtres {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filtres label:first-child {
+    grid-column: 1/-1;
+  }
+  .camps {
+    grid-template-columns: 1fr;
+  }
+  .cap-seccio {
+    flex-wrap: wrap;
+  }
+  .cap-seccio h2 {
+    margin-bottom: 10px;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .inferior {
+    gap: 28px;
+  }
+  #llista-ubicacions {
+    columns: 1;
+  }
+}

@@ -1,0 +1,13 @@
+Imatges generades amb l'eina integrada image_gen. Escenes fictícies per a ús didàctic.
+
+logica.png
+Use case: photorealistic-natural. Educational fictional town challenge app catalog photograph: a sunlit Mediterranean village square with a stone fountain and patterned paving, architectural puzzle atmosphere. Landscape 3:2 composition, natural realistic colors, crisp visible subject, editorial photography, no text, no watermarks, no logos.
+
+patrimoni.png
+Use case: photorealistic-natural. Educational fictional town challenge app catalog photograph: a traditional Valencian village market with historic facades, fruit stalls and warm daylight. Landscape 3:2 composition, natural realistic colors, crisp visible subject, editorial photography, no text, no watermarks, no logos.
+
+fotografia.png
+Use case: photorealistic-natural. Educational fictional town challenge app catalog photograph: beautiful close-up of a historic Mediterranean facade with wrought iron balcony, ceramic tiles and strong geometric afternoon shadows. Landscape 3:2 composition, natural realistic colors, crisp visible subject, editorial photography, no text, no watermarks, no logos.
+
+esport.png
+Use case: photorealistic-natural. Educational fictional town challenge app catalog photograph: a small outdoor sports circuit in a Mediterranean town park with balance beams and running lanes, no people. Landscape 3:2 composition, natural realistic colors, crisp visible subject, editorial photography, no text, no watermarks, no logos.
