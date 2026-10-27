@@ -1,0 +1,4644 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../DWEC_vall_descarrega/">
+      
+      
+        <link rel="next" href="../DWEC_UD5_teoria_ajax/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Enunciat, seguiment i rúbrica - DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#projecte-individual-de-la-1a-avaluacio" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-header__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Enunciat, seguiment i rúbrica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Neteja" aria-label="Neteja" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicialitzant cerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../presentaci%C3%B32/" class="md-tabs__link">
+          
+  
+  
+  Presentació
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-tabs__link">
+          
+  
+  
+  UD0
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-tabs__link">
+          
+  
+  
+  UD1
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD2_Javascript_DOM/" class="md-tabs__link">
+          
+  
+  
+  UD2
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD4_utilitats_extra/" class="md-tabs__link">
+          
+  
+  
+  UD3
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_projecte_guiat_2026/" class="md-tabs__link">
+          
+  
+  
+  Projecte 1av
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Projecte individual 1av
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD5_teoria_ajax/" class="md-tabs__link">
+          
+  
+  
+  UD4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD6_VUE_1rs_passos/" class="md-tabs__link">
+          
+  
+  
+  UD5
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD7_vue_router/" class="md-tabs__link">
+          
+  
+  
+  UD6
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_json_serve/" class="md-tabs__link">
+          
+  
+  
+  Fake API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DWEC_UD8_api_rest_vue/" class="md-tabs__link">
+          
+  
+  
+  UD7
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../projecte2/" class="md-tabs__link">
+          
+  
+  
+  Projecte 2av
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../revisio_actualitzacions_2026/" class="md-tabs__link">
+          
+  
+  
+  Annexos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" class="md-nav__button md-logo" aria-label="DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí" data-md-component="logo">
+      
+  <img src="../img/logocap.png" alt="logo">
+
+    </a>
+    DESENVOLUPAMENT WEB EN ENTORN CLIENT - 2DAWsp - Xuso Ortí
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Presentació
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Presentació
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentaci%C3%B32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DAW2sp_DWEC_%2824-25%29_ANNEX_I/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programació didàctica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD0
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Eines_Programaci%C3%B3_tema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD0 Eines de Programació
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD0_Pr_Git2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD0 Pràctica Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD1 Teoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_Javascript_Introducci%C3%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Javascript
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_la_consola/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 La Consola
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_practicaJSbasic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica JS bàsic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_operadors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Operadors
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_pr%C3%A0ctica_arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD1 Pràctica Arrays
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Codis extra
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Codis extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD1_codis_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD2 Teoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_DOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Javascript DOM
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Javascript_Events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Events
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Javascript Formularis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_json_teoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_DOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica DOM
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD2_Prac_Events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Events
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_Prac_formularis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Pràctica Formularis
+    
+      <br>
+      <small>Xuso Ortí Monton</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD2_exemples_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD2 Codis d'exemple
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD3 Teoria
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 Teoria
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD4_utilitats_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 Utilitats extra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques Unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques Unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD4_utilitats_extra_pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 Pràctica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Exemples unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Exemples unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD4_codis_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 Codis d'exemple
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projecte 1av
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Projecte 1av
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_projecte_guiat_2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projecte guiat 2026 - La Vall en Joc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_vall_demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demo final - La Vall en Joc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_vall_descarrega/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Descarrega el codi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projecte individual 1av
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Projecte individual 1av
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Enunciat, seguiment i rúbrica
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enunciat, seguiment i rúbrica
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-el-repte" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. El repte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. El repte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tematica-lliure-requisits-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temàtica lliure, requisits comuns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-defineix-la-teua-proposta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Defineix la teua proposta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-requisits-obligatoris" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Requisits obligatoris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Requisits obligatoris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r1-dades-propies-i-calculs" class="md-nav__link">
+    <span class="md-ellipsis">
+      R1. Dades pròpies i càlculs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r2-cataleg-dinamic-i-detall" class="md-nav__link">
+    <span class="md-ellipsis">
+      R2. Catàleg dinàmic i detall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r3-seleccio-personal-i-regles" class="md-nav__link">
+    <span class="md-ellipsis">
+      R3. Selecció personal i regles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r4-formulari-i-confirmacio-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      R4. Formulari i confirmació local
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r5-persistencia-i-preferencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      R5. Persistència i preferència
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r6-moduls-i-objectes-amb-comportament" class="md-nav__link">
+    <span class="md-ellipsis">
+      R6. Mòduls i objectes amb comportament
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r7-una-funcionalitat-addicional-a-triar" class="md-nav__link">
+    <span class="md-ellipsis">
+      R7. Una funcionalitat addicional, a triar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r8-us-proves-i-documentacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      R8. Ús, proves i documentació
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-desenvolupament-en-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Desenvolupament en paral·lel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Desenvolupament en paral·lel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unica-entrega-de-revisio-voluntaria-6-de-novembre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Única entrega de revisió voluntària · 6 de novembre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comprovacions-minimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Comprovacions mínimes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-entrega-i-explicacio-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Entrega i explicació individual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-resultats-daprenentatge-i-evidencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Resultats d'aprenentatge i evidències
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-qualificacio-i-rubrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Qualificació i rúbrica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Qualificació i rúbrica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-saplicara" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com s'aplicarà
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            UD4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_teoria_ajax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD4 AJAX Teoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_peticions_ajax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD4 AJAX Peticions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_promeses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD4 AJAX en Promeses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_exemple_ajax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD4 AJAX exemple
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques unitat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques unitat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD5_prac_ajax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica AJAX bàsica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD5
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            UD5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_VUE_1rs_passos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Primers passos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_databinding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data binding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_pas_dades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pas de dades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_cicle_vida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cicle de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_renderitzat_directives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Directives de renderitzat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD6_vue_tutorials_neoguias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctiques del tema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD6
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            UD6
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD7_vue_router/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    El router de Vue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD7_vue_router_avan%C3%A7at/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Router avançat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Codis extra
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Codis extra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD7_codis_extra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples de codi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctica
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_VUE_router_practica_semiguiada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica semi-guiada
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fake API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Fake API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_json_serve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pràctica
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_json_serve_pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pràctica semi-guiada
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD7
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            UD7
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apunts del tema
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1">
+            <span class="md-nav__icon md-icon"></span>
+            Apunts del tema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD8_api_rest_vue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API RESTful
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_UD8_app_exemple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aplicació d'exemple
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_login_jwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemple login JWT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projecte 2av
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Projecte 2av
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proposta i pla de 10 setmanes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demo funcional del gestor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preparació i materials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json-server i contracte REST (setmana 2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/setmanes-1-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vue i components (setmanes 1–3)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/setmanes-4-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AJAX, router i CRUD (setmanes 4–6)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/setmanes-7-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JWT, rols i errors (setmanes 7–9)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/router-rols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rols en Vue Router, pas a pas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/comprovacions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integració i comprovacions (setmana 10)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecte2/ra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RA i seguiment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Annexos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Annexos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../revisio_actualitzacions_2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revisió tècnica 2026
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annexos_vite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_serveis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ús de serveis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_codespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Codespaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DWEC_BOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BOM (opcional)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue_build_deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Desplegament
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-el-repte" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. El repte
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. El repte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tematica-lliure-requisits-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temàtica lliure, requisits comuns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-defineix-la-teua-proposta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Defineix la teua proposta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-requisits-obligatoris" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Requisits obligatoris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Requisits obligatoris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r1-dades-propies-i-calculs" class="md-nav__link">
+    <span class="md-ellipsis">
+      R1. Dades pròpies i càlculs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r2-cataleg-dinamic-i-detall" class="md-nav__link">
+    <span class="md-ellipsis">
+      R2. Catàleg dinàmic i detall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r3-seleccio-personal-i-regles" class="md-nav__link">
+    <span class="md-ellipsis">
+      R3. Selecció personal i regles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r4-formulari-i-confirmacio-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      R4. Formulari i confirmació local
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r5-persistencia-i-preferencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      R5. Persistència i preferència
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r6-moduls-i-objectes-amb-comportament" class="md-nav__link">
+    <span class="md-ellipsis">
+      R6. Mòduls i objectes amb comportament
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r7-una-funcionalitat-addicional-a-triar" class="md-nav__link">
+    <span class="md-ellipsis">
+      R7. Una funcionalitat addicional, a triar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r8-us-proves-i-documentacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      R8. Ús, proves i documentació
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-desenvolupament-en-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Desenvolupament en paral·lel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Desenvolupament en paral·lel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unica-entrega-de-revisio-voluntaria-6-de-novembre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Única entrega de revisió voluntària · 6 de novembre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comprovacions-minimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Comprovacions mínimes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-entrega-i-explicacio-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Entrega i explicació individual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-resultats-daprenentatge-i-evidencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Resultats d'aprenentatge i evidències
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-qualificacio-i-rubrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Qualificació i rúbrica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Qualificació i rúbrica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#com-saplicara" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com s'aplicarà
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="projecte-individual-de-la-1a-avaluacio">Projecte individual de la 1a avaluació</h1>
+<p><strong>El teu univers en JavaScript</strong> · Temàtica lliure · Treball individual</p>
+<h2 id="1-el-repte">1. El repte</h2>
+<p>Crea una aplicació web sobre un tema que t'interesse. L'usuari ha de poder <strong>explorar un catàleg, consultar-ne els detalls, preparar una selecció personal i guardar-la</strong>. Tu tries el nom, els continguts, l'aparença i la utilitat concreta.</p>
+<p>El projecte es desenvolupa <strong>individualment i en paral·lel al projecte guiat</strong>. Aplica al teu context les tècniques que vas aprenent, sense esperar que acabe la guia. Aquest projecte sí que es qualifica; el guiat serveix per a practicar.</p>
+<div class="admonition info">
+<p class="admonition-title">Dates clau · curs 2026–2027</p>
+<p>Totes les entregues es fan <strong>en Aules, fins a les 23.59 h (hora peninsular)</strong> del dia indicat.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Fita</th>
+<th>Data límit</th>
+<th>Caràcter</th>
+<th>Què presentes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Revisió voluntària</strong></td>
+<td><strong>Divendres 6 de novembre de 2026</strong></td>
+<td>Voluntària, sense nota</td>
+<td>Proposta, dades i primera versió del catàleg</td>
+</tr>
+<tr>
+<td><strong>Entrega final</strong></td>
+<td><strong>Dijous 19 de novembre de 2026</strong></td>
+<td>Obligatòria i avaluable</td>
+<td>Aplicació completa i documentació en un ZIP</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Comença per un recorregut senzill</p>
+<p><strong>Explorar → consultar el detall → preparar la selecció → validar → confirmar i guardar.</strong> Desenvolupa primer aquest recorregut i amplia'l progressivament amb la resta de requisits.</p>
+</div>
+<h3 id="tematica-lliure-requisits-comuns">Temàtica lliure, requisits comuns</h3>
+<table>
+<thead>
+<tr>
+<th>Si t'interessa…</th>
+<th>Pots crear…</th>
+<th>L'usuari prepara…</th>
+<th>Una possible regla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Música</td>
+<td>Un catàleg de grups, discos o cançons que tries tu</td>
+<td>Un cartell o una sessió musical</td>
+<td>Duració màxima o pressupost</td>
+</tr>
+<tr>
+<td>Cinema i sèries</td>
+<td>Una filmoteca personal</td>
+<td>Una marató de projeccions</td>
+<td>Temps disponible</td>
+</tr>
+<tr>
+<td>Videojocs</td>
+<td>Una col·lecció de jocs</td>
+<td>Una jornada de joc</td>
+<td>Duració o nombre de participants</td>
+</tr>
+<tr>
+<td>Llibres o còmics</td>
+<td>Un aparador de lectures</td>
+<td>Un pla de lectura</td>
+<td>Pàgines totals o pressupost</td>
+</tr>
+<tr>
+<td>Cuina</td>
+<td>Un receptari</td>
+<td>Un menú</td>
+<td>Cost o temps de preparació</td>
+</tr>
+<tr>
+<td>Esport</td>
+<td>Un catàleg d'exercicis</td>
+<td>Una sessió d'entrenament</td>
+<td>Duració i varietat</td>
+</tr>
+<tr>
+<td>Qualsevol altra afició</td>
+<td>Un catàleg amb dades pròpies</td>
+<td>Una col·lecció, proposta o planificació</td>
+<td>Una restricció mesurable coherent</td>
+</tr>
+</tbody>
+</table>
+<p>Són exemples, no temes assignats. També pots proposar un altre tipus d'aplicació si permet demostrar tots els requisits. No cal que la música es reproduïsca, que els productes es compren ni que existisca una reserva real.</p>
+<p><strong>La llibertat està en el contingut i les decisions de disseny. La dificultat tècnica i la rúbrica són comunes.</strong> No es dona més nota per triar una temàtica més complexa o per utilitzar serveis de pagament.</p>
+<h2 id="2-defineix-la-teua-proposta">2. Defineix la teua proposta</h2>
+<p>Abans de programar, crea <code>proposta.md</code>, amb una extensió màxima d'una pàgina:</p>
+<ol>
+<li>Nom de l'aplicació, públic i problema que resol.</li>
+<li>Què representa un element del catàleg i què representa la selecció.</li>
+<li>Camps de les dades, categories i magnitud numèrica que calcularàs.</li>
+<li>Tres regles de validació de la selecció, amb els límits exactes.</li>
+<li>Camps del formulari, classe especialitzada i funcionalitat addicional triada.</li>
+<li>Esbós de les zones de la pantalla.</li>
+</ol>
+<p>No cal esperar el seguiment voluntari per a començar. Si tens dubtes sobre com adaptar un requisit al teu tema, consulta'ls prompte. Conserva els canvis de criteri en el document perquè les proves coincidisquen amb la versió final.</p>
+<h2 id="3-requisits-obligatoris">3. Requisits obligatoris</h2>
+<h3 id="r1-dades-propies-i-calculs">R1. Dades pròpies i càlculs</h3>
+<p>Prepara <strong>almenys huit elements</strong>, distribuïts en <strong>tres categories com a mínim</strong>. Cada element ha de tindre:</p>
+<ul>
+<li>Identificador únic i estable.</li>
+<li>Nom, categoria i descripció.</li>
+<li>Imatge i text alternatiu.</li>
+<li>Una magnitud numèrica útil: minuts, preu, pàgines, capacitat, etc.</li>
+<li>Almenys un camp específic del tema: autor, país, any, estil, ingredients…</li>
+</ul>
+<p>Guarda el catàleg en un mòdul JavaScript local. Usa tipus adequats, conversions explícites, condicionals, bucles i funcions amb paràmetres i retorn. Els càlculs no han de dependre del text de la pantalla.</p>
+<p>Les imatges les buscarà o crearà l'alumnat. Guarda-les localment i indica autoria, procedència i llicència o permís en <code>credits.md</code>. El projecte ha de funcionar sense dependre d'enllaços remots d'imatges.</p>
+<h3 id="r2-cataleg-dinamic-i-detall">R2. Catàleg dinàmic i detall</h3>
+<p>Genera les fitxes des de les dades amb JavaScript. Cada fitxa mostra la informació essencial i permet consultar una vista de detall sense recarregar la pàgina.</p>
+<p>Inclou un cercador pel nom, un filtre per categoria i <strong>dues ordenacions</strong>: alfabètica i numèrica. Han de poder combinar-se. La cerca ignora majúscules i espais als extrems; no cal eliminar accents.</p>
+<p>Mostra un missatge quan no hi haja coincidències. Tornar a generar la vista no ha de duplicar elements ni gestors d’esdeveniments. Usa <code>textContent</code> per a textos de l'usuari o contingut no fiable.</p>
+<h3 id="r3-seleccio-personal-i-regles">R3. Selecció personal i regles</h3>
+<p>Permet afegir elements, eliminar-los i canviar-ne l'ordre amb botons. Un mateix identificador no pot aparéixer dues vegades. Mostra un resum amb quantitat, total numèric i estat de validació.</p>
+<p>Defineix aquestes <strong>tres regles</strong>, adaptades al tema:</p>
+<ol>
+<li>Un mínim i un màxim d'elements, amb valors diferents i assolibles amb el catàleg.</li>
+<li>Un límit numèric total, amb la unitat ben indicada.</li>
+<li>Una regla de composició: diversitat de categories, presència d'un tipus d'element o incompatibilitat entre tipus.</li>
+</ol>
+<p>Ha d'existir almenys una selecció vàlida. Documenta un cas vàlid i un cas que incompleix cada regla. Es poden preparar seleccions incompletes o que superen límits, però <strong>no confirmar-les</strong>. Les regles es comproven en una funció reutilitzable que retorna els motius d'error.</p>
+<p>La selecció es conserva en canviar els filtres del catàleg. Després de cada canvi, actualitza dades, resum i validació.</p>
+<h3 id="r4-formulari-i-confirmacio-local">R4. Formulari i confirmació local</h3>
+<p>El formulari posa nom o configura la proposta de l'usuari. Ha d'incloure, com a mínim:</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Validació requerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom de la proposta</td>
+<td>Entre 3 i 40 caràcters després de <code>trim()</code></td>
+</tr>
+<tr>
+<td>Correu de contacte fictici</td>
+<td>Obligatori i format de correu vàlid</td>
+</tr>
+<tr>
+<td>Camp numèric propi del tema</td>
+<td>Obligatori, enter i dins d'un interval documentat</td>
+</tr>
+<tr>
+<td><code>select</code> o grup de ràdio</td>
+<td>Selecció obligatòria</td>
+</tr>
+<tr>
+<td>Casella de confirmació</td>
+<td>Obligatòria</td>
+</tr>
+<tr>
+<td>Codi curt de la proposta</td>
+<td>Expressió regular: 3–12 caràcters, només lletres ASCII, dígits i guió</td>
+</tr>
+</tbody>
+</table>
+<p>Per exemple, el camp numèric pot representar persones, sessions o dies. Els seus valors han de tindre sentit en l'aplicació.</p>
+<p>Gestiona <code>submit</code> amb <code>preventDefault()</code>, combina validació HTML amb JavaScript i mostra errors clars. Rebutja també els camps formats només per espais. La confirmació exigeix <strong>formulari i selecció vàlids</strong>.</p>
+<p>Genera un resum final amb el nom, els elements ordenats i els totals. Indica que és una simulació local. Si es modifica la selecció o el formulari després de confirmar, invalida o retira el resum anterior. No implementes pagaments ni enviaments reals.</p>
+<h3 id="r5-persistencia-i-preferencia">R5. Persistència i preferència</h3>
+<p>Guarda en <code>localStorage</code>, amb JSON, els identificadors i l'ordre de la selecció. Recupera'ls en iniciar. No cal guardar el correu ni altres dades personals.</p>
+<p>Comprova el format de les dades recuperades, elimina identificadors desconeguts i duplicats, i gestiona el JSON corrupte sense bloquejar l'aplicació. Valida de nou les regles abans de confirmar.</p>
+<p>Afig una acció per a buidar la selecció guardada. Si l'emmagatzematge falla, permet continuar en memòria i informa de la limitació.</p>
+<p>Recorda també una preferència d'interfície amb una cookie: vista compacta, tema visual o avís tancat. Ha de poder crear-se, recuperar-se i eliminar-se. No cal que continga dades personals.</p>
+<h3 id="r6-moduls-i-objectes-amb-comportament">R6. Mòduls i objectes amb comportament</h3>
+<p>Separa, almenys, dades, regles, vista, persistència i coordinació principal amb <code>import</code> i <code>export</code>.</p>
+<p>Inclou una classe amb propietats i un mètode que participe en el funcionament de l'aplicació. Crea una subclasse amb <code>extends</code> que modifique un càlcul o una regla observable. Ha d'haver-hi almenys una instància de cada tipus en ús.</p>
+<p>Exemples: una actuació amb temps de muntatge, una recepta amb temps de repòs o una edició especial amb un cost addicional. Explica la diferència i comprova els dos resultats. No és suficient declarar classes que després no s'utilitzen.</p>
+<h3 id="r7-una-funcionalitat-addicional-a-triar">R7. Una funcionalitat addicional, a triar</h3>
+<p>Tria <strong>una</strong> d'aquestes opcions, de valor equivalent en la rúbrica:</p>
+<table>
+<thead>
+<tr>
+<th>Opció</th>
+<th>Requisits</th>
+<th>Casos que has de provar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. Arrossegament</td>
+<td>Reordenar la selecció amb drag and drop, mantenint els botons de teclat</td>
+<td>Primer a últim, mateixa posició, origen no vàlid i recuperació de l'ordre</td>
+</tr>
+<tr>
+<td>B. Importació i exportació</td>
+<td>Descarregar la selecció com a fitxer JSON i importar-ne un de triat per l'usuari, amb versió i validació d'estructura</td>
+<td>Fitxer vàlid, JSON corrupte, versió incorrecta i identificador desconegut; davant un error, conservar l'estat anterior</td>
+</tr>
+<tr>
+<td>C. Mapa i ubicació</td>
+<td>Mostrar almenys tres ubicacions relacionades amb la temàtica i demanar voluntàriament la ubicació de l'usuari</td>
+<td>Marcadors, permís concedit, denegat i mapa no disponible; la resta de l'aplicació continua sent utilitzable</td>
+</tr>
+</tbody>
+</table>
+<p>La importació de l'opció B es fa amb un fitxer local, sense API remota. Pots consultar la documentació de les APIs necessàries. Les opcions A i C tenen una aplicació directa de les tècniques del projecte guiat.</p>
+<p>Així, un tema sense relació geogràfica no està obligat a inventar un mapa. Fer dues opcions no duplica els punts.</p>
+<h3 id="r8-us-proves-i-documentacio">R8. Ús, proves i documentació</h3>
+<p>La pàgina ha de ser llegible en mòbil i escriptori. Usa controls HTML adequats, etiquetes de formulari, focus visible i alternatives de teclat. Mantín separats HTML, CSS i JavaScript.</p>
+<p>Comprova el funcionament en <strong>dos navegadors de motors diferents</strong>, per exemple Firefox i Chrome/Chromium. Anota versions i incidències. No es demana una compatibilitat exhaustiva amb navegadors antics.</p>
+<p>No cal AJAX, Vue, servidor de dades, autenticació ni una API comercial. El catàleg és local. Pots usar una biblioteca de mapes si tries l'opció C; la lògica de dades, DOM, formularis i estat s'ha d'implementar amb JavaScript propi.</p>
+<h2 id="4-desenvolupament-en-parallel">4. Desenvolupament en paral·lel</h2>
+<p>Previsió orientativa: <strong>24 hores de treball propi</strong>, distribuïdes entre classe i treball autònom segons l'horari. El calendari següent s'ajusta al període del <strong>27 d'octubre al 19 de novembre de 2026</strong>. Si ja has començat, aprofita el treball fet i dedica el temps disponible a completar i revisar l'aplicació.</p>
+<table>
+<thead>
+<tr>
+<th>Període de 2026</th>
+<th>Prioritat de treball</th>
+<th>Temps orientatiu</th>
+<th>Fita</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>27 d'octubre–1 de novembre</td>
+<td>Definir la proposta, preparar dades i imatges, esbossar la interfície i programar les regles</td>
+<td>6 h</td>
+<td>Base del projecte</td>
+</tr>
+<tr>
+<td>2–6 de novembre</td>
+<td>Generar el catàleg i el detall; incorporar cerca, filtres i primers esdeveniments</td>
+<td>6 h</td>
+<td><strong>Revisió voluntària · 6 de novembre</strong></td>
+</tr>
+<tr>
+<td>7–13 de novembre</td>
+<td>Completar selecció, formulari, persistència, cookie i classes</td>
+<td>7 h</td>
+<td>Versió navegable i integració</td>
+</tr>
+<tr>
+<td>14–19 de novembre</td>
+<td>Integrar l'opció addicional, executar les proves, corregir i preparar la documentació i el ZIP</td>
+<td>5 h</td>
+<td><strong>Entrega final · 19 de novembre</strong></td>
+</tr>
+</tbody>
+</table>
+<p>No esperes a acabar tots els apunts per a començar. Si encara no s'ha treballat una funcionalitat, deixa'n preparada la interfície i continua amb la part que ja coneixes. Reserva els últims dies per a corregir, no per a començar una aplicació nova.</p>
+<h3 id="unica-entrega-de-revisio-voluntaria-6-de-novembre">Única entrega de revisió voluntària · 6 de novembre</h3>
+<p>Entrega en Aules un <strong>ZIP amb el treball disponible</strong>, encara que siga incomplet:</p>
+<ul>
+<li><code>proposta.md</code>, amb la temàtica, les dades i les tres regles de validació.</li>
+<li>El catàleg de dades, les imatges i les funcions que tingues implementades.</li>
+<li>Una primera versió de la pàgina que mostre el catàleg.</li>
+<li>Dos casos de prova i un dubte concret que vulgues revisar.</li>
+<li>Una nota breu amb què funciona i què queda pendent.</li>
+</ul>
+<p>El retorn se centrarà en <strong>l'abast, les regles i l'organització inicial</strong>. No cal tindre completats el formulari, la persistència ni la funcionalitat addicional per a presentar aquesta revisió.</p>
+<div class="admonition note">
+<p class="admonition-title">Una única revisió voluntària</p>
+<p>El seguiment del <strong>6 de novembre</strong> és <strong>opcional, sense nota ni penalització per no presentar-lo</strong>. Tampoc dona punts extra ni substitueix l'entrega final. Pots presentar una versió incompleta identificant què funciona i què no. Aquesta revisió no ajorna l'entrega final del <strong>19 de novembre</strong>.</p>
+</div>
+<h2 id="5-comprovacions-minimes">5. Comprovacions mínimes</h2>
+<p>Adapta els valors al teu tema i registra el resultat real en <code>proves.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Cas</th>
+<th>Acció</th>
+<th>Resultat esperat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P01</td>
+<td>Iniciar sense dades guardades</td>
+<td>Catàleg complet i selecció buida</td>
+</tr>
+<tr>
+<td>P02</td>
+<td>Combinar cerca, categoria i ordre</td>
+<td>Només coincidències, en l'ordre correcte</td>
+</tr>
+<tr>
+<td>P03</td>
+<td>Cerca inexistent i recuperació del filtre</td>
+<td>Missatge buit i recuperació del catàleg</td>
+</tr>
+<tr>
+<td>P04</td>
+<td>Obrir i tancar un detall</td>
+<td>Informació de l'element correcte, sense recàrrega</td>
+</tr>
+<tr>
+<td>P05</td>
+<td>Afegir dues vegades el mateix element</td>
+<td>Una sola entrada</td>
+</tr>
+<tr>
+<td>P06</td>
+<td>Eliminar i reordenar</td>
+<td>Ordre i totals coherents</td>
+</tr>
+<tr>
+<td>P07</td>
+<td>Selecció vàlida i un cas invàlid per cada regla</td>
+<td>Confirmació possible només en el cas vàlid</td>
+</tr>
+<tr>
+<td>P08</td>
+<td>Límit numèric exacte i valor immediatament superior</td>
+<td>Acceptació i rebuig segons la regla documentada</td>
+</tr>
+<tr>
+<td>P09</td>
+<td>Formulari buit, espais, correu i codi incorrectes</td>
+<td>Errors clars, sense confirmació</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>Formulari i selecció vàlids; després modificar-los</td>
+<td>Resum correcte i posterior invalidació</td>
+</tr>
+<tr>
+<td>P11</td>
+<td>Recarregar després de seleccionar i ordenar</td>
+<td>Selecció i ordre recuperats</td>
+</tr>
+<tr>
+<td>P12</td>
+<td>JSON corrupte, identificador desconegut i duplicat</td>
+<td>Inici sense bloqueig i recuperació sanejada</td>
+</tr>
+<tr>
+<td>P13</td>
+<td>Esborrar la selecció i recarregar</td>
+<td>Selecció buida</td>
+</tr>
+<tr>
+<td>P14</td>
+<td>Crear, recuperar i eliminar la cookie</td>
+<td>Preferència coherent amb cada acció</td>
+</tr>
+<tr>
+<td>P15</td>
+<td>Instància normal i especialitzada</td>
+<td>Diferència calculada i visible</td>
+</tr>
+<tr>
+<td>P16</td>
+<td>Casos de l'opció A, B o C</td>
+<td>Comportaments especificats en R7</td>
+</tr>
+<tr>
+<td>P17</td>
+<td>Teclat, mòbil i segon navegador</td>
+<td>Flux principal utilitzable</td>
+</tr>
+<tr>
+<td>P18</td>
+<td>Simular error de guardat</td>
+<td>Avís i continuïtat en memòria</td>
+</tr>
+</tbody>
+</table>
+<p>Per a simular errors pots modificar temporalment una funció o el guardat des de les eines del navegador. Retira les simulacions abans d'entregar. Les captures complementen les proves, però no substitueixen els passos i resultats.</p>
+<h2 id="6-entrega-i-explicacio-individual">6. Entrega i explicació individual</h2>
+<p>Entrega en Aules, <strong>abans de les 23.59 h del dijous 19 de novembre de 2026</strong>, un ZIP amb una carpeta que continga:</p>
+<table>
+<thead>
+<tr>
+<th>Lliurable</th>
+<th>Contingut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aplicació completa</strong></td>
+<td>HTML, CSS, JavaScript, imatges i recursos necessaris</td>
+</tr>
+<tr>
+<td><strong><code>README.md</code></strong></td>
+<td>Autoria, instruccions d'execució amb servidor local i limitacions conegudes</td>
+</tr>
+<tr>
+<td><strong><code>proposta.md</code></strong></td>
+<td>Tema, dades i regles definitives</td>
+</tr>
+<tr>
+<td><strong><code>proves.md</code></strong></td>
+<td>Per a cada prova: entrada, resultat esperat, resultat observat i correcció aplicada, si escau</td>
+</tr>
+<tr>
+<td><strong><code>credits.md</code></strong></td>
+<td>Autoria, procedència i llicència o permís de les imatges; fonts de biblioteques i fragments externs</td>
+</tr>
+</tbody>
+</table>
+<p>No inclogues <code>node_modules</code>, contrasenyes ni tokens privats. Si uses eines que necessiten instal·lació, inclou el fitxer de dependències i les instruccions. L'enllaç a un repositori o desplegament és complementari: el ZIP ha de permetre revisar el projecte.</p>
+<p>Prepara una <strong>demostració individual de 5–7 minuts</strong>, en la sessió que indique el professorat després de l'entrega: mostra el flux principal, explica una decisió de codi i resol una modificació menuda relacionada amb el teu projecte. No cal una presentació de diapositives.</p>
+<p>Pots consultar apunts, documentació i exemples del projecte guiat. Identifica les adaptacions i l'ajuda rebuda, incloses eines d'IA si les uses. Has de poder explicar i modificar el codi entregat. La simple substitució de noms i imatges en la solució guiada no demostra les decisions i regles pròpies exigides.</p>
+<h2 id="7-resultats-daprenentatge-i-evidencies">7. Resultats d'aprenentatge i evidències</h2>
+<p>La referència és el mòdul <strong>0612, Desenvolupament web en entorn client</strong>, amb la redacció actualitzada pel <a href="https://www.boe.es/eli/es/rd/2023/05/29/405">RD 405/2023, annex II</a>. Les descripcions següents són resums; els codis indiquen els criteris d'avaluació seleccionats.</p>
+<table>
+<thead>
+<tr>
+<th>RA</th>
+<th>Àmbit resumit</th>
+<th>Criteris seleccionats</th>
+<th>Evidència del projecte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA1</td>
+<td>Tecnologies i execució en el client</td>
+<td>1a, 1b, 1e, 1f</td>
+<td>Explicar l'execució local i les eines en README i demostració</td>
+</tr>
+<tr>
+<td>RA2</td>
+<td>Sintaxi i verificació del codi</td>
+<td>2b–2h</td>
+<td>Tipus, conversions, decisions, bucles i depuració de R1–R4</td>
+</tr>
+<tr>
+<td>RA3</td>
+<td>Objectes predefinits i emmagatzematge</td>
+<td>3a, 3d, 3e, 3g, 3h</td>
+<td>Càlculs i persistència de R1 i R5</td>
+</tr>
+<tr>
+<td>RA4</td>
+<td>Funcions, col·leccions i objectes propis</td>
+<td>4a–4i, 4k</td>
+<td>Regles, agregacions, classes i mòduls de R1, R3 i R6</td>
+</tr>
+<tr>
+<td>RA5</td>
+<td>Esdeveniments i formularis</td>
+<td>5b–5h</td>
+<td>Listeners, delegació, validació i expressió regular de R2–R4</td>
+</tr>
+<tr>
+<td>RA6</td>
+<td>Manipulació del DOM</td>
+<td>6a–6h</td>
+<td>Fitxes, detall, actualitzacions, separació de capes i proves en dos motors</td>
+</tr>
+</tbody>
+</table>
+<p>El projecte aporta <strong>evidències parcials</strong> d'aquests RA; no acredita per si sol tot el mòdul. No s'avalua el RA7 de comunicació asíncrona client-servidor. Tampoc s'exigeixen múltiples finestres ni patrons de disseny com a continguts específics.</p>
+<p>La numeració de criteris correspon a la revisió de 2023: en particular, RA3.g inclou emmagatzematge del navegador, i RA4 incorpora agregacions i canvia la numeració d'objectes i documentació. Els documents antics del curs poden mostrar una numeració anterior.</p>
+<h2 id="8-qualificacio-i-rubrica">8. Qualificació i rúbrica</h2>
+<p>La <strong>nota del projecte és sobre 10</strong>. El pes d'aquesta nota en l'avaluació i les condicions de recuperació són els de la programació vigent del curs i la tasca d'Aules; aquesta rúbrica no els modifica. El projecte guiat i el seguiment voluntari no aporten punts a aquesta nota.</p>
+<p>Cada fila té un màxim i s'avalua amb aquests nivells:</p>
+<ul>
+<li><strong>Complet:</strong> 100% del màxim; compleix el descriptor i els casos límit corresponents.</li>
+<li><strong>Assolit:</strong> 75%; funciona el recorregut habitual, amb algun defecte menor dels indicats.</li>
+<li><strong>Bàsic:</strong> 50%; hi ha una implementació usable però incompleta segons el descriptor.</li>
+<li><strong>Iniciat:</strong> 25%; només hi ha fragments verificables, sense arribar al nivell bàsic.</li>
+<li><strong>Sense evidència:</strong> 0%; absent o sense funcionament verificable.</li>
+</ul>
+<p>Multiplica el màxim de cada fila pel factor del nivell i suma els resultats. Arredonim només la nota final a dues xifres decimals. Exemple: nivell assolit en un apartat de 1,5 punts aporta <strong>1,125 punts</strong> abans de l'arredoniment final.</p>
+<table>
+<thead>
+<tr>
+<th>Apartat i màxim</th>
+<th>RA principal</th>
+<th>Complet — 100%</th>
+<th>Assolit — 75%</th>
+<th>Bàsic — 50%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Dades i càlculs — 1 punt</strong></td>
+<td>RA2, RA4</td>
+<td>Catàleg amb tots els camps, tipus correctes i càlculs verificats, inclòs buit</td>
+<td>Dades completes i càlcul habitual correcte; algun cas límit falla</td>
+<td>Catàleg usable, però falten camps o hi ha conversions o càlculs incomplets</td>
+</tr>
+<tr>
+<td><strong>2. Catàleg i DOM — 1,5 punts</strong></td>
+<td>RA6</td>
+<td>Fitxes, detall, cerca, filtre i dos ordres combinables; estat buit correcte</td>
+<td>Totes les funcions principals, amb un defecte menor de combinació o actualització</td>
+<td>Fitxes dinàmiques i detall; cerca, filtre o ordenació incomplets</td>
+</tr>
+<tr>
+<td><strong>3. Selecció i regles — 1 punt</strong></td>
+<td>RA4, RA5</td>
+<td>Alta, baixa, ordre, totals i tres regles correctes; sense duplicats</td>
+<td>Flux habitual complet; algun límit o missatge incorrecte</td>
+<td>Afegir i llevar funciona; ordre o validació de regles parcial</td>
+</tr>
+<tr>
+<td><strong>4. Formulari — 1,5 punts</strong></td>
+<td>RA5</td>
+<td>Sis controls, validacions i expressió regular correctes; confirmació coherent i invalidació posterior</td>
+<td>Flux vàlid i rebuig d'errors habituals; falla un cas límit o la invalidació</td>
+<td>Confirma dades vàlides, però deixa passar errors o no comprova tota la selecció</td>
+</tr>
+<tr>
+<td><strong>5. Persistència i cookie — 1 punt</strong></td>
+<td>RA3</td>
+<td>Recupera ordre, saneja dades i tracta errors; esborrat i cookie complets</td>
+<td>Guardat, recuperació i cookie funcionen; falta algun cas de fallada</td>
+<td>Conserva dades vàlides, però recuperació, esborrat o cookie incomplets</td>
+</tr>
+<tr>
+<td><strong>6. Mòduls i classes — 1 punt</strong></td>
+<td>RA4, RA6</td>
+<td>Responsabilitats separades i dos tipus d'instàncies en ús amb comportament diferent</td>
+<td>Mòduls i herència funcionals amb acoblament o duplicació menor</td>
+<td>Separació parcial o classe usada sense especialització funcional</td>
+</tr>
+<tr>
+<td><strong>7. Opció addicional — 1 punt</strong></td>
+<td>RA3, RA5, RA6 segons opció</td>
+<td>Compleix tots els comportaments i casos de R7 per a l'opció triada</td>
+<td>Funció principal correcta, amb un cas d'error incomplet</td>
+<td>Demostració parcial de l'opció, sense el flux complet</td>
+</tr>
+<tr>
+<td><strong>8. Usabilitat i proves — 1 punt</strong></td>
+<td>RA2, RA5, RA6</td>
+<td>Teclat i mòbil usables; dos motors comprovats; P01–P18 amb resultats reals</td>
+<td>Flux usable i majoria de proves; alguna incidència menor o registre incomplet</td>
+<td>Funciona en un entorn, amb proves escasses o problemes de focus i adaptació</td>
+</tr>
+<tr>
+<td><strong>9. Documentació i explicació — 1 punt</strong></td>
+<td>RA1, RA4</td>
+<td>Execució reproduïble, proposta i crèdits clars; explica i modifica el codi amb autonomia</td>
+<td>Documentació suficient i explicació correcta; necessita alguna orientació</td>
+<td>Arranca amb ajuda, documentació parcial i explicació limitada del codi</td>
+</tr>
+<tr>
+<td><strong>Total — 10 punts</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="com-saplicara">Com s'aplicarà</h3>
+<ul>
+<li>La revisió es basa en l'aplicació entregada, el codi, les proves i l'explicació individual.</li>
+<li>Les parts que no funcionen no reben els punts de funcionalitat; les parts independents que sí funcionen es valoren segons la seua fila. No s'aplica un zero automàtic a tot el projecte per un únic error.</li>
+<li>La documentació no substitueix una funcionalitat absent. Si descrius una limitació, ajuda a entendre el treball, però no converteix el requisit en complet.</li>
+<li>El disseny visual es valora per llegibilitat i ús. No hi ha punts separats per decoració, imatges de pagament ni quantitat de pantalles.</li>
+<li>Els extres no eleven la nota per damunt de 10 ni compensen automàticament mancances en altres files.</li>
+<li>La demostració permet contrastar les evidències. Qualsevol incidència d'autoria o entrega fora de termini es tracta segons les normes del centre i de la tasca, sense inventar penalitzacions addicionals en aquesta rúbrica.</li>
+</ul>
+<p>La taula relaciona evidències amb RA; <strong>no és una ponderació oficial dels RA del mòdul</strong>. Una mateixa funcionalitat pot aportar evidència de diversos RA, però només es puntua dins de les files establides.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href="../DWEC_vall_descarrega/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Descarrega el codi">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Descarrega el codi
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../DWEC_UD5_teoria_ajax/" class="md-footer__link md-footer__link--next" aria-label="Següent: UD4 AJAX Teoria">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                UD4 AJAX Teoria
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright - Xuso Ortí - Professor Departament d'Informàtica IES Jaume II el Just (Tavernes de la Valldigna)
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
